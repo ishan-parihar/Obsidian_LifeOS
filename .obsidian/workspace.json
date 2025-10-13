@@ -11,14 +11,10 @@
             "id": "16013bcb4a85bec8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tasks Inbox.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Tasks Inbox"
+              "title": "New tab"
             }
           }
         ]
@@ -192,20 +188,25 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0e17ec9e2eacf489",
+  "active": "fe70c38ec800b6c7",
   "lastOpenFiles": [
-    "04 - Database Architecture/Strategic Tactical System/Values Template.md",
-    "04 - Database Architecture/Strategic Tactical System/Values Template.md.tmp.38264.1760370605718",
-    "package-lock.json",
-    "package.json",
+    "Instructions.md",
+    "Weekly Review Template.md",
     "Untitled.base",
+    "Untitled 1.base",
+    "Tasks Inbox.md",
     "Task Template.md",
     "Task - Create Task Management Templates.md",
     "Task - Create Documentation and Getting Started Guide.md",
     "Resources - Templates.md",
+    "README.md",
     "Projects Inbox.md",
     "Project Template.md",
     "Project - Build Life Management System.md",
+    "package-lock.json",
+    "package.json",
+    "LifeOS-TOC.md",
+    "LifeOS-Integration-Testing.md",
     "Life Management System - Complete.md",
     "Life Management Overview.md",
     "Life Management Dashboard.md",
@@ -216,19 +217,14 @@
     "Areas of Responsibility.md",
     "Archive - Completed Projects.md",
     "Welcome.md",
-    "Untitled 1.base",
-    "00 - The Workbench/Act II - The Co-Pilot Stream/Project Template.md",
-    "00 - The Workbench/Act II - The Co-Pilot Stream/Task Template.md",
-    "00 - The Workbench/Act II - The Co-Pilot Stream",
-    "00 - The Workbench/Act III - The Ledger/Financial Transaction Template.md",
-    "00 - The Workbench/Act III - The Ledger",
-    "00 - The Workbench/Act I - The Ignition Sequence/Financial Account Template.md",
-    "00 - The Workbench/Act I - The Ignition Sequence/Quarterly Goal Template.md",
-    "00 - The Workbench/Act I - The Ignition Sequence/Week Template.md",
-    "00 - The Workbench/Act I - The Ignition Sequence/Day Template.md",
-    "00 - The Workbench/Act I - The Ignition Sequence",
-    "00 - The Workbench",
-    "Weekly Review Template.md",
-    "01 - Projects"
+    "Blueprint/Core Architecture/Workbench Architecture.md",
+    "Blueprint/Operational Philosophy",
+    "Blueprint/Integration Patterns",
+    "Blueprint/Database Architecture",
+    "Blueprint/Three Metaphorical Workspaces",
+    "Blueprint/Four Domain Workspaces",
+    "Blueprint/Core Architecture",
+    "01 - Four Domain Workspaces/Architecture/Project Brief Template.md",
+    "02 - The Three Metaphorical Workspaces/The Engine Room/Intelligent Resource Management System.md"
   ]
 }
