@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4b339ea8eb2de8bb",
+        "id": "f85e984327daf7b3",
         "type": "tabs",
         "children": [
           {
-            "id": "819531e0f6d1ba53",
+            "id": "baea5c64c917f90f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Research_Docs/LifeOS-Obsidian-Development-Plan.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "LifeOS-Obsidian-Development-Plan"
             }
           }
         ]
@@ -29,6 +33,7 @@
       {
         "id": "0cb28c5c0b945c06",
         "type": "tabs",
+        "dimension": 67.58349705304518,
         "children": [
           {
             "id": "fe70c38ec800b6c7",
@@ -71,6 +76,23 @@
             }
           }
         ]
+      },
+      {
+        "id": "7a20a2567d801ddc",
+        "type": "tabs",
+        "dimension": 32.416502946954814,
+        "children": [
+          {
+            "id": "bd0f2bcfc92a4b08",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
@@ -90,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tasks Inbox.md",
+                "file": "Research_Docs/LifeOS-Obsidian-Development-Plan.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +122,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Tasks Inbox"
+              "title": "Backlinks for LifeOS-Obsidian-Development-Plan"
             }
           },
           {
@@ -109,12 +131,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tasks Inbox.md",
+                "file": "Research_Docs/LifeOS-Obsidian-Development-Plan.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Tasks Inbox"
+              "title": "Outgoing links from LifeOS-Obsidian-Development-Plan"
             }
           },
           {
@@ -138,23 +160,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tasks Inbox.md",
+                "file": "Research_Docs/LifeOS-Obsidian-Development-Plan.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Tasks Inbox"
-            }
-          },
-          {
-            "id": "bd0f2bcfc92a4b08",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "title": "Outline of LifeOS-Obsidian-Development-Plan"
             }
           },
           {
@@ -166,9 +178,19 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "79efc29420b44317",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -192,40 +214,41 @@
   },
   "active": "0e17ec9e2eacf489",
   "lastOpenFiles": [
-    "Forge.md",
-    "000-System/Templates/daily-note.md",
+    "LifeOS-Implementation-Status.md",
     "Research_Docs/LifeOS-Obsidian-Development-Plan.md",
-    "Research_Docs/Research-Results.md",
+    "2025-10-14.md",
+    "00-System/Dashboards/Engine-Room.md",
+    "00-System/Obsidian-Setup.md",
+    "00-System/Templates/people-template.md",
+    "00-System/Templates/financial-account.md",
+    "00-System/Templates/financial-log.md",
+    "00-System/Templates/vision.md",
+    "00-System/Templates/values.md",
+    "00-System/Templates/failure-scenario.md",
+    "00-System/Templates/diet-log.md",
+    "00-System/Templates/project-template.md",
+    "00-System/Templates/daily-note.md",
+    "00-System/Templates/annual-goal.md",
+    "00-System/Templates/activity-log.md",
+    "00-System/Dashboards/Workbench.md",
+    "00-System/Dashboards/Observatory.md",
+    "00-System/Dashboards/Forge.md",
+    "00-System/Templates/quarterly-goal.md",
+    "00-System/Templates/weekly-review.md",
+    "00-System/Templates/systemic-journal.md",
+    "00-System/Templates/relational-journal.md",
+    "00-System/Templates/subjective-journal.md",
+    "00-System/Templates",
+    "00-System/Dashboards",
+    "00-System",
+    "Untitled.base",
+    "Untitled Kanban.md",
     "Research_Docs/Initial_Instructions.md",
-    "Research_Docs/LifeOS-Notion-Research-Requirements.md",
-    "Observatory.md",
-    "Workbench.md",
+    "-p",
     "Research_Docs",
-    "LifeOS-README.md",
-    "000-System/Templates/person-template.md",
-    "000-System/Dashboards/Workbench.md",
-    "000-System/Dashboards/Observatory.md",
-    "000-System/Dashboards/Forge.md",
-    "000-System/Dashboards/Engine-Room.md",
-    "000-System/Templates/weekly-review.md",
-    "000-System/Templates/value-template.md",
-    "000-System/Templates/systemic-log.md",
-    "000-System/Templates/subjective-log.md",
-    "000-System/Templates/relational-log.md",
-    "000-System/Templates/project-template.md",
-    "01 - Four Domain Workspaces/Content Creation/Campaign Template.md",
     "000-System/Templates/daily-note.md.tmp.6088.1760382364584",
     "Resources/Documents",
     "Resources/Attachments",
-    "Resources",
-    "MOCs",
-    "Notes",
-    "People",
-    "Projects/Intelligence-Integration",
-    "Projects/Content-Creation",
-    "Weekly Review Template.md",
-    "Tasks Inbox.md",
-    "Task Template.md",
-    "Task - Create Task Management Templates.md"
+    "Resources"
   ]
 }
