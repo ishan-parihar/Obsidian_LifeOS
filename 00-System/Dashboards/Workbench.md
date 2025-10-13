@@ -13,7 +13,7 @@ TABLE WITHOUT ID
   file.link as "Task",
   priority as "Priority",
   status as "Status"
-FROM "Projects"
+FROM "15-Projects"
 WHERE status = "Active" AND contains(string(this), "#sprint/current")
 SORT priority DESC
 LIMIT 10
@@ -26,7 +26,7 @@ TABLE WITHOUT ID
   file.link as "Issue",
   impact as "Impact",
   status as "Status"
-FROM "Logs/Systemic"
+FROM "03-Systemic-Journal"
 WHERE status = "Triage" OR status = "Escalated"
 SORT impact DESC
 LIMIT 5
@@ -39,7 +39,7 @@ TABLE WITHOUT ID
   file.link as "Person",
   reconnect_by as "Reconnect By",
   networking_profile as "Profile"
-FROM "People"
+FROM "17-People"
 WHERE reconnect_by <= date(today) + dur(7 days)
 SORT reconnect_by ASC
 LIMIT 5
@@ -56,7 +56,7 @@ LIMIT 5
 
 ```dataview
 LIST
-FROM "Strategy/AnnualGoals"
+FROM "13-Annual-Goals"
 WHERE status = "Active"
 ```
 

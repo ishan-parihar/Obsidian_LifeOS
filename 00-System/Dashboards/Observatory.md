@@ -18,7 +18,7 @@ TABLE WITHOUT ID
   file.link as "Day",
   day_number as "Day #",
   choice(length(day_synthesis) > 0, "✅ Synthesized", "⏳ Pending") as "Status"
-FROM "Reviews/Days"
+FROM "06-Days"
 WHERE date >= date(today) - dur(7 days)
 SORT date DESC
 ```
@@ -32,7 +32,7 @@ TABLE WITHOUT ID
   key_result_1 as "KR1",
   key_result_2 as "KR2",
   key_result_3 as "KR3"
-FROM "Strategy/QuarterlyGoals"
+FROM "14-Quarterly-Goals"
 WHERE status != "Done"
 SORT priority DESC
 ```
@@ -41,7 +41,7 @@ SORT priority DESC
 
 ```dataview
 LIST
-FROM "Reviews/Months"
+FROM "08-Months"
 WHERE year = date(today).year
 SORT month_number DESC
 LIMIT 3
@@ -56,7 +56,7 @@ TABLE WITHOUT ID
   sum(rows.Total_Income) as "Income",
   sum(rows.Total_Expenses) as "Expenses",
   sum(rows.Net_Cashflow) as "Net"
-FROM "Reviews/Months"
+FROM "08-Months"
 WHERE year = date(today).year AND month_number = date(today).month
 ```
 
@@ -66,7 +66,7 @@ WHERE year = date(today).year AND month_number = date(today).month
 TABLE WITHOUT ID
   category as "Category",
   sum(amount) as "Total"
-FROM "Financial Log"
+FROM "20-Financial-Log"
 WHERE date >= date(today) - dur(30 days)
 GROUP BY category
 SORT sum(amount) DESC
@@ -78,7 +78,7 @@ SORT sum(amount) DESC
 
 ```dataview
 LIST
-FROM "Reviews/Days"
+FROM "06-Days"
 WHERE date >= date(today) - dur(7 days)
 FLATTEN file.lists as L
 WHERE contains(L.text, "## The ")

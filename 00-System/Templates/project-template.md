@@ -68,8 +68,8 @@ TABLE WITHOUT ID
   file.link as "Task",
   status as "Status",
   priority as "Priority"
-FROM "Projects"
-WHERE contains(file.folder, "<% tp.file.title %>") AND status != "Done"
+FROM "16-Tasks"
+WHERE contains(projects, "<% tp.file.title %>") AND status != "Done"
 SORT priority DESC
 ```
 
@@ -91,7 +91,7 @@ TABLE WITHOUT ID
   file.link as "Issue",
   impact as "Impact",
   status as "Status"
-FROM "Logs/Systemic"
+FROM "03-Systemic-Journal"
 WHERE contains(projects, "<% tp.file.title %>")
 SORT impact DESC
 ```

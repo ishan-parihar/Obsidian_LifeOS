@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "f85e984327daf7b3",
+        "id": "b8292311b20c679a",
         "type": "tabs",
         "children": [
           {
-            "id": "baea5c64c917f90f",
+            "id": "ed25aa638451e344",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Research_Docs/LifeOS-Obsidian-Development-Plan.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "LifeOS-Obsidian-Development-Plan"
+              "title": "New tab"
             }
           }
         ]
@@ -112,7 +108,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Research_Docs/LifeOS-Obsidian-Development-Plan.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +117,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for LifeOS-Obsidian-Development-Plan"
+              "title": "Backlinks"
             }
           },
           {
@@ -131,12 +126,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Research_Docs/LifeOS-Obsidian-Development-Plan.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from LifeOS-Obsidian-Development-Plan"
+              "title": "Outgoing links"
             }
           },
           {
@@ -160,13 +154,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Research_Docs/LifeOS-Obsidian-Development-Plan.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of LifeOS-Obsidian-Development-Plan"
+              "title": "Outline"
             }
           },
           {
@@ -212,43 +205,43 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "0e17ec9e2eacf489",
+  "active": "ed25aa638451e344",
   "lastOpenFiles": [
-    "LifeOS-Implementation-Status.md",
-    "Research_Docs/LifeOS-Obsidian-Development-Plan.md",
-    "2025-10-14.md",
-    "00-System/Dashboards/Engine-Room.md",
-    "00-System/Obsidian-Setup.md",
-    "00-System/Templates/people-template.md",
-    "00-System/Templates/financial-account.md",
-    "00-System/Templates/financial-log.md",
-    "00-System/Templates/vision.md",
-    "00-System/Templates/values.md",
-    "00-System/Templates/failure-scenario.md",
-    "00-System/Templates/diet-log.md",
-    "00-System/Templates/project-template.md",
-    "00-System/Templates/daily-note.md",
+    "Research_Docs/System-Optimization-Report.md",
+    "01-Subjective-Journal/README.md",
     "00-System/Templates/annual-goal.md",
+    "00-System/Obsidian-Setup.md",
     "00-System/Templates/activity-log.md",
     "00-System/Dashboards/Workbench.md",
     "00-System/Dashboards/Observatory.md",
     "00-System/Dashboards/Forge.md",
-    "00-System/Templates/quarterly-goal.md",
-    "00-System/Templates/weekly-review.md",
-    "00-System/Templates/systemic-journal.md",
-    "00-System/Templates/relational-journal.md",
-    "00-System/Templates/subjective-journal.md",
-    "00-System/Templates",
-    "00-System/Dashboards",
-    "00-System",
-    "Untitled.base",
-    "Untitled Kanban.md",
-    "Research_Docs/Initial_Instructions.md",
-    "-p",
-    "Research_Docs",
-    "000-System/Templates/daily-note.md.tmp.6088.1760382364584",
-    "Resources/Documents",
-    "Resources/Attachments",
-    "Resources"
+    "00-System/Dashboards/Engine-Room.md",
+    "Forge.md",
+    "24-Failure-Scenarios/README.md",
+    "24-Failure-Scenarios",
+    "23-Stories/README.md",
+    "23-Stories",
+    "22-Documents/README.md",
+    "22-Documents",
+    "21-Notes/README.md",
+    "21-Notes",
+    "20-Financial-Log/README.md",
+    "20-Financial-Log",
+    "19-Financial-Accounts/README.md",
+    "19-Financial-Accounts",
+    "18-Community/README.md",
+    "18-Community",
+    "17-People/README.md",
+    "17-People",
+    "16-Tasks/README.md",
+    "16-Tasks",
+    "15-Projects/README.md",
+    "15-Projects",
+    "14-Quarterly-Goals/README.md",
+    "13-Annual-Goals/README.md",
+    "12-Vision/README.md",
+    "11-Values/README.md",
+    "10-Years/README.md",
+    "09-Quarters/README.md"
   ]
 }

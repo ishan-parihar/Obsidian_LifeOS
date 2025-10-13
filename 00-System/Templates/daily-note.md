@@ -90,7 +90,7 @@ TABLE WITHOUT ID
   file.link as "Entry",
   primary_emotion as "Emotion",
   secondary_emotion as "Secondary"
-FROM "Logs/Subjective"
+FROM "01-Subjective-Journal"
 WHERE days = this.file.name
 SORT file.mtime DESC
 ```
@@ -101,7 +101,7 @@ TABLE WITHOUT ID
   file.link as "Entry",
   people as "People",
   emotional_tone as "Tone"
-FROM "Logs/Relational"
+FROM "02-Relational-Journal"
 WHERE days = this.file.name
 SORT file.mtime DESC
 ```
@@ -112,7 +112,7 @@ TABLE WITHOUT ID
   file.link as "Issue",
   impact as "Impact",
   status as "Status"
-FROM "Logs/Systemic"
+FROM "03-Systemic-Journal"
 WHERE date = this.date
 SORT impact DESC
 ```
@@ -123,7 +123,7 @@ TABLE WITHOUT ID
   file.link as "Activity",
   duration as "Duration",
   habit_quality as "Quality"
-FROM "Logs/Activity"
+FROM "04-Activity-Log"
 WHERE days = this.file.name
 SORT file.mtime DESC
 ```
@@ -133,7 +133,7 @@ SORT file.mtime DESC
 TABLE WITHOUT ID
   file.link as "Meal",
   meal_type as "Type"
-FROM "Logs/Diet"
+FROM "05-Diet-Log"
 WHERE days = this.file.name
 SORT file.mtime DESC
 ```
