@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8771b23e6eb571a4",
+        "id": "4b339ea8eb2de8bb",
         "type": "tabs",
         "children": [
           {
-            "id": "c21355d0fc63ea6d",
+            "id": "819531e0f6d1ba53",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LifeOS-Notion-Research-Requirements.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "LifeOS-Notion-Research-Requirements"
+              "title": "New tab"
             }
           }
         ]
@@ -190,30 +186,33 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false,
       "obsidian-git:Open Git source control": false,
-      "obsidian-kanban:Create new board": false
+      "obsidian-kanban:Create new board": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "c21355d0fc63ea6d",
+  "active": "0e17ec9e2eacf489",
   "lastOpenFiles": [
-    "Research Results.md",
-    "LifeOS-Notion-Research-Requirements.md",
-    "000-System/Templates/person-template.md",
+    "Forge.md",
     "000-System/Templates/daily-note.md",
+    "Research_Docs/LifeOS-Obsidian-Development-Plan.md",
+    "Research_Docs/Research-Results.md",
+    "Research_Docs/Initial_Instructions.md",
+    "Research_Docs/LifeOS-Notion-Research-Requirements.md",
+    "Observatory.md",
+    "Workbench.md",
+    "Research_Docs",
+    "LifeOS-README.md",
+    "000-System/Templates/person-template.md",
     "000-System/Dashboards/Workbench.md",
     "000-System/Dashboards/Observatory.md",
     "000-System/Dashboards/Forge.md",
     "000-System/Dashboards/Engine-Room.md",
-    "Instructions.md",
-    "Forge.md",
-    "Observatory.md",
-    "Workbench.md",
     "000-System/Templates/weekly-review.md",
     "000-System/Templates/value-template.md",
     "000-System/Templates/systemic-log.md",
     "000-System/Templates/subjective-log.md",
     "000-System/Templates/relational-log.md",
     "000-System/Templates/project-template.md",
-    "LifeOS-README.md",
     "01 - Four Domain Workspaces/Content Creation/Campaign Template.md",
     "000-System/Templates/daily-note.md.tmp.6088.1760382364584",
     "Resources/Documents",
@@ -224,12 +223,9 @@
     "People",
     "Projects/Intelligence-Integration",
     "Projects/Content-Creation",
-    "Projects/ConsciRise",
     "Weekly Review Template.md",
     "Tasks Inbox.md",
     "Task Template.md",
-    "Task - Create Task Management Templates.md",
-    "Task - Create Documentation and Getting Started Guide.md",
-    "Resources - Templates.md"
+    "Task - Create Task Management Templates.md"
   ]
 }
