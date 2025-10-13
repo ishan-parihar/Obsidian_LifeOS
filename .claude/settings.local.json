@@ -3,7 +3,9 @@
     "allow": [
       "Bash(dir:*)",
       "Bash(mkdir:*)",
-      "mcp__notion__API-get-self"
+      "mcp__notion__API-get-self",
+      "mcp__notion__API-post-search",
+      "mcp__notion__API-retrieve-a-database"
     ],
     "deny": [],
     "ask": []
