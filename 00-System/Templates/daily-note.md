@@ -91,7 +91,7 @@ TABLE WITHOUT ID
   primary_emotion as "Emotion",
   secondary_emotion as "Secondary"
 FROM "01-Subjective-Journal"
-WHERE days = this.file.name
+WHERE contains(days, this.file.name)
 SORT file.mtime DESC
 ```
 
@@ -102,7 +102,7 @@ TABLE WITHOUT ID
   people as "People",
   emotional_tone as "Tone"
 FROM "02-Relational-Journal"
-WHERE days = this.file.name
+WHERE contains(days, this.file.name)
 SORT file.mtime DESC
 ```
 
@@ -124,7 +124,7 @@ TABLE WITHOUT ID
   duration as "Duration",
   habit_quality as "Quality"
 FROM "04-Activity-Log"
-WHERE days = this.file.name
+WHERE contains(string(days), this.file.name)
 SORT file.mtime DESC
 ```
 
@@ -134,7 +134,7 @@ TABLE WITHOUT ID
   file.link as "Meal",
   meal_type as "Type"
 FROM "05-Diet-Log"
-WHERE days = this.file.name
+WHERE contains(days, this.file.name)
 SORT file.mtime DESC
 ```
 

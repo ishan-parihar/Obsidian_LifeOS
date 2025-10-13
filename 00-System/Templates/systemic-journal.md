@@ -1,5 +1,6 @@
 ---
-date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
+date: <% tp.date.now("YYYY-MM-DD") %>
+datetime: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
 status: Triage
 impact: 
 system_domain: 

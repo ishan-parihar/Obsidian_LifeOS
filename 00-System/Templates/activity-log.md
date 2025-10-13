@@ -3,8 +3,7 @@ date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
 title:
 duration:
 habit_quality: 0.5
-days:
-  - - <% tp.date.now("YYYY-MM-DD") %>
+days: [[<% tp.date.now("YYYY-MM-DD") %>]]
 type: activity-log
 activity_type:
 activity_notes:

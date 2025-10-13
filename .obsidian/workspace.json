@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b8292311b20c679a",
+        "id": "3f95b06512c478c9",
         "type": "tabs",
         "children": [
           {
-            "id": "ed25aa638451e344",
+            "id": "b829d39187cde193",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -205,17 +205,25 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "ed25aa638451e344",
+  "active": "b829d39187cde193",
   "lastOpenFiles": [
+    "00-System/Templates/subjective-journal.md",
+    "06-Days/2025-10-14.md",
+    "05-Diet-Log/test-diet-2025-10-14.md",
+    "04-Activity-Log/test-activity-2025-10-14.md",
+    "03-Systemic-Journal/test-systemic-2025-10-14.md",
+    "02-Relational-Journal/test-relational-2025-10-14.md",
+    "15-Projects/lifeos-system-optimization.md",
+    "01-Subjective-Journal/2025-10-14-test-entry.md",
+    "00-System/Dashboards/Observatory.md",
+    "00-System/Dashboards/Forge.md",
+    "00-System/Dashboards/Engine-Room.md",
     "Research_Docs/System-Optimization-Report.md",
     "01-Subjective-Journal/README.md",
     "00-System/Templates/annual-goal.md",
     "00-System/Obsidian-Setup.md",
     "00-System/Templates/activity-log.md",
     "00-System/Dashboards/Workbench.md",
-    "00-System/Dashboards/Observatory.md",
-    "00-System/Dashboards/Forge.md",
-    "00-System/Dashboards/Engine-Room.md",
     "Forge.md",
     "24-Failure-Scenarios/README.md",
     "24-Failure-Scenarios",
@@ -233,15 +241,7 @@
     "18-Community",
     "17-People/README.md",
     "17-People",
-    "16-Tasks/README.md",
     "16-Tasks",
-    "15-Projects/README.md",
-    "15-Projects",
-    "14-Quarterly-Goals/README.md",
-    "13-Annual-Goals/README.md",
-    "12-Vision/README.md",
-    "11-Values/README.md",
-    "10-Years/README.md",
-    "09-Quarters/README.md"
+    "15-Projects"
   ]
 }
