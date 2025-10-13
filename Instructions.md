@@ -25,9 +25,9 @@ Your LifeOS operates on a **dual-hierarchy convergence model**: temporal review 
 ```
 ATOMIC CAPTURE → SYNTHESIS → STRATEGY → EXECUTION
 
-[Logs] → [Days] → [Weeks] → [Months] → [Quarters] → [Years]
-   ↕         ↕        ↕          ↕           ↕           ↕
-[Tasks] ← [Projects] ← [Q-Goals] ← [Annual Goals] ← [Vision] ← [Values]
+[Logs]	→	[Days]	→	[Weeks]	→		[Months]	→	[Quarters]		→	[Years]			[Years]
+			↕			↕	          	↕           	↕           		↕				↕
+			[Tasks]	←	[Projects]	←	[Q-Goals]	←	[Annual Goals]	←	[Vision]	←	[Values]
 ```
 
 **Critical Flow Pattern:**
