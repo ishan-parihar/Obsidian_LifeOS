@@ -2,15 +2,16 @@
 # Notes Template
 
 # Metadata
-note_id:: 
-note_title:: 
-note_type:: 
+title:
+note_status: "New Note"
+note_id::
+note_title::
+note_type::
 created_date:: 2025-10-14
 last_updated:: 2025-10-14
-status:: pending
-priority:: medium
-
 category:: Notes
+entity_type: "note"
+created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 
 tags:: #notes #template #pending
 

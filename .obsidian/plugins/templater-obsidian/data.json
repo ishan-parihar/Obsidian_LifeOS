@@ -84,7 +84,7 @@
     },
     {
       "folder": "18-Community",
-      "template": ""
+      "template": "00-System/Templates/community.md"
     },
     {
       "folder": "19-Financial-Accounts",
@@ -96,15 +96,15 @@
     },
     {
       "folder": "21-Notes",
-      "template": ""
+      "template": "00-System/Templates/notes.md"
     },
     {
       "folder": "22-Documents",
-      "template": ""
+      "template": "00-System/Templates/documents.md"
     },
     {
       "folder": "23-Stories",
-      "template": ""
+      "template": "00-System/Templates/stories.md"
     },
     {
       "folder": "24-Failure-Scenarios",

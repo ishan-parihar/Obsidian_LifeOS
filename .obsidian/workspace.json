@@ -11,14 +11,13 @@
             "id": "8b5df98fe237f84a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "Pending Tasks.md",
-                "mode": "source",
-                "source": false
+                "file": "21-Notes/21-Notes.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file",
-              "title": "Pending Tasks"
+              "icon": "lucide-table",
+              "title": "21-Notes"
             }
           }
         ]
@@ -206,40 +205,40 @@
   },
   "active": "8b5df98fe237f84a",
   "lastOpenFiles": [
+    "21-Notes/Untitled.md",
+    "21-Notes/21-Notes.base",
+    "00-System/Templates/notes.md",
+    "Untitled.md",
+    "Untitled",
+    "00-System/Templates/diet-log.md",
+    "00-System/Templates/daily-note.md",
+    "00-System/Templates/community.md",
+    "00-System/Templates/annual-goal.md",
+    "00-System/Templates/activity-log.md",
+    "02-Relational-Journal/02-Relational-Journal.base",
+    "02-Relational-Journal/Interactions with Family.md",
+    "01-Subjective-Journal/01-Subjective-Journal.base",
+    "00-System/Dashboards/Forge.md",
+    "00-System/Dashboards/Engine-Room.md",
+    "08-Months/08-Months.base",
+    "Pending Tasks.md",
     "06-Days/Untitled.md",
     "06-Days/06-Days.base",
     "05-Diet-Log/05-Diet-Log.base",
     "00-System/Dashboards/Workbench.md",
-    "Pending Tasks.md",
     "00-System/Templates/documents.md",
-    "00-System/Templates/daily-note.md",
-    "00-System/Dashboards/Engine-Room.md",
     "00-System/Dashboards/Observatory.md",
     "00-System/Templates/monthly-review.md",
     "00-System/Templates/financial-log.md",
-    "00-System/Templates/notes.md",
-    "00-System/Dashboards/Forge.md",
     "00-System/Templates/quarterly-goal.md",
     "00-System/Templates/people-template.md",
     "00-System/Templates/failure-scenario.md",
-    "00-System/Templates/diet-log.md",
-    "00-System/Templates/community.md",
-    "00-System/Templates/activity-log.md",
     "00-System/Templates/subjective-journal.md",
     "00-System/Templates/systemic-journal.md",
     "00-System/Templates/stories.md",
     "Pending Templates",
     "Untitled 1.md",
-    "CRUSH.md",
-    "08-Months/08-Months.base",
     "09-Quarters/09-Quarters.base",
-    "10-Years/10-Years.base",
-    "15-Projects/15-Projects.base",
-    "06-Days/2025-10-14.md",
-    "16-Tasks/16-Tasks.base",
-    "15-Projects/Untitled.md",
-    "15-Projects/lifeos-system-optimization.md",
-    "03-Systemic-Journal/03-Systemic-Journal.base",
-    "02-Relational-Journal/02-Relational-Journal.base"
+    "10-Years/10-Years.base"
   ]
 }

@@ -2,15 +2,17 @@
 # Documents Template
 
 # Metadata
-document_id:: 
-document_title:: 
-document_type:: 
+title:
+doc_category:
+doc_status: "Not started"
+document_id::
+document_title::
+document_type::
 created_date:: 2025-10-14
 last_updated:: 2025-10-14
-status:: pending
-priority:: medium
-
 category:: Documents
+entity_type: "document"
+created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 
 tags:: #documents #template #pending
 
