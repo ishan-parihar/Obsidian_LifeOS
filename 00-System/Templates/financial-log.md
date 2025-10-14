@@ -1,18 +1,18 @@
 ---
 title: 
-date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
-category: 
-capital_engine: 
-financial_accounts: []
-weeks: [[<% tp.date.now("YYYY-[W]WW") %>]]
-months: [[<% tp.date.now("YYYY-MM") %>]]
-receipt_document: 
-amount: 
-transaction_type: 
-is_financial: 
-financial_relater: 
-notes: 
-type: financial-log
+fl_date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
+fl_category: 
+fl_capital_engine: 
+fl_financial_accounts: []
+fl_weeks: [[<% tp.date.now("YYYY-[W]WW") %>]]
+fl_months: [[<% tp.date.now("YYYY-MM") %>]]
+fl_receipt_document: 
+fl_amount: 
+fl_transaction_type: 
+fl_is_financial: 
+fl_financial_relater: 
+fl_notes: 
+entity_type: "financial-log"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 

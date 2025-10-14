@@ -1,50 +1,50 @@
 ---
 title: 
-first_name: ""
-custom_name: ""
-city: ""
-relationship_status: ""
+people_first_name: ""
+people_custom_name: ""
+people_city: ""
+people_relationship_status: ""
 
 # Developmental Psychology Tracking
-developmental_altitude: ""
-primary_center_intelligence: ""
-explanatory_style: ""
-stability_profile: ""
-primary_conflict_style: ""
-dominant_power_strategy: ""
+people_developmental_altitude: ""
+people_primary_center_intelligence: ""
+people_explanatory_style: ""
+people_stability_profile: ""
+people_primary_conflict_style: ""
+people_dominant_power_strategy: ""
 
 # Motivational & Shadow Psychology
-aspirational_drive: ""
-core_shadow: ""
-temporal_focus: ""
+people_aspirational_drive: ""
+people_core_shadow: ""
+people_temporal_focus: ""
 
 # Influence & Networking
-influence_toolkit: []
-networking_profile: ""
-desired_trajectory: ""
-value_exchange_balance: ""
+people_influence_toolkit: []
+people_networking_profile: ""
+people_desired_trajectory: ""
+people_value_exchange_balance: ""
 
 # Strategic Context Fields
-in_days_connection_frequency: 30
-reconnect_by: ""
-last_connected_date: ""
-origin_context: ""
-key_personal_intel: ""
-strategic_context: ""
-professional_domain_influence: ""
-engagement_blueprint: ""
-summary: ""
+people_in_days_connection_frequency: 30
+people_reconnect_by: ""
+people_last_connected_date: ""
+people_origin_context: ""
+people_key_personal_intel: ""
+people_strategic_context: ""
+people_professional_domain_influence: ""
+people_engagement_blueprint: ""
+people_summary: ""
 
 # Relations
-community: []
-projects: []
-stories: []
+people_community: []
+people_projects: []
+people_stories: []
 
 # Computed Fields
-current_status: ""
-active_range: ""
+people_current_status: ""
+people_active_range: ""
 
-type: person
+entity_type: "person"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 

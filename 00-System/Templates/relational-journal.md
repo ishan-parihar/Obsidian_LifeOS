@@ -1,20 +1,15 @@
 ---
 title: Relational Journal
-date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
-people: []
-emotional_tone: 
-power_balance: 
-days: [[<% tp.date.now("YYYY-MM-DD") %>]]
-relationship_status: ""
-total_context: ""
-id: 
-hierarchy_level: "atomic"
-parent_entities: [[<% tp.date.now("YYYY-MM-DD") %>]] # Days
-child_entities: []
-sibling_entities: [] # Other atomic entries
-related_time_periods: [[<% tp.date.now("YYYY-MM-DD") %>]]
-strategic_alignment: []
-type: relational-journal
+rj_date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
+rj_people: []
+rj_emotional_tone: 
+rj_power_balance: 
+rj_days: [[<% tp.date.now("YYYY-MM-DD") %>]]
+rj_relationship_status: ""
+rj_total_context: ""
+rj_id: 
+entity_hierarchy_level: "atomic"
+entity_type: "relational-journal"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 

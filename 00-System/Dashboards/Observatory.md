@@ -13,12 +13,12 @@
 const COLUMNS = [
   { id: "Day", value: row => row.$link },
   { id: "Day #", value: row => {
-    const dayNumber = row.value("day_number");
+    const dayNumber = row.value("daily_day_number");
     return dayNumber ?? "";
   }},
   { id: "Status", value: row => {
     try {
-      const synthesis = row.value("day_synthesis");
+      const synthesis = row.value("daily_day_synthesis");
       return (synthesis && synthesis.length > 0) ? "✅ Synthesized" : "⏳ Pending";
     } catch {
       return "⏳ Pending";
@@ -34,14 +34,14 @@ return function View() {
     const recentDays = dc.useArray(days, array => 
       array.filter(day => {
         try {
-          const dayDate = day.value("date");
+          const dayDate = day.value("daily_date");
           return dayDate && dayDate >= sevenDaysAgo;
         } catch {
           return false;
         }
       }).sort(row => {
         try {
-          const date = row.value("date");
+          const date = row.value("daily_date");
           return date ? -date.getTime() : 0;
         } catch {
           return 0;

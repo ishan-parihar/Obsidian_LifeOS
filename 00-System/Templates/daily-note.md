@@ -1,47 +1,42 @@
 ---
 title: "<% tp.date.now("YY-MM-DD") %>-D<% tp.date.now("DDD") %>"
-date: <% tp.date.now("YYYY-MM-DD") %>
-day_name: <% tp.date.now("dddd") %>
-day_number: <% tp.date.now("DDD") %>
-year: <% tp.date.now("YYYY") %>
-time_period_start: <% tp.date.now("YYYY-MM-DD") %>
-time_period_end: <% tp.date.now("YYYY-MM-DD") %>
-containing_period: [[<% tp.date.now("YYYY-[W]WW") %>]]
-contained_periods: []
-parallel_periods: []
-hierarchy_level: "review"
-parent_entities: [[<% tp.date.now("YYYY-[W]WW") %>]]
-child_entities: []
-sibling_entities: []
-related_time_periods: []
-strategic_alignment: []
-weeks: [[<% tp.date.now("YYYY-[W]WW") %>]]
-months: [[<% tp.date.now("YYYY-MM") %>]]
-quarters: [[<% tp.date.now("YYYY-[Q]Q") %>]]
-years: [[<% tp.date.now("YYYY") %>]]
-type: daily-review
-day_synthesis: ""
-the_witness: ""
-the_logos_inquisitor: ""
-the_alpha_scanner: ""
-the_structural_integrator: ""
-the_ascension_architect: ""
-the_mythopoetic_weaver: ""
-the_somatic_arbiter: ""
-the_state_hacker: ""
-the_capital_strategist: ""
-the_hearth_tender: ""
-the_network_weaver: ""
-the_stillness_warden: ""
-the_aesthetic_calibrator: ""
-the_legacy_tender: ""
-the_systemic_navigator: ""
-day_oracle_synthesis: ""
-day_phoenix_synthesis: ""
-day_sovereign_synthesis: ""
-night_wind_down: ""
-status: ""
-day_report: ""
+daily_date: <% tp.date.now("YYYY-MM-DD") %>
+daily_day_name: <% tp.date.now("dddd") %>
+daily_day_number: <% tp.date.now("DDD") %>
+daily_year: <% tp.date.now("YYYY") %>
+daily_time_period_start: <% tp.date.now("YYYY-MM-DD") %>
+daily_time_period_end: <% tp.date.now("YYYY-MM-DD") %>
+daily_containing_period: [[<% tp.date.now("YYYY-[W]WW") %>]]
+entity_hierarchy_level: "review"
+entity_type: "daily-review"
+daily_weeks: [[<% tp.date.now("YYYY-[W]WW") %>]]
+daily_months: [[<% tp.date.now("YYYY-MM") %>]]
+daily_quarters: [[<% tp.date.now("YYYY-[Q]Q") %>]]
+daily_years: [[<% tp.date.now("YYYY") %>]]
+# Intelligence Synthesis Fields
+daily_day_synthesis: ""
+daily_the_witness: ""
+daily_the_logos_inquisitor: ""
+daily_the_alpha_scanner: ""
+daily_the_structural_integrator: ""
+daily_the_ascension_architect: ""
+daily_the_mythopoetic_weaver: ""
+daily_the_somatic_arbiter: ""
+daily_the_state_hacker: ""
+daily_the_capital_strategist: ""
+daily_the_hearth_tender: ""
+daily_the_network_weaver: ""
+daily_the_stillness_warden: ""
+daily_the_aesthetic_calibrator: ""
+daily_the_legacy_tender: ""
+daily_the_systemic_navigator: ""
+# Meta-Synthesis Fields
+daily_day_oracle_synthesis: ""
+daily_day_phoenix_synthesis: ""
+daily_day_sovereign_synthesis: ""
+daily_night_wind_down: ""
+daily_status: ""
+daily_day_report: ""
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 
@@ -125,12 +120,12 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ```datacorejsx
 const COLUMNS = [
   { id: "Entry", value: row => row.$link },
-  { id: "Emotion", value: row => row.value("primary_emotion") },
-  { id: "Secondary", value: row => row.value("secondary_emotion") }
+  { id: "Emotion", value: row => row.value("sj_primary_emotion") },
+  { id: "Secondary", value: row => row.value("sj_secondary_emotion") }
 ];
 
 return function View() {
-  const entries = dc.useQuery(`@page and "01-Subjective-Journal" and days = "<% tp.file.title %>"`);
+  const entries = dc.useQuery(`@page and "01-Subjective-Journal" and sj_days = "<% tp.file.title %>"`);
   const sortedEntries = dc.useArray(entries, array => 
     array.sort(row => -row.$mtime)
   );
@@ -143,12 +138,12 @@ return function View() {
 ```datacorejsx
 const COLUMNS = [
   { id: "Entry", value: row => row.$link },
-  { id: "People", value: row => row.value("people")?.join(", ") ?? "" },
-  { id: "Tone", value: row => row.value("emotional_tone") }
+  { id: "People", value: row => row.value("rj_people")?.join(", ") ?? "" },
+  { id: "Tone", value: row => row.value("rj_emotional_tone") }
 ];
 
 return function View() {
-  const entries = dc.useQuery(`@page and "02-Relational-Journal" and days = "<% tp.file.title %>"`);
+  const entries = dc.useQuery(`@page and "02-Relational-Journal" and rj_days = "<% tp.file.title %>"`);
   const sortedEntries = dc.useArray(entries, array => 
     array.sort(row => -row.$mtime)
   );
@@ -161,14 +156,14 @@ return function View() {
 ```datacorejsx
 const COLUMNS = [
   { id: "Issue", value: row => row.$link },
-  { id: "Impact", value: row => row.value("impact") },
-  { id: "Status", value: row => row.value("status") }
+  { id: "Impact", value: row => row.value("sysj_impact") },
+  { id: "Status", value: row => row.value("sysj_status") }
 ];
 
 return function View() {
-  const issues = dc.useQuery(`@page and "03-Systemic-Journal" and date = "<% tp.frontmatter.date %>"`);
+  const issues = dc.useQuery(`@page and "03-Systemic-Journal" and sysj_date = "<% tp.frontmatter.daily_date %>"`);
   const sortedIssues = dc.useArray(issues, array => 
-    array.sort(row => -row.value("impact"))
+    array.sort(row => -row.value("sysj_impact"))
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedIssues} />;

@@ -1,46 +1,28 @@
 ---
 title: 
 project_summary: 
-priority: ⭐⭐⭐
-status: On-Hold
+project_priority: ⭐⭐⭐
+project_status: On-Hold
 project_start: 
-deadline: 
-review_date: 
-hierarchy_level: "strategic"
-parent_entities: [] # Quarterly Goals
-child_entities: [] # Tasks
-sibling_entities: [] # Other Projects
-related_time_periods: []
-strategic_alignment: []
-strategic_hierarchy: {
-  vision: [],
-  annual_goals: [],
-  quarterly_goals: [], 
-  projects: [],
-  tasks: []
-}
-execution_status: {
-  progress: 0,
-  health: "",
-  next_milestone: "",
-  blockers: []
-}
-quarterly_goals: []
-annual_goals: []
-quarters: []
-years: []
-tasks: []
-people: []
-notes: []
-documents: []
-competencies: []
-systemic_journal: []
-hard_constraints_antigoals: 
-kpis: 
-kpi_bar: 0
+project_deadline: 
+project_review_date: 
+entity_hierarchy_level: "strategic"
+entity_type: "project"
+project_quarterly_goals: []
+project_annual_goals: []
+project_quarters: []
+project_years: []
+project_tasks: []
+project_people: []
+project_notes: []
+project_documents: []
+project_competencies: []
+project_systemic_journal: []
+project_hard_constraints_antigoals: 
+project_kpis: 
+project_kpi_bar: 0
 project_progress: 0
-health: 
-type: project
+project_health: 
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 

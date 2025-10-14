@@ -1,24 +1,39 @@
 ---
 title: <% tp.date.now("YYYY-[W]WW") %>
-week_number: <% tp.date.now("WW") %>
-year: <% tp.date.now("YYYY") %>
-time_period_start: <% tp.date.now("YYYY-MM-DD", 0, -tp.date.now().weekday) %>
-time_period_end: <% tp.date.now("YYYY-MM-DD", 6, -tp.date.now().weekday) %>
-containing_period: [[<% tp.date.now("YYYY-[Q]Q") %>]]
-contained_periods: [] # Auto-populated with days
-parallel_periods: [] # Other weeks in same quarter
-hierarchy_level: "review"
-parent_entities: []
-child_entities: []
-sibling_entities: []
-related_time_periods: []
-strategic_alignment: []
-months: [[<% tp.date.now("YYYY-MM") %>]]
-quarters: [[<% tp.date.now("YYYY-[Q]Q") %>]]
-years: [[<% tp.date.now("YYYY") %>]]
-days: []
-type: weekly-review
-status: Active
+weekly_week_number: <% tp.date.now("WW") %>
+weekly_year: <% tp.date.now("YYYY") %>
+weekly_time_period_start: <% tp.date.now("YYYY-MM-DD", 0, -tp.date.now().weekday) %>
+weekly_time_period_end: <% tp.date.now("YYYY-MM-DD", 6, -tp.date.now().weekday) %>
+weekly_containing_period: [[<% tp.date.now("YYYY-[Q]Q") %>]]
+entity_hierarchy_level: "review"
+entity_type: "weekly-review"
+weekly_months: [[<% tp.date.now("YYYY-MM") %>]]
+weekly_quarters: [[<% tp.date.now("YYYY-[Q]Q") %>]]
+weekly_years: [[<% tp.date.now("YYYY") %>]]
+weekly_days: []
+weekly_status: Active
+# Intelligence Synthesis Fields
+weekly_week_synthesis: ""
+weekly_the_witness: ""
+weekly_the_logos_inquisitor: ""
+weekly_the_alpha_scanner: ""
+weekly_the_structural_integrator: ""
+weekly_the_ascension_architect: ""
+weekly_the_mythopoetic_weaver: ""
+weekly_the_somatic_arbiter: ""
+weekly_the_state_hacker: ""
+weekly_the_capital_strategist: ""
+weekly_the_hearth_tender: ""
+weekly_the_network_weaver: ""
+weekly_the_stillness_warden: ""
+weekly_the_aesthetic_calibrator: ""
+weekly_the_legacy_tender: ""
+weekly_the_systemic_navigator: ""
+# Meta-Synthesis Fields
+weekly_week_oracle_synthesis: ""
+weekly_week_phoenix_synthesis: ""
+weekly_week_sovereign_synthesis: ""
+weekly_key_learnings: ""
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 

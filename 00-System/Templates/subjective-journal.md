@@ -1,18 +1,13 @@
 ---
 title: Subjective Journal
-date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
-primary_emotion: 
-secondary_emotion: 
-days: [[<% tp.date.now("YYYY-MM-DD") %>]]
-total_context: ""
-id: 
-hierarchy_level: "atomic"
-parent_entities: [[<% tp.date.now("YYYY-MM-DD") %>]] # Days
-child_entities: []
-sibling_entities: [] # Other atomic entries
-related_time_periods: [[<% tp.date.now("YYYY-MM-DD") %>]]
-strategic_alignment: []
-type: subjective-journal
+sj_date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
+sj_primary_emotion: 
+sj_secondary_emotion: 
+sj_days: [[<% tp.date.now("YYYY-MM-DD") %>]]
+sj_total_context: ""
+sj_id: 
+entity_hierarchy_level: "atomic"
+entity_type: "subjective-journal"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 
