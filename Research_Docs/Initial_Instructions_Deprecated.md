@@ -1139,92 +1139,6 @@ action QuickAdd: Move Task to Next Sprint
 
 ---
 
-## IV. AUTOMATION & WORKFLOW
-
-### A. Daily Workflow
-
-1. **Morning (Ignition)**
-    - Open Workbench dashboard
-    - Review today's note (auto-created by Daily Notes)
-    - Check current sprint tasks
-    - Review systemic issues
-2. **Throughout Day (Capture)**
-    - Quick-capture logs via mobile/desktop
-    - Templater hotkeys for log templates
-    - Activity tracking via plugin
-3. **Evening (Synthesis)**
-    - Run synthesis generator script
-    - Review 15 perspectives
-    - Add night wind-down reflection
-    - Link to weekly note
-
-### B. Weekly Workflow
-
-1. **Sunday Evening (Review)**
-    - Open Observatory dashboard
-    - Create new week note (Periodic Notes)
-    - Run weekly aggregation Dataview
-    - Synthesize: Wins, Challenges, Lessons
-    - Plan next week's sprint
-2. **Monday Morning (Planning)**
-    - Review quarterly goals alignment
-    - Assign tasks to Current Sprint
-    - Set weekly focus
-
-### C. Monthly/Quarterly Workflow
-
-Similar pattern with increasing strategic altitude.
-
-### D. n8n Integration (Optional)
-
-Since you currently use n8n for automation:
-
-**n8n Workflow for Obsidian:**
-
-1. Trigger: Daily cron (8 AM)
-2. Fetch: Query Obsidian logs via Local REST API plugin
-3. Process: Send to LLM for synthesis
-4. Write: Post synthesis back to daily note
-5. Notify: Send Telegram summary
-
----
-
-## V. MIGRATION CHECKLIST
-
-### Phase 1: Foundation (Week 1)
-
-- [ ]  Set up folder structure
-- [ ]  Install required plugins
-- [ ]  Create templates for all databases
-- [ ]  Build Workbench dashboard
-- [ ]  Build Observatory dashboard
-
-### Phase 2: Data Migration (Week 2-3)
-
-- [ ]  Export Notion data to CSV/JSON
-- [ ]  Script conversion to Markdown + frontmatter
-- [ ]  Migrate logs (Subjective, Relational, Systemic)
-- [ ]  Migrate review cycles (Days, Weeks, etc.)
-- [ ]  Migrate strategic data (Goals, Projects, Tasks)
-
-### Phase 3: Automation (Week 4)
-
-- [ ]  Set up Templater scripts for synthesis
-- [ ]  Configure Dataview queries
-- [ ]  Test rollup logic
-- [ ]  Set up n8n workflows (if applicable)
-- [ ]  Create button actions for sprint management
-
-### Phase 4: Testing & Refinement (Week 5)
-
-- [ ]  Run full daily/weekly cycle
-- [ ]  Verify data integrity
-- [ ]  Optimize query performance
-- [ ]  Refine dashboard layouts
-- [ ]  Document personal workflows
-
----
-
 ## VI. KEY DIFFERENCES: NOTION vs OBSIDIAN
 
 | Aspect | Notion | Obsidian |
@@ -1237,23 +1151,6 @@ Since you currently use n8n for automation:
 | **Syncing** | Cloud-native | Local-first (sync via plugin) |
 | **Mobile** | Native app | Community app (limited) |
 | **AI Integration** | Built-in | API calls via scripts |
-
-**Advantages of Obsidian:**
-
-- Full data ownership (plain text)
-- Faster performance (local)
-- Infinite extensibility (plugins/scripts)
-- Graph view for emergent insights
-
-**Challenges:**
-
-- More technical setup required
-- Manual query optimization
-- Steeper learning curve for Dataview
-
----
-
-This blueprint provides the complete technical specification to rebuild your LifeOS in Obsidian while preserving its sophisticated systemic intelligence. The key is maintaining the dual-hierarchy convergence: logs → synthesis → reviews flowing upward, while strategy → goals → tasks flows downward, meeting at the junction point that reveals "what matters most right now."
 
 ---
 # OPERATIONAL CONTEXT

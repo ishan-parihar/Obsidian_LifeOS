@@ -2,8 +2,17 @@
 title: <% tp.date.now("YYYY-MM") %>
 month_number: <% tp.date.now("MM") %>
 year: <% tp.date.now("YYYY") %>
-month_start: <% tp.date.now("YYYY-MM-DD", 1) %>
-month_end: <% tp.date.now("YYYY-MM-DD", 0, 1) %>
+time_period_start: <% tp.date.now("YYYY-MM-DD", 1) %>
+time_period_end: <% tp.date.now("YYYY-MM-DD", 0, 1) %>
+containing_period: [[<% tp.date.now("YYYY-[Q]Q") %>]]
+contained_periods: [] # Auto-populated with weeks
+parallel_periods: [] # Other months in same year
+hierarchy_level: "review"
+parent_entities: [] # Quarters
+child_entities: [] # Weeks
+sibling_entities: [] # Other months in year
+related_time_periods: []
+strategic_alignment: []
 quarters: [[<% tp.date.now("YYYY-[Q]Q") %>]]
 years: [[<% tp.date.now("YYYY") %>]]
 weeks: []
@@ -90,7 +99,7 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 TABLE WITHOUT ID
   file.link as "Week",
   choice(length(day_synthesis) > 0, "✅", "⏳") as "Synthesized"
-FROM "Reviews/Weeks"
+FROM "07-Weeks"
 WHERE contains(string(this.file.name), string(months))
 SORT file.name DESC
 ```

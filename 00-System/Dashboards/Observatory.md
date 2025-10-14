@@ -93,6 +93,33 @@ GROUP BY split(L.text, "## The ")[1]
 - 
 - 
 
+## 🌐 Hierarchical Navigation
+
+### Cross-Level Navigation: Years → Days
+```dataview
+TABLE WITHOUT ID
+  file.link as "Day",
+  day_synthesis as "Synthesis",
+  energy_level as "Energy"
+FROM "06-Days"
+WHERE date >= date("2025-01-01") AND date <= date("2025-12-31")
+SORT date DESC
+LIMIT 10
+```
+
+### Strategic Drill-down: Vision → All Execution
+```dataview
+TABLE WITHOUT ID
+  file.link as "Item",
+  type as "Type",
+  status as "Status",
+  goal_progress as "Progress"
+FROM "13-Annual-Goals" OR "14-Quarterly-Goals" OR "15-Projects" OR "16-Tasks"
+WHERE contains(strategic_hierarchy.vision, "Vision")
+SORT type ASC, goal_progress DESC
+LIMIT 15
+```
+
 ---
 
 *Last updated: Real-time*

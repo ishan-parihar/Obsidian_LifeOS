@@ -5,6 +5,25 @@ key_result_2:
 key_result_3: 
 key_learning: 
 status: Planning
+hierarchy_level: "strategic"
+parent_entities: [] # Annual Goals
+child_entities: [] # Projects
+sibling_entities: [] # Other Quarterly Goals
+related_time_periods: []
+strategic_alignment: []
+strategic_hierarchy: {
+  vision: [],
+  annual_goals: [],
+  quarterly_goals: [], 
+  projects: [],
+  tasks: []
+}
+execution_status: {
+  progress: 0,
+  health: "",
+  next_milestone: "",
+  blockers: []
+}
 annual_goals: []
 quarters: []
 years: []
@@ -50,7 +69,7 @@ TABLE WITHOUT ID
   file.link as "Project",
   status as "Status",
   project_progress as "Progress"
-FROM "Projects"
+FROM "15-Projects"
 WHERE contains(string(quarterly_goals), string("<% tp.file.title %>"))
 SORT project_progress DESC
 ```
@@ -75,7 +94,7 @@ TABLE WITHOUT ID
   impact as "Impact",
   likelihood as "Likelihood",
   status as "Status"
-FROM "Strategy/FailureScenarios"
+FROM "24-Failure-Scenarios"
 WHERE contains(string(quarterly_goals), string("<% tp.file.title %>"))
 SORT impact DESC
 ```

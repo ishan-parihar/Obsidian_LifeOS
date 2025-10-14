@@ -6,6 +6,25 @@ status: On-Hold
 project_start: 
 deadline: 
 review_date: 
+hierarchy_level: "strategic"
+parent_entities: [] # Quarterly Goals
+child_entities: [] # Tasks
+sibling_entities: [] # Other Projects
+related_time_periods: []
+strategic_alignment: []
+strategic_hierarchy: {
+  vision: [],
+  annual_goals: [],
+  quarterly_goals: [], 
+  projects: [],
+  tasks: []
+}
+execution_status: {
+  progress: 0,
+  health: "",
+  next_milestone: "",
+  blockers: []
+}
 quarterly_goals: []
 annual_goals: []
 quarters: []

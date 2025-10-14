@@ -1,8 +1,17 @@
 ---
 title: <% tp.date.now("YYYY") %> Year Review
 year: <% tp.date.now("YYYY") %>
-year_start: <% tp.date.now("YYYY-01-01") %>
-year_end: <% tp.date.now("YYYY-12-31") %>
+time_period_start: <% tp.date.now("YYYY-01-01") %>
+time_period_end: <% tp.date.now("YYYY-12-31") %>
+containing_period: ""
+contained_periods: [] # Auto-populated with quarters
+parallel_periods: [] # Other years
+hierarchy_level: "review"
+parent_entities: [] # None (top level)
+child_entities: [] # Quarters
+sibling_entities: [] # Other years
+related_time_periods: []
+strategic_alignment: []
 quarters: []
 months: []
 weeks: []
@@ -89,7 +98,7 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 TABLE WITHOUT ID
   file.link as "Quarter",
   choice(length(quarter_synthesis) > 0, "✅", "⏳") as "Synthesized"
-FROM "Reviews/Quarters"
+FROM "09-Quarters"
 WHERE contains(string(this.file.name), string(years))
 SORT file.name DESC
 ```
@@ -100,7 +109,7 @@ TABLE WITHOUT ID
   file.link as "Annual Goal",
   status as "Status",
   goal_progress as "Progress"
-FROM "Strategy/AnnualGoals"
+FROM "13-Annual-Goals"
 WHERE contains(string(this.file.name), string(years))
 SORT goal_progress DESC
 ```

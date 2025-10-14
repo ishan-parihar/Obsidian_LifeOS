@@ -5,6 +5,25 @@ the_boundary:
 shadow_expression: 
 litmus_test: 
 status: Active
+hierarchy_level: "strategic"
+parent_entities: [] # Vision
+child_entities: [] # Annual Goals
+sibling_entities: [] # Other Values
+related_time_periods: []
+strategic_alignment: []
+strategic_hierarchy: {
+  vision: [],
+  annual_goals: [],
+  quarterly_goals: [], 
+  projects: [],
+  tasks: []
+}
+execution_status: {
+  progress: 0,
+  health: "",
+  next_milestone: "",
+  blockers: []
+}
 life_aspects: []
 vision: []
 annual_goals: []

@@ -6,6 +6,31 @@ status: Todo
 due_date: 
 estimated_hours: 
 actual_hours: 
+hierarchy_level: "strategic"
+parent_entities: [] # Projects
+child_entities: [] # Subtasks
+sibling_entities: [] # Other Tasks in Project
+related_time_periods: []
+strategic_alignment: []
+strategic_hierarchy: {
+  vision: [],
+  annual_goals: [],
+  quarterly_goals: [],
+  projects: [],
+  tasks: [] # Dependencies
+}
+execution_status: {
+  progress: 0,
+  health: "",
+  next_milestone: "",
+  blockers: []
+}
+context: {
+  energy_required: "",
+  time_of_day: "",
+  location: "",
+  tools_needed: []
+}
 projects: []
 quarterly_goals: []
 annual_goals: []
@@ -13,7 +38,6 @@ quarters: []
 years: []
 weeks: []
 days: []
-context: 
 external_dependencies: []
 completion_criteria: []
 task_type: 

@@ -12,5 +12,8 @@
   "customjs",
   "obsidian-excalidraw-plugin",
   "folder-notes",
-  "obsidian-tracker"
+  "obsidian-tracker",
+  "metadata-menu",
+  "datacore",
+  "obsidian-linter"
 ]

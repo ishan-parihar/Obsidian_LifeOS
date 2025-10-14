@@ -16,18 +16,10 @@ TABLE WITHOUT ID
   file.link as "Note",
   status as "Status",
   file.mtime as "Modified"
-FROM "Notes"
+FROM "21-Notes"
 WHERE status = "Live" OR status = "Priority-Highlight"
 SORT file.mtime DESC
 LIMIT 10
-```
-
-### Knowledge Categories
-
-```dataview
-LIST
-FROM "MOCs"
-SORT file.name ASC
 ```
 
 ## 📄 Document Repository
@@ -39,7 +31,7 @@ TABLE WITHOUT ID
   file.link as "Document",
   category as "Category",
   status as "Status"
-FROM "Resources/Documents"
+FROM "22-Documents"
 SORT file.mtime DESC
 LIMIT 10
 ```
@@ -65,7 +57,7 @@ TABLE WITHOUT ID
   type as "Type",
   current_balance as "Balance",
   status as "Status"
-FROM "Resources/Financial-Accounts"
+FROM "19-Financial-Accounts"
 WHERE status = "Active"
 SORT current_balance DESC
 ```
@@ -78,7 +70,7 @@ TABLE WITHOUT ID
   amount as "Amount",
   category as "Category",
   date as "Date"
-FROM "Financial Log"
+FROM "20-Financial-Log"
 SORT date DESC
 LIMIT 10
 ```
@@ -92,7 +84,7 @@ TABLE WITHOUT ID
   networking_profile as "Profile",
   count(rows) as "Count",
   choice(count(rows) > 2, "🔥", "📝") as "Activity"
-FROM "People"
+FROM "17-People"
 GROUP BY networking_profile
 SORT count(rows) DESC
 ```
@@ -112,14 +104,6 @@ LIMIT 10
 
 ## 🏗️ Project Resources
 
-### Competency Arsenal
-
-```dataview
-LIST
-FROM "Resources/Competency-Arsenal"
-SORT file.name ASC
-```
-
 ### Systemic Patterns
 
 ```dataview
@@ -127,7 +111,7 @@ TABLE WITHOUT ID
   system_domain as "Domain",
   count(rows) as "Issues",
   choice(count(rows) > 5, "⚠️", "✅") as "Health"
-FROM "Logs/Systemic"
+FROM "03-Systemic-Journal"
 GROUP BY system_domain
 SORT count(rows) DESC
 ```
@@ -155,6 +139,20 @@ SORT count(rows) DESC
 - [ ] Add financial account
 - [ ] Create person profile
 - [ ] Backup vault
+
+## 🌐 Hierarchical Navigation
+
+### Cross-Hierarchy: Atomic Data by Time Period
+```dataview
+TABLE WITHOUT ID
+  file.link as "Entry",
+  type as "Type",
+  primary_emotion as "Emotion"
+FROM "01-Subjective-Journal" OR "02-Relational-Journal" OR "03-Systemic-Journal"
+WHERE date >= date(today) - dur(7 days)
+SORT date DESC, type ASC
+LIMIT 15
+```
 
 ---
 

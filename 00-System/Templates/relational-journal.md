@@ -3,6 +3,12 @@ date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
 people: []
 emotional_tone: 
 power_balance: 
+hierarchy_level: "atomic"
+parent_entities: [] # Days
+child_entities: []
+sibling_entities: [] # Other atomic entries
+related_time_periods: [[<% tp.date.now("YYYY-MM-DD") %>]]
+strategic_alignment: []
 days: [[<% tp.date.now("YYYY-MM-DD") %>]]
 type: relational-journal
 id: 

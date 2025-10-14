@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4921f830c47a33db",
+        "id": "25e4dda7e83bf1c6",
         "type": "tabs",
         "children": [
           {
-            "id": "0e5b797ff0d85e26",
+            "id": "d277afb169cf7037",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Research_Docs/Initial_Instructions_Deprecated.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Initial_Instructions_Deprecated"
             }
           }
         ]
@@ -205,13 +209,14 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "0e17ec9e2eacf489",
+  "active": "d277afb169cf7037",
   "lastOpenFiles": [
+    "Research_Docs/Research-Results.md",
+    "Research_Docs/Initial_Instructions_Deprecated.md",
+    "Research_Docs/Datacore_Documentation.md",
+    "Research_Docs/LifeOS-Data-Flow-Upgrade-Plan.md",
     "00-System/Templates/lifeos-dashboard.md",
     "00-System/Dashboards/Observatory.md",
-    "Research_Docs/Initial_Instructions.md",
-    "Research_Docs/Research-Results.md",
-    "Research_Docs/LifeOS-Data-Flow-Upgrade-Plan.md",
     "Research_Docs/LifeOS-Data-Flow-Implementation-Guide.md",
     "Research_Docs/System-Optimization-Report.md",
     "Research_Docs/LifeOS-Obsidian-Development-Plan.md",
@@ -232,7 +237,6 @@
     "01-Subjective-Journal/2025-10-14-test-entry.md",
     "00-System/Dashboards/Forge.md",
     "00-System/Dashboards/Engine-Room.md",
-    "01-Subjective-Journal/README.md",
     "24-Failure-Scenarios",
     "23-Stories",
     "22-Documents",

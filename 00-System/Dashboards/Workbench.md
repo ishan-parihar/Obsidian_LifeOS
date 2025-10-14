@@ -57,6 +57,33 @@ FROM "13-Annual-Goals"
 WHERE status = "Active"
 ```
 
+## 🌐 Hierarchical Navigation
+
+### From Annual Goals → Tasks
+```dataview
+TABLE WITHOUT ID
+  file.link as "Task",
+  status as "Status",
+  priority as "Priority",
+  due_date as "Due"
+FROM "16-Tasks"
+WHERE contains(strategic_hierarchy.annual_goals, "Active")
+SORT priority DESC, due_date ASC
+LIMIT 10
+```
+
+### Time Navigation: Current Week → Days
+```dataview
+TABLE WITHOUT ID
+  file.link as "Day",
+  day_synthesis as "Synthesis",
+  energy_level as "Energy"
+FROM "06-Days"
+WHERE date >= date(week) AND date <= date(week) + dur(7 days)
+SORT date DESC
+LIMIT 7
+```
+
 ## 🔗 Quick Actions
 
 - [ ] Create new Subjective log

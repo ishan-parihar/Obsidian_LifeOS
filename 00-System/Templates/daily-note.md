@@ -2,6 +2,17 @@
 date: <% tp.date.now("YYYY-MM-DD") %>
 day_number: <% tp.date.now("DDD") %>
 year: <% tp.date.now("YYYY") %>
+time_period_start: <% tp.date.now("YYYY-MM-DD") %>
+time_period_end: <% tp.date.now("YYYY-MM-DD") %>
+containing_period: [[<% tp.date.now("YYYY-[W]WW") %>]]
+contained_periods: [] # Auto-populated with atomic entries
+parallel_periods: [] # Other days in same week
+hierarchy_level: "review"
+parent_entities: [] # Weeks
+child_entities: [] # Atomic entries
+sibling_entities: [] # Other days in week
+related_time_periods: []
+strategic_alignment: []
 weeks: [[<% tp.date.now("YYYY-[W]WW") %>]]
 months: [[<% tp.date.now("YYYY-MM") %>]]
 quarters: [[<% tp.date.now("YYYY-[Q]Q") %>]]

@@ -15,7 +15,7 @@ TABLE WITHOUT ID
   priority as "Priority",
   project_progress as "Progress",
   deadline as "Deadline"
-FROM "Projects"
+FROM "15-Projects"
 WHERE status = "Active"
 SORT priority DESC, deadline ASC
 ```
@@ -73,7 +73,7 @@ TABLE WITHOUT ID
   file.link as "Project",
   project_progress as "Progress",
   status as "Status"
-FROM "Projects"
+FROM "15-Projects"
 WHERE status = "Active"
 SORT project_progress DESC
 ```
@@ -86,7 +86,7 @@ SORT project_progress DESC
 TABLE WITHOUT ID
   quarterly_goals as "Q-Goal",
   count(rows) as "Active Projects"
-FROM "Projects"
+FROM "15-Projects"
 WHERE status = "Active"
 GROUP BY quarterly_goals
 ```
@@ -108,6 +108,21 @@ GROUP BY annual_goals
 - [ ] Create new project
 - [ ] Sprint retrospective
 - [ ] Replan next sprint
+
+## 🌐 Hierarchical Navigation
+
+### From Projects → Tasks
+```dataview
+TABLE WITHOUT ID
+  file.link as "Task",
+  status as "Status",
+  priority as "Priority",
+  due_date as "Due"
+FROM "16-Tasks"
+WHERE contains(projects, "Active")
+SORT priority DESC, due_date ASC
+LIMIT 10
+```
 
 ---
 

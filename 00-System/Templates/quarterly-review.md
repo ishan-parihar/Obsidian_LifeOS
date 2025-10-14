@@ -2,8 +2,17 @@
 title: <% tp.date.now("YYYY-[Q]Q") %> Review
 quarter_number: <% tp.date.now("[Q]Q") %>
 year: <% tp.date.now("YYYY") %>
-quarter_start: <% tp.date.now("YYYY-MM-DD", 0, -tp.date.now().quarter + 1) %>
-quarter_end: <% tp.date.now("YYYY-MM-DD", 0, -tp.date.now().quarter + 1 + 90) %>
+time_period_start: <% tp.date.now("YYYY-MM-DD", 0, -tp.date.now().quarter + 1) %>
+time_period_end: <% tp.date.now("YYYY-MM-DD", 0, -tp.date.now().quarter + 1 + 90) %>
+containing_period: [[<% tp.date.now("YYYY") %>]]
+contained_periods: [] # Auto-populated with months
+parallel_periods: [] # Other quarters in same year
+hierarchy_level: "review"
+parent_entities: [] # Years
+child_entities: [] # Months
+sibling_entities: [] # Other quarters in year
+related_time_periods: []
+strategic_alignment: []
 years: [[<% tp.date.now("YYYY") %>]]
 months: []
 weeks: []
@@ -90,7 +99,7 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 TABLE WITHOUT ID
   file.link as "Month",
   choice(length(month_synthesis) > 0, "✅", "⏳") as "Synthesized"
-FROM "Reviews/Months"
+FROM "08-Months"
 WHERE contains(string(this.file.name), string(quarters))
 SORT file.name DESC
 ```
@@ -101,7 +110,7 @@ TABLE WITHOUT ID
   file.link as "Quarterly Goal",
   status as "Status",
   goal_progress as "Progress"
-FROM "Strategy/QuarterlyGoals"
+FROM "14-Quarterly-Goals"
 WHERE contains(string(this.file.name), string(quarters))
 SORT goal_progress DESC
 ```

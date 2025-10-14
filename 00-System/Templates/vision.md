@@ -6,6 +6,25 @@ priority: ⭐⭐⭐
 status: Planning
 review_date: 
 last_review_date: 
+hierarchy_level: "strategic"
+parent_entities: [] # None (top level)
+child_entities: [] # Annual Goals
+sibling_entities: [] # Other Vision statements
+related_time_periods: []
+strategic_alignment: []
+strategic_hierarchy: {
+  vision: [],
+  annual_goals: [],
+  quarterly_goals: [], 
+  projects: [],
+  tasks: []
+}
+execution_status: {
+  progress: 0,
+  health: "",
+  next_milestone: "",
+  blockers: []
+}
 life_aspects: []
 values: []
 annual_goals: []
@@ -44,7 +63,7 @@ TABLE WITHOUT ID
   file.link as "Annual Goal",
   status as "Status",
   goal_progress as "Progress"
-FROM "Strategy/AnnualGoals"
+FROM "13-Annual-Goals"
 WHERE contains(vision, "<% tp.file.title %>")
 SORT goal_progress DESC
 ```
@@ -56,7 +75,7 @@ TABLE WITHOUT ID
   count(rows) as "Q-Goals",
   sum(choice(rows.status = "Done", 1, 0)) as "Completed",
   round(sum(choice(rows.status = "Done", 1, 0)) / count(rows) * 100) as "%"
-FROM "Strategy/QuarterlyGoals"
+FROM "14-Quarterly-Goals"
 WHERE contains(vision, "<% tp.file.title %>")
 ```
 

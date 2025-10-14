@@ -2,8 +2,17 @@
 title: <% tp.date.now("YYYY-[W]WW") %>
 week_number: <% tp.date.now("WW") %>
 year: <% tp.date.now("YYYY") %>
-week_start: <% tp.date.now("YYYY-MM-DD", 0, -tp.date.now().weekday) %>
-week_end: <% tp.date.now("YYYY-MM-DD", 6, -tp.date.now().weekday) %>
+time_period_start: <% tp.date.now("YYYY-MM-DD", 0, -tp.date.now().weekday) %>
+time_period_end: <% tp.date.now("YYYY-MM-DD", 6, -tp.date.now().weekday) %>
+containing_period: [[<% tp.date.now("YYYY-[Q]Q") %>]]
+contained_periods: [] # Auto-populated with days
+parallel_periods: [] # Other weeks in same quarter
+hierarchy_level: "review"
+parent_entities: []
+child_entities: []
+sibling_entities: []
+related_time_periods: []
+strategic_alignment: []
 months: [[<% tp.date.now("YYYY-MM") %>]]
 quarters: [[<% tp.date.now("YYYY-[Q]Q") %>]]
 years: [[<% tp.date.now("YYYY") %>]]
@@ -92,7 +101,7 @@ TABLE WITHOUT ID
   file.link as "Day",
   choice(length(day_synthesis) > 0, "✅", "⏳") as "Synthesized",
   choice(length(night_wind_down) > 0, "✅", "⏳") as "Reflected"
-FROM "Reviews/Days"
+FROM "06-Days"
 WHERE contains(string(this.file.name), string(weeks))
 SORT date DESC
 ```
