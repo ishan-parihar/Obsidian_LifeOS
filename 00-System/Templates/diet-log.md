@@ -1,17 +1,17 @@
 ---
+title: Diet Log
 date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
-title: 
 meal_type: 
+days: [[<% tp.date.now("YYYY-MM-DD") %>]]
+total_context: ""
+id: 
 hierarchy_level: "atomic"
-parent_entities: [] # Days
+parent_entities: [[<% tp.date.now("YYYY-MM-DD") %>]] # Days
 child_entities: []
 sibling_entities: [] # Other atomic entries
 related_time_periods: [[<% tp.date.now("YYYY-MM-DD") %>]]
 strategic_alignment: []
-days: [[<% tp.date.now("YYYY-MM-DD") %>]]
 type: diet-log
-id: 
-total_context: 
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 

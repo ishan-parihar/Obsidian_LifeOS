@@ -1,5 +1,7 @@
 ---
+title: "<% tp.date.now("YY-MM-DD") %>-D<% tp.date.now("DDD") %>"
 date: <% tp.date.now("YYYY-MM-DD") %>
+day_name: <% tp.date.now("dddd") %>
 day_number: <% tp.date.now("DDD") %>
 year: <% tp.date.now("YYYY") %>
 time_period_start: <% tp.date.now("YYYY-MM-DD") %>
@@ -8,7 +10,7 @@ containing_period: [[<% tp.date.now("YYYY-[W]WW") %>]]
 contained_periods: [] # Auto-populated with atomic entries
 parallel_periods: [] # Other days in same week
 hierarchy_level: "review"
-parent_entities: [] # Weeks
+parent_entities: [[<% tp.date.now("YYYY-[W]WW") %>]] # Weeks
 child_entities: [] # Atomic entries
 sibling_entities: [] # Other days in week
 related_time_periods: []
@@ -18,6 +20,37 @@ months: [[<% tp.date.now("YYYY-MM") %>]]
 quarters: [[<% tp.date.now("YYYY-[Q]Q") %>]]
 years: [[<% tp.date.now("YYYY") %>]]
 type: daily-review
+
+# Intelligence Synthesis Units
+day_synthesis: ""
+the_witness: ""
+the_logos_inquisitor: ""
+the_alpha_scanner: ""
+the_structural_integrator: ""
+the_ascension_architect: ""
+the_mythopoetic_weaver: ""
+the_somatic_arbiter: ""
+the_state_hacker: ""
+the_capital_strategist: ""
+the_hearth_tender: ""
+the_network_weaver: ""
+the_stillness_warden: ""
+the_aesthetic_calibrator: ""
+the_legacy_tender: ""
+the_systemic_navigator: ""
+
+# Meta-Synthesis Fields
+day_oracle_synthesis: ""
+day_phoenix_synthesis: ""
+day_sovereign_synthesis: ""
+
+# Evening Reflection
+night_wind_down: ""
+
+# Computed Fields
+status: ""
+day_report: ""
+
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 

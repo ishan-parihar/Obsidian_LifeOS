@@ -1,11 +1,28 @@
 ---
 title: 
-task_summary: 
-priority: ⭐⭐
+description: ""
 status: Todo
-due_date: 
-estimated_hours: 
-actual_hours: 
+priority: ⭐⭐⭐
+action_date: <% tp.date.now("YYYY-MM-DD") %>T09:00
+assignee: ""
+projects: []
+weeks: []
+systemic_journal: []
+last_edited_time: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+project_status: ""
+sprint_status: ""
+monitor: ""
+tasks_report: ""
+
+# Button Properties (for workflow)
+done_button: false
+current_sprint_button: false
+backlog_button: false
+next_sprint_1_button: false
+next_sprint_2_button: false
+next_sprint_3_button: false
+next_sprint_4_button: false
+
 hierarchy_level: "strategic"
 parent_entities: [] # Projects
 child_entities: [] # Subtasks
@@ -31,12 +48,10 @@ context: {
   location: "",
   tools_needed: []
 }
-projects: []
 quarterly_goals: []
 annual_goals: []
 quarters: []
 years: []
-weeks: []
 days: []
 external_dependencies: []
 completion_criteria: []

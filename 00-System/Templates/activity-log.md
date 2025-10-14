@@ -1,19 +1,20 @@
 ---
+title: Activity Log
 date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
-title:
-duration:
 habit_quality: 0.5
+days: [[<% tp.date.now("YYYY-MM-DD") %>]]
+activity_type: ""
+activity_notes: ""
+duration: ""
+habit: ""
+id: 
 hierarchy_level: "atomic"
-parent_entities: [] # Days
+parent_entities: [[<% tp.date.now("YYYY-MM-DD") %>]] # Days
 child_entities: []
 sibling_entities: [] # Other atomic entries
 related_time_periods: [[<% tp.date.now("YYYY-MM-DD") %>]]
 strategic_alignment: []
-days: [[<% tp.date.now("YYYY-MM-DD") %>]]
 type: activity-log
-activity_type:
-activity_notes:
-habit:
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 . 

@@ -1,32 +1,49 @@
 ---
-custom_name:
-relationship_status:
-city:
-developmental_altitude:
-primary_center_intelligence:
-explanatory_style:
-stability_profile:
-primary_conflict_style:
-dominant_power_strategy:
-temporal_focus:
-aspirational_drive:
-core_shadow:
+title: 
+first_name: ""
+custom_name: ""
+city: ""
+relationship_status: ""
+
+# Developmental Psychology Tracking
+developmental_altitude: ""
+primary_center_intelligence: ""
+explanatory_style: ""
+stability_profile: ""
+primary_conflict_style: ""
+dominant_power_strategy: ""
+
+# Motivational & Shadow Psychology
+aspirational_drive: ""
+core_shadow: ""
+temporal_focus: ""
+
+# Influence & Networking
 influence_toolkit: []
-networking_profile:
-desired_trajectory:
-value_exchange_balance:
+networking_profile: ""
+desired_trajectory: ""
+value_exchange_balance: ""
+
+# Strategic Context Fields
 in_days_connection_frequency: 30
-last_connected_date:
-reconnect_by:
-origin_context:
-key_personal_intel:
-professional_domain_influence:
-strategic_context:
-engagement_blueprint:
-summary:
+reconnect_by: ""
+last_connected_date: ""
+origin_context: ""
+key_personal_intel: ""
+strategic_context: ""
+professional_domain_influence: ""
+engagement_blueprint: ""
+summary: ""
+
+# Relations
 community: []
 projects: []
 stories: []
+
+# Computed Fields
+current_status: ""
+active_range: ""
+
 type: person
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---

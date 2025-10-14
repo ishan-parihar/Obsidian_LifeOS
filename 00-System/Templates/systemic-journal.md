@@ -1,21 +1,23 @@
 ---
-date: <% tp.date.now("YYYY-MM-DD") %>
-datetime: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
+title: Systemic Journal
+date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
 status: Triage
 impact: 
 system_domain: 
+tasks: []
+failure_scenarios: []
+projects: []
+ai_generated_report: ""
+systemic_report: ""
+created_time: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
+id: 
 hierarchy_level: "atomic"
-parent_entities: [] # Days
+parent_entities: [[<% tp.date.now("YYYY-MM-DD") %>]] # Days
 child_entities: []
 sibling_entities: [] # Other atomic entries
 related_time_periods: [[<% tp.date.now("YYYY-MM-DD") %>]]
 strategic_alignment: []
-tasks: []
-failure_scenarios: []
-projects: []
-ai_generated_report: 
 type: systemic-journal
-id: 
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 
