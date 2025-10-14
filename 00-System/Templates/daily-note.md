@@ -7,12 +7,12 @@ year: <% tp.date.now("YYYY") %>
 time_period_start: <% tp.date.now("YYYY-MM-DD") %>
 time_period_end: <% tp.date.now("YYYY-MM-DD") %>
 containing_period: [[<% tp.date.now("YYYY-[W]WW") %>]]
-contained_periods: [] # Auto-populated with atomic entries
-parallel_periods: [] # Other days in same week
+contained_periods: []
+parallel_periods: []
 hierarchy_level: "review"
-parent_entities: [[<% tp.date.now("YYYY-[W]WW") %>]] # Weeks
-child_entities: [] # Atomic entries
-sibling_entities: [] # Other days in week
+parent_entities: [[<% tp.date.now("YYYY-[W]WW") %>]]
+child_entities: []
+sibling_entities: []
 related_time_periods: []
 strategic_alignment: []
 weeks: [[<% tp.date.now("YYYY-[W]WW") %>]]
@@ -20,8 +20,6 @@ months: [[<% tp.date.now("YYYY-MM") %>]]
 quarters: [[<% tp.date.now("YYYY-[Q]Q") %>]]
 years: [[<% tp.date.now("YYYY") %>]]
 type: daily-review
-
-# Intelligence Synthesis Units
 day_synthesis: ""
 the_witness: ""
 the_logos_inquisitor: ""
@@ -38,19 +36,12 @@ the_stillness_warden: ""
 the_aesthetic_calibrator: ""
 the_legacy_tender: ""
 the_systemic_navigator: ""
-
-# Meta-Synthesis Fields
 day_oracle_synthesis: ""
 day_phoenix_synthesis: ""
 day_sovereign_synthesis: ""
-
-# Evening Reflection
 night_wind_down: ""
-
-# Computed Fields
 status: ""
 day_report: ""
-
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 
@@ -131,57 +122,92 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ## 📊 Today's Data
 
 ### Subjective Entries
-```dataview
-TABLE WITHOUT ID
-  file.link as "Entry",
-  primary_emotion as "Emotion",
-  secondary_emotion as "Secondary"
-FROM "01-Subjective-Journal"
-WHERE contains(string(days), string(this.file.name))
-SORT file.mtime DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Entry", value: row => row.$link },
+  { id: "Emotion", value: row => row.value("primary_emotion") },
+  { id: "Secondary", value: row => row.value("secondary_emotion") }
+];
+
+return function View() {
+  const entries = dc.useQuery(`@page and "01-Subjective-Journal" and days = "<% tp.file.title %>"`);
+  const sortedEntries = dc.useArray(entries, array => 
+    array.sort(row => row.$mtime).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedEntries} />;
+}
 ```
 
 ### Relational Entries
-```dataview
-TABLE WITHOUT ID
-  file.link as "Entry",
-  people as "People",
-  emotional_tone as "Tone"
-FROM "02-Relational-Journal"
-WHERE contains(string(days), string(this.file.name))
-SORT file.mtime DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Entry", value: row => row.$link },
+  { id: "People", value: row => row.value("people")?.join(", ") ?? "" },
+  { id: "Tone", value: row => row.value("emotional_tone") }
+];
+
+return function View() {
+  const entries = dc.useQuery(`@page and "02-Relational-Journal" and days = "<% tp.file.title %>"`);
+  const sortedEntries = dc.useArray(entries, array => 
+    array.sort(row => row.$mtime).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedEntries} />;
+}
 ```
 
 ### Systemic Issues
-```dataview
-TABLE WITHOUT ID
-  file.link as "Issue",
-  impact as "Impact",
-  status as "Status"
-FROM "03-Systemic-Journal"
-WHERE date = this.date
-SORT impact DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Issue", value: row => row.$link },
+  { id: "Impact", value: row => row.value("impact") },
+  { id: "Status", value: row => row.value("status") }
+];
+
+return function View() {
+  const issues = dc.useQuery(`@page and "03-Systemic-Journal" and date = "<% tp.frontmatter.date %>"`);
+  const sortedIssues = dc.useArray(issues, array => 
+    array.sort(row => row.value("impact")).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedIssues} />;
+}
 ```
 
 ### Activities
-```dataview
-TABLE WITHOUT ID
-  file.link as "Activity",
-  duration as "Duration",
-  habit_quality as "Quality"
-FROM "04-Activity-Log"
-WHERE contains(string(days), string(this.file.name))
-SORT file.mtime DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Activity", value: row => row.$link },
+  { id: "Duration", value: row => row.value("duration") },
+  { id: "Quality", value: row => row.value("habit_quality") }
+];
+
+return function View() {
+  const activities = dc.useQuery(`@page and "04-Activity-Log" and days = "<% tp.file.title %>"`);
+  const sortedActivities = dc.useArray(activities, array => 
+    array.sort(row => row.$mtime).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedActivities} />;
+}
 ```
 
 ### Diet Log
-```dataview
-TABLE WITHOUT ID
-  file.link as "Meal",
-  meal_type as "Type"
-FROM "05-Diet-Log"
-WHERE contains(string(days), string(this.file.name))
-SORT file.mtime DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Meal", value: row => row.$link },
+  { id: "Type", value: row => row.value("meal_type") }
+];
+
+return function View() {
+  const meals = dc.useQuery(`@page and "05-Diet-Log" and days = "<% tp.file.title %>"`);
+  const sortedMeals = dc.useArray(meals, array => 
+    array.sort(row => row.$mtime).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedMeals} />;
+}
 ```
 
 ---

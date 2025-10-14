@@ -74,38 +74,59 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 
 ### Quarterly Breakdown
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Quarterly Goal",
-  status as "Status",
-  goal_progress as "Progress"
-FROM "14-Quarterly-Goals"
-WHERE contains(string(annual_goals), string("<% tp.file.title %>"))
-SORT file.name DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Quarterly Goal", value: row => row.$link },
+  { id: "Status", value: row => row.value("status") },
+  { id: "Progress", value: row => row.value("goal_progress") }
+];
+
+return function View() {
+  const goals = dc.useQuery(`@page and "14-Quarterly-Goals" and annual_goals = "<% tp.file.title %>"`);
+  const sortedGoals = dc.useArray(goals, array => 
+    array.sort(row => row.$name).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedGoals} />;
+}
 ```
 
 ### Supporting Projects
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Project",
-  status as "Status",
-  project_progress as "Progress"
-FROM "15-Projects"
-WHERE contains(string(annual_goals), string("<% tp.file.title %>"))
-SORT project_progress DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Project", value: row => row.$link },
+  { id: "Status", value: row => row.value("status") },
+  { id: "Progress", value: row => row.value("project_progress") }
+];
+
+return function View() {
+  const projects = dc.useQuery(`@page and "15-Projects" and annual_goals = "<% tp.file.title %>"`);
+  const sortedProjects = dc.useArray(projects, array => 
+    array.sort(row => row.value("project_progress")).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedProjects} />;
+}
 ```
 
 ### Task Rollup
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Task",
-  status as "Status",
-  priority as "Priority"
-FROM "16-Tasks"
-WHERE contains(string(annual_goals), string("<% tp.file.title %>"))
-SORT priority DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Task", value: row => row.$link },
+  { id: "Status", value: row => row.value("status") },
+  { id: "Priority", value: row => row.value("priority") }
+];
+
+return function View() {
+  const tasks = dc.useQuery(`@page and "16-Tasks" and annual_goals = "<% tp.file.title %>"`);
+  const sortedTasks = dc.useArray(tasks, array => 
+    array.sort(row => row.value("priority")).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedTasks} />;
+}
 ```
 
 ---

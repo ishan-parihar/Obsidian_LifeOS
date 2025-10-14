@@ -96,49 +96,102 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 
 ### Daily Summaries
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Day",
-  choice(length(day_synthesis) > 0, "✅", "⏳") as "Synthesized",
-  choice(length(night_wind_down) > 0, "✅", "⏳") as "Reflected"
-FROM "06-Days"
-WHERE contains(string(this.file.name), string(weeks))
-SORT date DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Day", value: row => row.$link },
+  { id: "Synthesized", value: row => row.value("day_synthesis") ? "✅" : "⏳" },
+  { id: "Reflected", value: row => row.value("night_wind_down") ? "✅" : "⏳" }
+];
+
+return function View() {
+  const days = dc.useQuery(`@page and "06-Days" and weeks = "<% tp.file.title %>"`);
+  const sortedDays = dc.useArray(days, array => 
+    array.sort(row => row.value("date")).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedDays} />;
+}
 ```
 
 ### Task Completion
 
-```dataview
-TABLE WITHOUT ID
-  count(rows) as "Total",
-  sum(choice(rows.completed, 1, 0)) as "Completed",
-  round(sum(choice(rows.completed, 1, 0)) / count(rows) * 100) as "%"
-FROM "16-Tasks"
-WHERE contains(string(this.file.name), string(weeks))
-FLATTEN file.tasks as t
+```datacorejsx
+return function View() {
+  const tasks = dc.useQuery(`@page and "16-Tasks" and weeks = "<% tp.file.title %>"`);
+  
+  const total = tasks.length;
+  const completed = tasks.filter(task => task.value("completed")).length;
+  const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
+  
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Total</th>
+          <th>Completed</th>
+          <th>%</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{total}</td>
+          <td>{completed}</td>
+          <td>{percentage}</td>
+        </tr>
+      </tbody>
+    </table>
+  );
+}
 ```
 
 ### Financial Summary
 
-```dataview
-TABLE WITHOUT ID
-  sum(rows.Total_Income) as "Income",
-  sum(rows.Total_Expenses) as "Expenses",
-  sum(rows.Net_Cashflow) as "Net"
-FROM "Financial Log"
-WHERE contains(string(this.file.name), string(weeks))
+```datacorejsx
+return function View() {
+  const financialLogs = dc.useQuery(`@page and "Financial Log" and weeks = "<% tp.file.title %>"`);
+  
+  const income = financialLogs.reduce((sum, log) => sum + (log.value("Total_Income") || 0), 0);
+  const expenses = financialLogs.reduce((sum, log) => sum + (log.value("Total_Expenses") || 0), 0);
+  const net = financialLogs.reduce((sum, log) => sum + (log.value("Net_Cashflow") || 0), 0);
+  
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Income</th>
+          <th>Expenses</th>
+          <th>Net</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{income}</td>
+          <td>{expenses}</td>
+          <td>{net}</td>
+        </tr>
+      </tbody>
+    </table>
+  );
+}
 ```
 
 ### Systemic Issues
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Issue",
-  impact as "Impact",
-  status as "Status"
-FROM "Logs/Systemic"
-WHERE date >= this.week_start AND date <= this.week_end
-SORT impact DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Issue", value: row => row.$link },
+  { id: "Impact", value: row => row.value("impact") },
+  { id: "Status", value: row => row.value("status") }
+];
+
+return function View() {
+  const issues = dc.useQuery(`@page and "Logs/Systemic" and date >= "<% tp.frontmatter.time_period_start %>" and date <= "<% tp.frontmatter.time_period_end %>"`);
+  const sortedIssues = dc.useArray(issues, array => 
+    array.sort(row => row.value("impact")).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedIssues} />;
+}
 ```
 
 ---

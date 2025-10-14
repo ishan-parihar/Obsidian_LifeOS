@@ -94,56 +94,116 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ## 📊 Yearly Metrics
 
 ### Quarterly Summaries
-```dataview
-TABLE WITHOUT ID
-  file.link as "Quarter",
-  choice(length(quarter_synthesis) > 0, "✅", "⏳") as "Synthesized"
-FROM "09-Quarters"
-WHERE contains(string(this.file.name), string(years))
-SORT file.name DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Quarter", value: row => row.$link },
+  { id: "Synthesized", value: row => row.value("quarter_synthesis") ? "✅" : "⏳" }
+];
+
+return function View() {
+  const quarters = dc.useQuery(`@page and "09-Quarters" and years = "<% tp.file.title %>"`);
+  const sortedQuarters = dc.useArray(quarters, array => 
+    array.sort(row => row.$name).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedQuarters} />;
+}
 ```
 
 ### Annual Goal Progress
-```dataview
-TABLE WITHOUT ID
-  file.link as "Annual Goal",
-  status as "Status",
-  goal_progress as "Progress"
-FROM "13-Annual-Goals"
-WHERE contains(string(this.file.name), string(years))
-SORT goal_progress DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Annual Goal", value: row => row.$link },
+  { id: "Status", value: row => row.value("status") },
+  { id: "Progress", value: row => row.value("goal_progress") }
+];
+
+return function View() {
+  const goals = dc.useQuery(`@page and "13-Annual-Goals" and years = "<% tp.file.title %>"`);
+  const sortedGoals = dc.useArray(goals, array => 
+    array.sort(row => row.value("goal_progress")).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedGoals} />;
+}
 ```
 
 ### Task Completion
-```dataview
-TABLE WITHOUT ID
-  count(rows) as "Total",
-  sum(choice(rows.completed, 1, 0)) as "Completed",
-  round(sum(choice(rows.completed, 1, 0)) / count(rows) * 100) as "%"
-FROM "16-Tasks"
-WHERE contains(string(this.file.name), string(years))
-FLATTEN file.tasks as t
+```datacorejsx
+return function View() {
+  const tasks = dc.useQuery(`@page and "16-Tasks" and years = "<% tp.file.title %>"`);
+  
+  const total = tasks.length;
+  const completed = tasks.filter(task => task.value("completed")).length;
+  const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
+  
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Total</th>
+          <th>Completed</th>
+          <th>%</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{total}</td>
+          <td>{completed}</td>
+          <td>{percentage}</td>
+        </tr>
+      </tbody>
+    </table>
+  );
+}
 ```
 
 ### Financial Summary
-```dataview
-TABLE WITHOUT ID
-  sum(rows.Total_Income) as "Income",
-  sum(rows.Total_Expenses) as "Expenses",
-  sum(rows.Net_Cashflow) as "Net"
-FROM "Financial Log"
-WHERE contains(string(this.file.name), string(years))
+```datacorejsx
+return function View() {
+  const financialLogs = dc.useQuery(`@page and "Financial Log" and years = "<% tp.file.title %>"`);
+  
+  const income = financialLogs.reduce((sum, log) => sum + (log.value("Total_Income") || 0), 0);
+  const expenses = financialLogs.reduce((sum, log) => sum + (log.value("Total_Expenses") || 0), 0);
+  const net = financialLogs.reduce((sum, log) => sum + (log.value("Net_Cashflow") || 0), 0);
+  
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Income</th>
+          <th>Expenses</th>
+          <th>Net</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{income}</td>
+          <td>{expenses}</td>
+          <td>{net}</td>
+        </tr>
+      </tbody>
+    </table>
+  );
+}
 ```
 
 ### Systemic Issues
-```dataview
-TABLE WITHOUT ID
-  file.link as "Issue",
-  impact as "Impact",
-  status as "Status"
-FROM "03-Systemic-Journal"
-WHERE date >= this.year_start AND date <= this.year_end
-SORT impact DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Issue", value: row => row.$link },
+  { id: "Impact", value: row => row.value("impact") },
+  { id: "Status", value: row => row.value("status") }
+];
+
+return function View() {
+  const issues = dc.useQuery(`@page and "03-Systemic-Journal" and date >= "<% tp.frontmatter.time_period_start %>" and date <= "<% tp.frontmatter.time_period_end %>"`);
+  const sortedIssues = dc.useArray(issues, array => 
+    array.sort(row => row.value("impact")).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedIssues} />;
+}
 ```
 
 ---

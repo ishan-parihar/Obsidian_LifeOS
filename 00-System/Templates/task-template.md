@@ -106,29 +106,55 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ## 🔗 Related Items
 
 ### Related Tasks
-```dataview
-TABLE WITHOUT ID
-  file.link as "Task",
-  status as "Status",
-  priority as "Priority"
-FROM "16-Tasks"
-WHERE file.link != this.file.link AND (
-  contains(string(projects), string(this.projects)) OR
-  contains(string(quarterly_goals), string(this.quarterly_goals)) OR
-  contains(string(annual_goals), string(this.annual_goals))
-)
-SORT priority DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Task", value: row => row.$link },
+  { id: "Status", value: row => row.value("status") },
+  { id: "Priority", value: row => row.value("priority") }
+];
+
+return function View() {
+  const currentFile = "<% tp.file.title %>";
+  const tasks = dc.useQuery(`@page and "16-Tasks" and file != "${currentFile}"`);
+  const relatedTasks = tasks.filter(task => {
+    const taskProjects = task.value("projects") || [];
+    const taskQuarterlyGoals = task.value("quarterly_goals") || [];
+    const taskAnnualGoals = task.value("annual_goals") || [];
+    const thisProjects = [<% tp.frontmatter.projects %>];
+    const thisQuarterlyGoals = [<% tp.frontmatter.quarterly_goals %>];
+    const thisAnnualGoals = [<% tp.frontmatter.annual_goals %>];
+    
+    return (
+      taskProjects.some(p => thisProjects.includes(p)) ||
+      taskQuarterlyGoals.some(qg => thisQuarterlyGoals.includes(qg)) ||
+      taskAnnualGoals.some(ag => thisAnnualGoals.includes(ag))
+    );
+  });
+  
+  const sortedTasks = dc.useArray(relatedTasks, array => 
+    array.sort(row => row.value("priority")).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedTasks} />;
+}
 ```
 
 ### Systemic Issues
-```dataview
-TABLE WITHOUT ID
-  file.link as "Issue",
-  impact as "Impact",
-  status as "Status"
-FROM "03-Systemic-Journal"
-WHERE contains(string(projects), string(this.projects))
-SORT impact DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Issue", value: row => row.$link },
+  { id: "Impact", value: row => row.value("impact") },
+  { id: "Status", value: row => row.value("status") }
+];
+
+return function View() {
+  const issues = dc.useQuery(`@page and "03-Systemic-Journal" and projects = "<% tp.file.title %>"`);
+  const sortedIssues = dc.useArray(issues, array => 
+    array.sort(row => row.value("impact")).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedIssues} />;
+}
 ```
 
 ## 📝 Notes & Context

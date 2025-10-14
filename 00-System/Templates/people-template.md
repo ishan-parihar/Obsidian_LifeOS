@@ -108,23 +108,37 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 
 ### Recent Interactions
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Interaction",
-  date as "Date",
-  emotional_tone as "Tone"
-FROM "Logs/Relational"
-WHERE contains(people, "<% tp.file.title %>")
-SORT date DESC
-LIMIT 5
+```datacorejsx
+const COLUMNS = [
+  { id: "Interaction", value: row => row.$link },
+  { id: "Date", value: row => row.value("date") },
+  { id: "Tone", value: row => row.value("emotional_tone") }
+];
+
+return function View() {
+  const interactions = dc.useQuery(`@page and "Logs/Relational" and people = "<% tp.file.title %>"`);
+  const sortedInteractions = dc.useArray(interactions, array => 
+    array.sort(row => row.value("date")).reverse()
+  ).slice(0, 5);
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedInteractions} />;
+}
 ```
 
 ### Shared Projects
 
-```dataview
-LIST
-FROM "Projects"
-WHERE contains(people, "<% tp.file.title %>") AND status = "Active"
+```datacorejsx
+return function View() {
+  const projects = dc.useQuery(`@page and "Projects" and people = "<% tp.file.title %>" and status = "Active"`);
+  
+  return (
+    <ul>
+      {projects.map(project => (
+        <li key={project.$path}>{project.$link}</li>
+      ))}
+    </ul>
+  );
+}
 ```
 
 ## 🎯 Growth Opportunities

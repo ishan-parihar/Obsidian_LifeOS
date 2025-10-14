@@ -20,7 +20,7 @@
   "focusExistingTab": false,
   "oldFolderNoteName": "{{folder_name}}",
   "folderNoteName": "{{folder_name}}",
-  "folderNoteType": ".md",
+  "folderNoteType": ".base",
   "disableFolderHighlighting": false,
   "newFolderNoteName": "{{folder_name}}",
   "storageLocation": "insideFolder",

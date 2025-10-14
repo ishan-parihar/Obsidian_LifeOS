@@ -64,39 +64,60 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 
 ## 📈 Supporting Projects
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Project",
-  status as "Status",
-  project_progress as "Progress"
-FROM "15-Projects"
-WHERE contains(string(quarterly_goals), string("<% tp.file.title %>"))
-SORT project_progress DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Project", value: row => row.$link },
+  { id: "Status", value: row => row.value("status") },
+  { id: "Progress", value: row => row.value("project_progress") }
+];
+
+return function View() {
+  const projects = dc.useQuery(`@page and "15-Projects" and quarterly_goals = "<% tp.file.title %>"`);
+  const sortedProjects = dc.useArray(projects, array => 
+    array.sort(row => row.value("project_progress")).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedProjects} />;
+}
 ```
 
 ### Task Rollup
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Task",
-  status as "Status",
-  priority as "Priority"
-FROM "16-Tasks"
-WHERE contains(string(quarterly_goals), string("<% tp.file.title %>"))
-SORT priority DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Task", value: row => row.$link },
+  { id: "Status", value: row => row.value("status") },
+  { id: "Priority", value: row => row.value("priority") }
+];
+
+return function View() {
+  const tasks = dc.useQuery(`@page and "16-Tasks" and quarterly_goals = "<% tp.file.title %>"`);
+  const sortedTasks = dc.useArray(tasks, array => 
+    array.sort(row => row.value("priority")).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedTasks} />;
+}
 ```
 
 ## ⚠️ Risk Management
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Risk",
-  impact as "Impact",
-  likelihood as "Likelihood",
-  status as "Status"
-FROM "24-Failure-Scenarios"
-WHERE contains(string(quarterly_goals), string("<% tp.file.title %>"))
-SORT impact DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Risk", value: row => row.$link },
+  { id: "Impact", value: row => row.value("impact") },
+  { id: "Likelihood", value: row => row.value("likelihood") },
+  { id: "Status", value: row => row.value("status") }
+];
+
+return function View() {
+  const risks = dc.useQuery(`@page and "24-Failure-Scenarios" and quarterly_goals = "<% tp.file.title %>"`);
+  const sortedRisks = dc.useArray(risks, array => 
+    array.sort(row => row.value("impact")).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedRisks} />;
+}
 ```
 
 ---

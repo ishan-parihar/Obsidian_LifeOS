@@ -1,0 +1,130 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "00-System/Templates",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": false,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "Scripts",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "01-Subjective-Journal",
+      "template": "00-System/Templates/subjective-journal.md"
+    },
+    {
+      "folder": "02-Relational-Journal",
+      "template": "00-System/Templates/relational-journal.md"
+    },
+    {
+      "folder": "03-Systemic-Journal",
+      "template": "00-System/Templates/systemic-journal.md"
+    },
+    {
+      "folder": "04-Activity-Log",
+      "template": "00-System/Templates/activity-log.md"
+    },
+    {
+      "folder": "05-Diet-Log",
+      "template": "00-System/Templates/diet-log.md"
+    },
+    {
+      "folder": "06-Days",
+      "template": "00-System/Templates/daily-note.md"
+    },
+    {
+      "folder": "07-Weeks",
+      "template": "00-System/Templates/weekly-review.md"
+    },
+    {
+      "folder": "08-Months",
+      "template": "00-System/Templates/monthly-review.md"
+    },
+    {
+      "folder": "09-Quarters",
+      "template": "00-System/Templates/quarterly-review.md"
+    },
+    {
+      "folder": "10-Years",
+      "template": "00-System/Templates/yearly-review.md"
+    },
+    {
+      "folder": "11-Values",
+      "template": "00-System/Templates/values.md"
+    },
+    {
+      "folder": "12-Vision",
+      "template": "00-System/Templates/vision.md"
+    },
+    {
+      "folder": "13-Annual-Goals",
+      "template": "00-System/Templates/annual-goal.md"
+    },
+    {
+      "folder": "14-Quarterly-Goals",
+      "template": "00-System/Templates/quarterly-goal.md"
+    },
+    {
+      "folder": "15-Projects",
+      "template": "00-System/Templates/project-template.md"
+    },
+    {
+      "folder": "16-Tasks",
+      "template": "00-System/Templates/task-template.md"
+    },
+    {
+      "folder": "17-People",
+      "template": "00-System/Templates/people-template.md"
+    },
+    {
+      "folder": "18-Community",
+      "template": ""
+    },
+    {
+      "folder": "19-Financial-Accounts",
+      "template": "00-System/Templates/financial-account.md"
+    },
+    {
+      "folder": "20-Financial-Log",
+      "template": "00-System/Templates/financial-log.md"
+    },
+    {
+      "folder": "21-Notes",
+      "template": ""
+    },
+    {
+      "folder": "22-Documents",
+      "template": ""
+    },
+    {
+      "folder": "23-Stories",
+      "template": ""
+    },
+    {
+      "folder": "24-Failure-Scenarios",
+      "template": "00-System/Templates/failure-scenario.md"
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    ""
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "intellisense_render": 1
+}

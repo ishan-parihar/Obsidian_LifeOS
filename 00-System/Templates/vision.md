@@ -58,25 +58,52 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 
 ### Annual Goals
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Annual Goal",
-  status as "Status",
-  goal_progress as "Progress"
-FROM "13-Annual-Goals"
-WHERE contains(vision, "<% tp.file.title %>")
-SORT goal_progress DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Annual Goal", value: row => row.$link },
+  { id: "Status", value: row => row.value("status") },
+  { id: "Progress", value: row => row.value("goal_progress") }
+];
+
+return function View() {
+  const goals = dc.useQuery(`@page and "13-Annual-Goals" and vision = "<% tp.file.title %>"`);
+  const sortedGoals = dc.useArray(goals, array => 
+    array.sort(row => row.value("goal_progress")).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedGoals} />;
+}
 ```
 
 ### Quarterly Progress
 
-```dataview
-TABLE WITHOUT ID
-  count(rows) as "Q-Goals",
-  sum(choice(rows.status = "Done", 1, 0)) as "Completed",
-  round(sum(choice(rows.status = "Done", 1, 0)) / count(rows) * 100) as "%"
-FROM "14-Quarterly-Goals"
-WHERE contains(vision, "<% tp.file.title %>")
+```datacorejsx
+return function View() {
+  const quarterlyGoals = dc.useQuery(`@page and "14-Quarterly-Goals" and vision = "<% tp.file.title %>"`);
+  
+  const total = quarterlyGoals.length;
+  const completed = quarterlyGoals.filter(goal => goal.value("status") === "Done").length;
+  const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
+  
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Q-Goals</th>
+          <th>Completed</th>
+          <th>%</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{total}</td>
+          <td>{completed}</td>
+          <td>{percentage}</td>
+        </tr>
+      </tbody>
+    </table>
+  );
+}
 ```
 
 ## 🧼 Vision Review

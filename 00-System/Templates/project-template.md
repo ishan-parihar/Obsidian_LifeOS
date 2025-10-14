@@ -85,14 +85,21 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 
 ## 📋 Active Tasks
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Task",
-  status as "Status",
-  priority as "Priority"
-FROM "16-Tasks"
-WHERE contains(string(projects), string("<% tp.file.title %>")) AND status != "Done"
-SORT priority DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Task", value: row => row.$link },
+  { id: "Status", value: row => row.value("status") },
+  { id: "Priority", value: row => row.value("priority") }
+];
+
+return function View() {
+  const tasks = dc.useQuery(`@page and "16-Tasks" and projects = "<% tp.file.title %>" and status != "Done"`);
+  const sortedTasks = dc.useArray(tasks, array => 
+    array.sort(row => row.value("priority")).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedTasks} />;
+}
 ```
 
 ## 📈 Progress Tracking
@@ -108,14 +115,21 @@ SORT priority DESC
 
 ## ⚠️ Systemic Issues
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Issue",
-  impact as "Impact",
-  status as "Status"
-FROM "03-Systemic-Journal"
-WHERE contains(string(projects), string("<% tp.file.title %>"))
-SORT impact DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Issue", value: row => row.$link },
+  { id: "Impact", value: row => row.value("impact") },
+  { id: "Status", value: row => row.value("status") }
+];
+
+return function View() {
+  const issues = dc.useQuery(`@page and "03-Systemic-Journal" and projects = "<% tp.file.title %>"`);
+  const sortedIssues = dc.useArray(issues, array => 
+    array.sort(row => row.value("impact")).reverse()
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedIssues} />;
+}
 ```
 
 ---
