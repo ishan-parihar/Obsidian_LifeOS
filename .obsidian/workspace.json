@@ -112,6 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Pending Tasks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +122,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Pending Tasks"
             }
           },
           {
@@ -130,26 +131,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Pending Tasks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
-            }
-          },
-          {
-            "id": "6609da332f2f5d67",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "Outgoing links from Pending Tasks"
             }
           },
           {
@@ -158,12 +145,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Pending Tasks.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Pending Tasks"
             }
           },
           {
@@ -175,19 +163,9 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
-          },
-          {
-            "id": "79efc29420b44317",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -212,6 +190,11 @@
   },
   "active": "1b772f54c806a46f",
   "lastOpenFiles": [
+    "Pending Templates/Stories.md",
+    "Pending Templates/Documents.md",
+    "Pending Templates/Notes.md",
+    "Pending Templates/Community.md",
+    "Pending Templates",
     "Untitled 1.md",
     "Pending Tasks.md",
     "CRUSH.md",
@@ -241,12 +224,7 @@
     "13-Annual-Goals/README.md",
     "01-Subjective-Journal/README.md",
     "02-Relational-Journal/README.md",
-    "24-Failure-Scenarios/24-Failure-Scenarios.base",
     "24-Failure-Scenarios/README.md",
-    "23-Stories/README.md",
-    "22-Documents/README.md",
-    "21-Notes/README.md",
-    "20-Financial-Log/README.md",
-    "19-Financial-Accounts/README.md"
+    "23-Stories/README.md"
   ]
 }
