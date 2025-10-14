@@ -11,14 +11,10 @@
             "id": "8b5df98fe237f84a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Pending Tasks.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Pending Tasks"
+              "title": "New tab"
             }
           }
         ]
@@ -163,6 +159,21 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "cfbf7c1347a821f2",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
           }
         ],
         "currentTab": 3
@@ -185,31 +196,34 @@
       "obsidian-git:Open Git source control": false,
       "obsidian-kanban:Create new board": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "periodic-notes:Open today": false,
-      "markdown-importer:Open format converter": false
+      "markdown-importer:Open format converter": false,
+      "periodic-notes:Open today": false
     }
   },
   "active": "8b5df98fe237f84a",
   "lastOpenFiles": [
-    "00-System/Dashboards/Engine-Room.md",
+    "06-Days/Untitled.md",
+    "06-Days/06-Days.base",
+    "05-Diet-Log/05-Diet-Log.base",
     "00-System/Dashboards/Workbench.md",
+    "Pending Tasks.md",
+    "00-System/Templates/documents.md",
+    "00-System/Templates/daily-note.md",
+    "00-System/Dashboards/Engine-Room.md",
     "00-System/Dashboards/Observatory.md",
     "00-System/Templates/monthly-review.md",
     "00-System/Templates/financial-log.md",
     "00-System/Templates/notes.md",
-    "00-System/Templates/daily-note.md",
     "00-System/Dashboards/Forge.md",
     "00-System/Templates/quarterly-goal.md",
     "00-System/Templates/people-template.md",
     "00-System/Templates/failure-scenario.md",
     "00-System/Templates/diet-log.md",
     "00-System/Templates/community.md",
-    "Pending Tasks.md",
     "00-System/Templates/activity-log.md",
     "00-System/Templates/subjective-journal.md",
     "00-System/Templates/systemic-journal.md",
     "00-System/Templates/stories.md",
-    "00-System/Templates/documents.md",
     "Pending Templates",
     "Untitled 1.md",
     "CRUSH.md",
@@ -218,14 +232,10 @@
     "10-Years/10-Years.base",
     "15-Projects/15-Projects.base",
     "06-Days/2025-10-14.md",
-    "06-Days/Untitled.md",
     "16-Tasks/16-Tasks.base",
     "15-Projects/Untitled.md",
     "15-Projects/lifeos-system-optimization.md",
     "03-Systemic-Journal/03-Systemic-Journal.base",
-    "02-Relational-Journal/Interactions with Family.md",
-    "06-Days/06-Days.base",
-    "02-Relational-Journal/02-Relational-Journal.base",
-    "01-Subjective-Journal/01-Subjective-Journal.base"
+    "02-Relational-Journal/02-Relational-Journal.base"
   ]
 }

@@ -25,13 +25,12 @@
     "TQ_show_tree": "checkbox",
     "TQ_show_urgency": "checkbox",
     "status": "multitext",
-    
     "=== SUBJECTIVE JOURNAL PROPERTIES ===": "",
     "sj_primary_emotion": {
       "type": "select",
       "options": [
         "Motivated",
-        "Confident", 
+        "Confident",
         "Satisfied",
         "Grateful",
         "Excited",
@@ -51,7 +50,7 @@
       "type": "select",
       "options": [
         "Motivated",
-        "Confident", 
+        "Confident",
         "Satisfied",
         "Grateful",
         "Excited",
@@ -67,7 +66,6 @@
         "Uncertain"
       ]
     },
-    
     "=== RELATIONAL JOURNAL PROPERTIES ===": "",
     "rj_emotional_tone": {
       "type": "select",
@@ -89,7 +87,6 @@
         "Unequal - They have more"
       ]
     },
-    
     "=== SYSTEMIC JOURNAL PROPERTIES ===": "",
     "sysj_status": {
       "type": "select",
@@ -121,7 +118,6 @@
         "Financial"
       ]
     },
-    
     "=== ACTIVITY LOG PROPERTIES ===": "",
     "al_habit_quality": {
       "type": "select",
@@ -138,7 +134,6 @@
         "1.0"
       ]
     },
-    
     "=== DIET LOG PROPERTIES ===": "",
     "dl_meal_type": {
       "type": "select",
@@ -150,7 +145,6 @@
         "Brunch"
       ]
     },
-    
     "=== TASK PROPERTIES ===": "",
     "task_status": {
       "type": "select",
@@ -207,7 +201,6 @@
         "Intense"
       ]
     },
-    
     "=== PROJECT PROPERTIES ===": "",
     "project_status": {
       "type": "select",
@@ -230,7 +223,6 @@
         "⭐"
       ]
     },
-    
     "=== FINANCIAL LOG PROPERTIES ===": "",
     "fl_category": {
       "type": "select",
@@ -262,7 +254,6 @@
         "Personal"
       ]
     },
-    
     "=== FINANCIAL ACCOUNT PROPERTIES ===": "",
     "fa_type": {
       "type": "multiselect",
@@ -292,7 +283,6 @@
         "Closed"
       ]
     },
-    
     "=== PEOPLE PROPERTIES ===": "",
     "people_relationship_status": {
       "type": "select",
@@ -447,7 +437,6 @@
         "I am in Debt"
       ]
     },
-    
     "=== DOCUMENT PROPERTIES ===": "",
     "doc_category": {
       "type": "select",
@@ -465,7 +454,6 @@
         "Done"
       ]
     },
-    
     "=== NOTES PROPERTIES ===": "",
     "note_status": {
       "type": "select",
@@ -476,7 +464,6 @@
         "Archived Note"
       ]
     },
-    
     "=== HIERARCHICAL PROPERTIES ===": "",
     "entity_hierarchy_level": {
       "type": "select",
