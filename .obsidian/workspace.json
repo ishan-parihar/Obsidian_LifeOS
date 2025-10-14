@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7a70c3d724f676fb",
+        "id": "8c25e83096b87a21",
         "type": "tabs",
         "children": [
           {
-            "id": "8b5df98fe237f84a",
+            "id": "1fd721fb91a37918",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -176,7 +176,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -200,14 +200,19 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "8b5df98fe237f84a",
+  "active": "a009331bfde5351b",
   "lastOpenFiles": [
+    "06-Days/Untitled.md",
+    "15-Projects/15-Projects.base",
+    "15-Projects/Untitled.md",
+    "14-Quarterly-Goals/14-Quarterly-Goals.base",
+    "13-Annual-Goals/13-Annual-Goals.base",
+    "00-System/Templates/daily-note.md",
     "00-System/Templates/relational-journal.md",
     "00-System/Templates/stories.md",
     "00-System/Templates/quarterly-review.md",
     "00-System/Templates/quarterly-goal.md",
     "14-Quarterly-Goals/Untitled.md",
-    "14-Quarterly-Goals/14-Quarterly-Goals.base",
     "09-Quarters/09-Quarters.base",
     "21-Notes/21-Notes.base",
     "00-System/Templates/annual-goal.md.tmp.8988.1760476738303",
@@ -216,7 +221,6 @@
     "Untitled.md",
     "Untitled",
     "00-System/Templates/diet-log.md",
-    "00-System/Templates/daily-note.md",
     "00-System/Templates/community.md",
     "00-System/Templates/annual-goal.md",
     "00-System/Templates/activity-log.md",
@@ -227,16 +231,11 @@
     "00-System/Dashboards/Engine-Room.md",
     "08-Months/08-Months.base",
     "Pending Tasks.md",
-    "06-Days/Untitled.md",
-    "06-Days/06-Days.base",
-    "05-Diet-Log/05-Diet-Log.base",
     "00-System/Dashboards/Workbench.md",
     "00-System/Templates/documents.md",
     "00-System/Dashboards/Observatory.md",
     "00-System/Templates/monthly-review.md",
     "00-System/Templates/financial-log.md",
-    "00-System/Templates/people-template.md",
-    "00-System/Templates/failure-scenario.md",
-    "00-System/Templates/subjective-journal.md"
+    "00-System/Templates/people-template.md"
   ]
 }
