@@ -144,7 +144,7 @@ return function View() {
 }
 ```
 
-### Upcoming Reconnections
+- [ ] ### Upcoming Reconnections
 
 ```datacorejsx
 const COLUMNS = [

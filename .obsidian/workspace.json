@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-System/Dashboards/Forge.md",
+                "file": "00-System/Dashboards/Engine-Room.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Forge"
+              "title": "Engine-Room"
             }
           }
         ]
@@ -112,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00-System/Dashboards/Forge.md",
+                "file": "00-System/Dashboards/Engine-Room.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Forge"
+              "title": "Backlinks for Engine-Room"
             }
           },
           {
@@ -131,12 +131,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00-System/Dashboards/Forge.md",
+                "file": "00-System/Dashboards/Engine-Room.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Forge"
+              "title": "Outgoing links from Engine-Room"
             }
           },
           {
@@ -145,13 +145,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00-System/Dashboards/Forge.md",
+                "file": "00-System/Dashboards/Engine-Room.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Forge"
+              "title": "Outline of Engine-Room"
             }
           },
           {
@@ -191,22 +191,24 @@
   },
   "active": "1b772f54c806a46f",
   "lastOpenFiles": [
-    "00-System/Dashboards/Observatory.md",
-    "00-System/Dashboards/Workbench.md",
     "00-System/Dashboards/Forge.md",
     "00-System/Dashboards/Engine-Room.md",
+    "00-System/Dashboards/Observatory.md",
+    "00-System/Templates/quarterly-goal.md",
+    "00-System/Templates/people-template.md",
+    "00-System/Templates/financial-log.md",
+    "00-System/Templates/failure-scenario.md",
+    "00-System/Templates/diet-log.md",
+    "00-System/Templates/community.md",
+    "00-System/Dashboards/Workbench.md",
     "Pending Tasks.md",
     "00-System/Templates/activity-log.md",
     "00-System/Templates/subjective-journal.md",
-    "00-System/Templates/failure-scenario.md",
-    "00-System/Templates/diet-log.md",
     "00-System/Templates/daily-note.md",
-    "00-System/Templates/quarterly-goal.md",
     "00-System/Templates/systemic-journal.md",
     "00-System/Templates/stories.md",
     "00-System/Templates/notes.md",
     "00-System/Templates/documents.md",
-    "00-System/Templates/community.md",
     "Pending Templates",
     "Untitled 1.md",
     "CRUSH.md",
@@ -223,8 +225,6 @@
     "02-Relational-Journal/Interactions with Family.md",
     "2025-10-14.md",
     "06-Days/06-Days.base",
-    "00-System/Templates/annual-goal.md",
-    "03-Systemic-Journal/Untitled.md",
     "02-Relational-Journal/02-Relational-Journal.base",
     "01-Subjective-Journal/01-Subjective-Journal.base"
   ]
