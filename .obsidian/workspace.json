@@ -11,10 +11,13 @@
             "id": "1fd721fb91a37918",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "bases",
+              "state": {
+                "file": "06-Days/06-Days.base",
+                "viewName": "Table"
+              },
+              "icon": "lucide-table",
+              "title": "06-Days"
             }
           }
         ]
@@ -127,12 +130,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pending Tasks.md",
+                "file": "06-Days/06-Days.base",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Pending Tasks"
+              "title": "Outgoing links from 06-Days"
             }
           },
           {
@@ -141,13 +144,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pending Tasks.md",
+                "file": "06-Days/06-Days.base",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Pending Tasks"
+              "title": "Outline of 06-Days"
             }
           },
           {
@@ -176,7 +179,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -200,7 +203,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "a009331bfde5351b",
+  "active": "0e17ec9e2eacf489",
   "lastOpenFiles": [
     "06-Days/Untitled.md",
     "15-Projects/15-Projects.base",
