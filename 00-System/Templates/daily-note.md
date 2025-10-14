@@ -174,16 +174,16 @@ return function View() {
 ```datacorejsx
 const COLUMNS = [
   { id: "Activity", value: row => row.$link },
-  { id: "Duration", value: row => row.value("duration") },
-  { id: "Quality", value: row => row.value("habit_quality") }
+  { id: "Duration", value: row => row.value("al_duration") },
+  { id: "Quality", value: row => row.value("al_habit_quality") }
 ];
 
 return function View() {
-  const activities = dc.useQuery(`@page and "04-Activity-Log" and days = "<% tp.file.title %>"`);
-  const sortedActivities = dc.useArray(activities, array => 
+  const activities = dc.useQuery(`@page and "04-Activity-Log" and al_days = "<% tp.file.title %>"`);
+  const sortedActivities = dc.useArray(activities, array =>
     array.sort(row => -row.$mtime)
   );
-  
+
   return <dc.VanillaTable columns={COLUMNS} rows={sortedActivities} />;
 }
 ```
@@ -192,15 +192,15 @@ return function View() {
 ```datacorejsx
 const COLUMNS = [
   { id: "Meal", value: row => row.$link },
-  { id: "Type", value: row => row.value("meal_type") }
+  { id: "Type", value: row => row.value("dl_meal_type") }
 ];
 
 return function View() {
-  const meals = dc.useQuery(`@page and "05-Diet-Log" and days = "<% tp.file.title %>"`);
-  const sortedMeals = dc.useArray(meals, array => 
+  const meals = dc.useQuery(`@page and "05-Diet-Log" and dl_days = "<% tp.file.title %>"`);
+  const sortedMeals = dc.useArray(meals, array =>
     array.sort(row => -row.$mtime)
   );
-  
+
   return <dc.VanillaTable columns={COLUMNS} rows={sortedMeals} />;
 }
 ```

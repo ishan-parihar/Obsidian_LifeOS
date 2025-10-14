@@ -1,16 +1,17 @@
 ---
-type: 
-sub_type: 
-status: Active
-capital_engine: 
-current_balance: 0
-financial_logs: []
-last_updated: 
-related_statements: 
-related_transactions: 
-current_status: 
-active_range: 
-type: financial-account
+title:
+fa_type: ["Asset"]
+fa_subtype:
+fa_status: "Active"
+fa_capital_engine:
+fa_current_balance: 0
+fa_financial_logs: []
+fa_last_updated:
+fa_related_statements:
+fa_related_transactions:
+fa_current_status:
+fa_active_range:
+entity_type: "financial-account"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 
@@ -18,27 +19,27 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 
 ## 🏦 Account Overview
 
-**Account Type**: 
-**Sub-Type**: 
-**Status**: 
-**Capital Engine**: 
+**Account Type**: <% tp.frontmatter.fa_type %>
+**Sub-Type**: <% tp.frontmatter.fa_subtype %>
+**Status**: <% tp.frontmatter.fa_status %>
+**Capital Engine**: <% tp.frontmatter.fa_capital_engine %>
 
 ## 💰 Balance Information
 
-**Current Balance**: 
-**Last Updated**: 
-**Active Range**: 
+**Current Balance**: <% tp.frontmatter.fa_current_balance %>
+**Last Updated**: <% tp.frontmatter.fa_last_updated %>
+**Active Range**: <% tp.frontmatter.fa_active_range %>
 
 ## 📊 Account Status
 
 ## 📄 External References
 
-**Related Statements**: 
-**Related Transactions**: 
+**Related Statements**: <% tp.frontmatter.fa_related_statements %>
+**Related Transactions**: <% tp.frontmatter.fa_related_transactions %>
 
 ## 🧠 Financial Strategy
 
-**Role in Financial System**: 
+**Role in Financial System**:
 **Optimization Opportunities**: 
 
 ---

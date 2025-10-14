@@ -1,17 +1,12 @@
 ---
 title: Diet Log
-date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
-meal_type: 
-days: [[<% tp.date.now("YYYY-MM-DD") %>]]
-total_context: ""
-id: 
-hierarchy_level: "atomic"
-parent_entities: [[<% tp.date.now("YYYY-MM-DD") %>]] # Days
-child_entities: []
-sibling_entities: [] # Other atomic entries
-related_time_periods: [[<% tp.date.now("YYYY-MM-DD") %>]]
-strategic_alignment: []
-type: diet-log
+dl_date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
+dl_meal_type:
+dl_days: [[<% tp.date.now("YYYY-MM-DD") %>]]
+dl_total_context: ""
+dl_id:
+entity_hierarchy_level: "atomic"
+entity_type: "diet-log"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 
@@ -19,7 +14,7 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 
 ## 🍽️ Meal Details
 
-**Meal Type**: 
+**Meal Type**: <% tp.frontmatter.dl_meal_type %>
 **Food/Drink**: 
 
 ## 📝 Description
