@@ -14,17 +14,35 @@ created: 2025-10-14
 ```datacorejsx
 const COLUMNS = [
   { id: "Note", value: row => row.$link },
-  { id: "Status", value: row => row.value("status") },
-  { id: "Modified", value: row => row.$mtime.toLocaleDateString() }
+  { id: "Status", value: row => row.value("status") ?? "" },
+  { id: "Modified", value: row => {
+    try {
+      return row.$mtime?.toLocaleDateString() || "";
+    } catch {
+      return "";
+    }
+  }}
 ];
 
 return function View() {
-  const notes = dc.useQuery('@page and "21-Notes" and (status = "Live" or status = "Priority-Highlight")');
-  const sortedNotes = dc.useArray(notes, array => 
-    array.sort(row => -row.$mtime)
-  );
-  
-  return <dc.VanillaTable columns={COLUMNS} rows={sortedNotes.slice(0, 10)} />;
+  try {
+    const notes = dc.useQuery('@page and "21-Notes" and (status = "Live" or status = "Priority-Highlight")');
+    const sortedNotes = dc.useArray(notes, array => 
+      array.sort((a, b) => {
+        try {
+          const timeA = a.$mtime?.getTime() || 0;
+          const timeB = b.$mtime?.getTime() || 0;
+          return timeB - timeA;
+        } catch {
+          return 0;
+        }
+      })
+    );
+    
+    return <dc.VanillaTable columns={COLUMNS} rows={sortedNotes.slice(0, 10)} />;
+  } catch (error) {
+    return <div>⚠️ Recent Notes Widget Error</div>;
+  }
 }
 ```
 
@@ -35,17 +53,29 @@ return function View() {
 ```datacorejsx
 const COLUMNS = [
   { id: "Document", value: row => row.$link },
-  { id: "Category", value: row => row.value("category") },
-  { id: "Status", value: row => row.value("status") }
+  { id: "Category", value: row => row.value("category") ?? "" },
+  { id: "Status", value: row => row.value("status") ?? "" }
 ];
 
 return function View() {
-  const documents = dc.useQuery('@page and "22-Documents"');
-  const sortedDocuments = dc.useArray(documents, array => 
-    array.sort(row => -row.$mtime)
-  );
-  
-  return <dc.VanillaTable columns={COLUMNS} rows={sortedDocuments.slice(0, 10)} />;
+  try {
+    const documents = dc.useQuery('@page and "22-Documents"');
+    const sortedDocuments = dc.useArray(documents, array => 
+      array.sort((a, b) => {
+        try {
+          const timeA = a.$mtime?.getTime() || 0;
+          const timeB = b.$mtime?.getTime() || 0;
+          return timeB - timeA;
+        } catch {
+          return 0;
+        }
+      })
+    );
+    
+    return <dc.VanillaTable columns={COLUMNS} rows={sortedDocuments.slice(0, 10)} />;
+  } catch (error) {
+    return <div>⚠️ Recent Documents Widget Error</div>;
+  }
 }
 ```
 
@@ -53,24 +83,32 @@ return function View() {
 
 ```datacorejsx
 const COLUMNS = [
-  { id: "Category", value: row => row.category },
+  { id: "Category", value: row => row.category || "Uncategorized" },
   { id: "Count", value: row => row.count }
 ];
 
 return function View() {
-  const documents = dc.useQuery('@page and "22-Documents"');
-  const grouped = dc.useArray(documents, array => {
-    const categories = {};
-    array.forEach(doc => {
-      const category = doc.value("category") || "Uncategorized";
-      categories[category] = (categories[category] || 0) + 1;
+  try {
+    const documents = dc.useQuery('@page and "22-Documents"');
+    const grouped = dc.useArray(documents, array => {
+      const categories = {};
+      array.forEach(doc => {
+        try {
+          const category = doc.value("category") || "Uncategorized";
+          categories[category] = (categories[category] || 0) + 1;
+        } catch {
+          categories["Error Reading Category"] = (categories["Error Reading Category"] || 0) + 1;
+        }
+      });
+      return Object.entries(categories)
+        .map(([category, count]) => ({ category, count }))
+        .sort((a, b) => b.count - a.count);
     });
-    return Object.entries(categories)
-      .map(([category, count]) => ({ category, count }))
-      .sort((a, b) => b.count - a.count);
-  });
-  
-  return <dc.VanillaTable columns={COLUMNS} rows={grouped} />;
+    
+    return <dc.VanillaTable columns={COLUMNS} rows={grouped} />;
+  } catch (error) {
+    return <div>⚠️ Document Categories Widget Error</div>;
+  }
 }
 ```
 
