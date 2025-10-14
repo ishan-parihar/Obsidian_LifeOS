@@ -9,8 +9,10 @@ success_condition:
 key_risks: 
 status: Draft
 vision: []
-years: []
+quarters: []
 quarterly_goals: []
+projects: []
+tasks: []
 primary_metric: []
 current_annual_goal: 
 goal_progress: 0
@@ -59,7 +61,7 @@ TABLE WITHOUT ID
   status as "Status",
   goal_progress as "Progress"
 FROM "Strategy/QuarterlyGoals"
-WHERE contains(annual_goals, "<% tp.file.title %>")
+WHERE contains(string(annual_goals), string("<% tp.file.title %>"))
 SORT file.name DESC
 ```
 
@@ -71,8 +73,20 @@ TABLE WITHOUT ID
   status as "Status",
   project_progress as "Progress"
 FROM "Projects"
-WHERE contains(annual_goals, "<% tp.file.title %>")
+WHERE contains(string(annual_goals), string("<% tp.file.title %>"))
 SORT project_progress DESC
+```
+
+### Task Rollup
+
+```dataview
+TABLE WITHOUT ID
+  file.link as "Task",
+  status as "Status",
+  priority as "Priority"
+FROM "16-Tasks"
+WHERE contains(string(annual_goals), string("<% tp.file.title %>"))
+SORT priority DESC
 ```
 
 ---

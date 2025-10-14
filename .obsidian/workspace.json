@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3f95b06512c478c9",
+        "id": "3b6a1a97c135292a",
         "type": "tabs",
         "children": [
           {
-            "id": "b829d39187cde193",
+            "id": "f62bc9338df9f00c",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -205,8 +205,20 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "b829d39187cde193",
+  "active": "0e17ec9e2eacf489",
   "lastOpenFiles": [
+    "Research_Docs/LifeOS-Data-Flow-Implementation-Guide.md",
+    "00-System/Templates/lifeos-dashboard.md",
+    "00-System/Templates/yearly-review.md",
+    "00-System/Templates/quarterly-review.md",
+    "00-System/Templates/monthly-review.md",
+    "00-System/Templates/task-template.md",
+    "00-System/Templates/weekly-review.md",
+    "Research_Docs/LifeOS-Data-Flow-Upgrade-Plan.md",
+    "Research_Docs/LifeOS-Obsidian-Development-Plan.md",
+    "Research_Docs/Initial_Instructions.md",
+    "Research_Docs/Research-Results.md",
+    "00-System/Templates/activity-log.md",
     "00-System/Templates/subjective-journal.md",
     "06-Days/2025-10-14.md",
     "05-Diet-Log/test-diet-2025-10-14.md",
@@ -221,25 +233,13 @@
     "Research_Docs/System-Optimization-Report.md",
     "01-Subjective-Journal/README.md",
     "00-System/Templates/annual-goal.md",
-    "00-System/Obsidian-Setup.md",
-    "00-System/Templates/activity-log.md",
-    "00-System/Dashboards/Workbench.md",
-    "Forge.md",
-    "24-Failure-Scenarios/README.md",
     "24-Failure-Scenarios",
-    "23-Stories/README.md",
     "23-Stories",
-    "22-Documents/README.md",
     "22-Documents",
-    "21-Notes/README.md",
     "21-Notes",
-    "20-Financial-Log/README.md",
     "20-Financial-Log",
-    "19-Financial-Accounts/README.md",
     "19-Financial-Accounts",
-    "18-Community/README.md",
     "18-Community",
-    "17-People/README.md",
     "17-People",
     "16-Tasks",
     "15-Projects"

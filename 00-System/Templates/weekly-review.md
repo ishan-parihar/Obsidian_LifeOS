@@ -6,6 +6,8 @@ week_start: <% tp.date.now("YYYY-MM-DD", 0, -tp.date.now().weekday) %>
 week_end: <% tp.date.now("YYYY-MM-DD", 6, -tp.date.now().weekday) %>
 months: [[<% tp.date.now("YYYY-MM") %>]]
 quarters: [[<% tp.date.now("YYYY-[Q]Q") %>]]
+years: [[<% tp.date.now("YYYY") %>]]
+days: []
 type: weekly-review
 status: Active
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
@@ -91,7 +93,7 @@ TABLE WITHOUT ID
   choice(length(day_synthesis) > 0, "✅", "⏳") as "Synthesized",
   choice(length(night_wind_down) > 0, "✅", "⏳") as "Reflected"
 FROM "Reviews/Days"
-WHERE weeks = this.file.name
+WHERE contains(string(this.file.name), string(weeks))
 SORT date DESC
 ```
 
@@ -102,8 +104,8 @@ TABLE WITHOUT ID
   count(rows) as "Total",
   sum(choice(rows.completed, 1, 0)) as "Completed",
   round(sum(choice(rows.completed, 1, 0)) / count(rows) * 100) as "%"
-FROM "Projects"
-WHERE weeks = this.file.name
+FROM "16-Tasks"
+WHERE contains(string(this.file.name), string(weeks))
 FLATTEN file.tasks as t
 ```
 
@@ -115,7 +117,7 @@ TABLE WITHOUT ID
   sum(rows.Total_Expenses) as "Expenses",
   sum(rows.Net_Cashflow) as "Net"
 FROM "Financial Log"
-WHERE weeks = this.file.name
+WHERE contains(string(this.file.name), string(weeks))
 ```
 
 ### Systemic Issues

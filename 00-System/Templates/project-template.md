@@ -7,6 +7,9 @@ project_start:
 deadline: 
 review_date: 
 quarterly_goals: []
+annual_goals: []
+quarters: []
+years: []
 tasks: []
 people: []
 notes: []
@@ -69,7 +72,7 @@ TABLE WITHOUT ID
   status as "Status",
   priority as "Priority"
 FROM "16-Tasks"
-WHERE contains(projects, "<% tp.file.title %>") AND status != "Done"
+WHERE contains(string(projects), string("<% tp.file.title %>")) AND status != "Done"
 SORT priority DESC
 ```
 
@@ -92,7 +95,7 @@ TABLE WITHOUT ID
   impact as "Impact",
   status as "Status"
 FROM "03-Systemic-Journal"
-WHERE contains(projects, "<% tp.file.title %>")
+WHERE contains(string(projects), string("<% tp.file.title %>"))
 SORT impact DESC
 ```
 

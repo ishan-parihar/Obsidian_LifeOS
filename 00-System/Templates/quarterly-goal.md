@@ -7,7 +7,9 @@ key_learning:
 status: Planning
 annual_goals: []
 quarters: []
+years: []
 projects: []
+tasks: []
 failure_scenarios: []
 current_quarter_goal: 
 goal_progress: 0
@@ -49,8 +51,20 @@ TABLE WITHOUT ID
   status as "Status",
   project_progress as "Progress"
 FROM "Projects"
-WHERE contains(quarterly_goals, "<% tp.file.title %>")
+WHERE contains(string(quarterly_goals), string("<% tp.file.title %>"))
 SORT project_progress DESC
+```
+
+### Task Rollup
+
+```dataview
+TABLE WITHOUT ID
+  file.link as "Task",
+  status as "Status",
+  priority as "Priority"
+FROM "16-Tasks"
+WHERE contains(string(quarterly_goals), string("<% tp.file.title %>"))
+SORT priority DESC
 ```
 
 ## ⚠️ Risk Management
@@ -62,7 +76,7 @@ TABLE WITHOUT ID
   likelihood as "Likelihood",
   status as "Status"
 FROM "Strategy/FailureScenarios"
-WHERE contains(quarterly_goals, "<% tp.file.title %>")
+WHERE contains(string(quarterly_goals), string("<% tp.file.title %>"))
 SORT impact DESC
 ```
 
