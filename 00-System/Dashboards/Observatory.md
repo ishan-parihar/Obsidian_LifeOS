@@ -155,7 +155,15 @@ return function View() {
     const currentMonth = today.getMonth() + 1;
     
     const months = dc.useQuery(`@page and "08-Months" and year = ${currentYear} and month_number = ${currentMonth}`);
+    if (!months || !months.array) {
+      return <div>⚠️ No monthly financial data available</div>;
+    }
+    
     const monthlyData = dc.useArray(months, array => {
+      if (!array || !Array.isArray(array)) {
+        return [{ totalIncome: 0, totalExpenses: 0, netCashflow: 0 }];
+      }
+      
       const totalIncome = array.reduce((sum, month) => {
         try {
           return sum + (month.value("total_income") || 0);
@@ -174,6 +182,10 @@ return function View() {
       
       return [{ totalIncome, totalExpenses, netCashflow }];
     });
+    
+    if (!monthlyData || !Array.isArray(monthlyData)) {
+      return <div>⚠️ No cashflow data available</div>;
+    }
     
     return <dc.VanillaTable columns={COLUMNS} rows={monthlyData} />;
   } catch (error) {
@@ -201,7 +213,13 @@ return function View() {
     const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
     
     const transactions = dc.useQuery('@page and "20-Financial-Log"');
+    if (!transactions || !transactions.array) {
+      return <div>⚠️ No transaction data available</div>;
+    }
+    
     const categoryTotals = dc.useArray(transactions, array => {
+      if (!array || !Array.isArray(array)) return [];
+      
       const categories = {};
       array.forEach(transaction => {
         try {
@@ -220,6 +238,10 @@ return function View() {
         .sort((a, b) => Math.abs(b.total) - Math.abs(a.total));
     });
     
+    if (!categoryTotals || !Array.isArray(categoryTotals)) {
+      return <div>⚠️ No category data available</div>;
+    }
+    
     return <dc.VanillaTable columns={COLUMNS} rows={categoryTotals} />;
   } catch (error) {
     return <div>⚠️ Category Breakdown Widget Error</div>;
@@ -237,7 +259,13 @@ return function View() {
     const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
     const days = dc.useQuery('@page and "06-Days"');
     
+    if (!days || !days.array) {
+      return <div>⚠️ No daily data available</div>;
+    }
+    
     const perspectives = dc.useArray(days, array => {
+      if (!array || !Array.isArray(array)) return [];
+      
       const perspectiveCounts = {};
       
       array.forEach(day => {
@@ -270,6 +298,10 @@ return function View() {
         .sort((a, b) => b.count - a.count)
         .slice(0, 5);
     });
+    
+    if (!perspectives || !Array.isArray(perspectives)) {
+      return <div>⚠️ No perspective data available</div>;
+    }
     
     return (
       <ul>

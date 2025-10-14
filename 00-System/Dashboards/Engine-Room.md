@@ -90,7 +90,13 @@ const COLUMNS = [
 return function View() {
   try {
     const documents = dc.useQuery('@page and "22-Documents"');
+    if (!documents || !documents.array) {
+      return <div>⚠️ No document data available</div>;
+    }
+    
     const grouped = dc.useArray(documents, array => {
+      if (!array || !Array.isArray(array)) return [];
+      
       const categories = {};
       array.forEach(doc => {
         try {
@@ -104,6 +110,10 @@ return function View() {
         .map(([category, count]) => ({ category, count }))
         .sort((a, b) => b.count - a.count);
     });
+    
+    if (!grouped || !Array.isArray(grouped)) {
+      return <div>⚠️ No category data available</div>;
+    }
     
     return <dc.VanillaTable columns={COLUMNS} rows={grouped} />;
   } catch (error) {
@@ -220,19 +230,37 @@ const COLUMNS = [
 ];
 
 return function View() {
-  const people = dc.useQuery('@page and "17-People"');
-  const grouped = dc.useArray(people, array => {
-    const profiles = {};
-    array.forEach(person => {
-      const profile = person.value("networking_profile") || "Unknown";
-      profiles[profile] = (profiles[profile] || 0) + 1;
+  try {
+    const people = dc.useQuery('@page and "17-People"');
+    if (!people || !people.array) {
+      return <div>⚠️ No people data available</div>;
+    }
+    
+    const grouped = dc.useArray(people, array => {
+      if (!array || !Array.isArray(array)) return [];
+      
+      const profiles = {};
+      array.forEach(person => {
+        try {
+          const profile = person.value("networking_profile") || "Unknown";
+          profiles[profile] = (profiles[profile] || 0) + 1;
+        } catch {
+          profiles["Error Reading Profile"] = (profiles["Error Reading Profile"] || 0) + 1;
+        }
+      });
+      return Object.entries(profiles)
+        .map(([profile, count]) => ({ profile, count }))
+        .sort((a, b) => b.count - a.count);
     });
-    return Object.entries(profiles)
-      .map(([profile, count]) => ({ profile, count }))
-      .sort((a, b) => b.count - a.count);
-  });
-  
-  return <dc.VanillaTable columns={COLUMNS} rows={grouped} />;
+    
+    if (!grouped || !Array.isArray(grouped)) {
+      return <div>⚠️ No profile data available</div>;
+    }
+    
+    return <dc.VanillaTable columns={COLUMNS} rows={grouped} />;
+  } catch (error) {
+    return <div>⚠️ Relationship Overview Widget Error</div>;
+  }
 }
 ```
 
@@ -286,19 +314,37 @@ const COLUMNS = [
 ];
 
 return function View() {
-  const issues = dc.useQuery('@page and "03-Systemic-Journal"');
-  const grouped = dc.useArray(issues, array => {
-    const domains = {};
-    array.forEach(issue => {
-      const domain = issue.value("system_domain") || "Unknown";
-      domains[domain] = (domains[domain] || 0) + 1;
+  try {
+    const issues = dc.useQuery('@page and "03-Systemic-Journal"');
+    if (!issues || !issues.array) {
+      return <div>⚠️ No systemic journal data available</div>;
+    }
+    
+    const grouped = dc.useArray(issues, array => {
+      if (!array || !Array.isArray(array)) return [];
+      
+      const domains = {};
+      array.forEach(issue => {
+        try {
+          const domain = issue.value("system_domain") || "Unknown";
+          domains[domain] = (domains[domain] || 0) + 1;
+        } catch {
+          domains["Error Reading Domain"] = (domains["Error Reading Domain"] || 0) + 1;
+        }
+      });
+      return Object.entries(domains)
+        .map(([domain, count]) => ({ domain, count }))
+        .sort((a, b) => b.count - a.count);
     });
-    return Object.entries(domains)
-      .map(([domain, count]) => ({ domain, count }))
-      .sort((a, b) => b.count - a.count);
-  });
-  
-  return <dc.VanillaTable columns={COLUMNS} rows={grouped} />;
+    
+    if (!grouped || !Array.isArray(grouped)) {
+      return <div>⚠️ No domain data available</div>;
+    }
+    
+    return <dc.VanillaTable columns={COLUMNS} rows={grouped} />;
+  } catch (error) {
+    return <div>⚠️ Systemic Patterns Widget Error</div>;
+  }
 }
 ```
 
