@@ -4,5 +4,8 @@ views:
     filters:
       and:
         - file.inFolder("24-Failure-Scenarios")
+        - file.ext != "base"
     order:
       - file.name
+    columnSize:
+      file.name: 168

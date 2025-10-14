@@ -1,0 +1,12 @@
+- Create pending templates for
+	- Community
+	- Notes
+	- Documents
+	- Stories
+- Update the dataview to datacorejsx formulations in Dashboards
+- Fix the datacore errors in all the templates
+- Set up the metadata menu settings for the properties
+	- to ensure correct options for each pages, their similar properties need to have different names
+	- configure the metadata menu settings for implementing options (select and multi-select) for relevant properties.
+	- Remove redundant properties from a lot of templates
+- Research on relevant scripts development for this workspace `Obsidian LifeOS`

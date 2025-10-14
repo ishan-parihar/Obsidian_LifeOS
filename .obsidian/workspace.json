@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "af4b79e74fc79deb",
+        "id": "c8e587c209a54e5f",
         "type": "tabs",
         "children": [
           {
-            "id": "34a239fcc872d298",
+            "id": "1b772f54c806a46f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Pending Tasks.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Pending Tasks"
             }
           }
         ]
@@ -206,8 +210,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "34a239fcc872d298",
+  "active": "1b772f54c806a46f",
   "lastOpenFiles": [
+    "Untitled 1.md",
+    "Pending Tasks.md",
     "CRUSH.md",
     "08-Months/08-Months.base",
     "09-Quarters/09-Quarters.base",
@@ -241,8 +247,6 @@
     "22-Documents/README.md",
     "21-Notes/README.md",
     "20-Financial-Log/README.md",
-    "19-Financial-Accounts/README.md",
-    "18-Community/README.md",
-    "17-People/README.md"
+    "19-Financial-Accounts/README.md"
   ]
 }
