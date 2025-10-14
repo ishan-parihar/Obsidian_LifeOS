@@ -29,7 +29,7 @@ life_aspects: []
 values: []
 annual_goals: []
 quarterly_goals: []
-type: vision
+entity_type: "vision"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 

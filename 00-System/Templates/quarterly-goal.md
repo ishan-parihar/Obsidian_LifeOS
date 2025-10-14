@@ -33,7 +33,7 @@ failure_scenarios: []
 current_quarter_goal: 
 goal_progress: 0
 health: 
-type: quarterly-goal
+entity_type: "quarterly-goal"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 
@@ -67,16 +67,16 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ```datacorejsx
 const COLUMNS = [
   { id: "Project", value: row => row.$link },
-  { id: "Status", value: row => row.value("status") },
+  { id: "Status", value: row => row.value("project_status") },
   { id: "Progress", value: row => row.value("project_progress") }
 ];
 
 return function View() {
   const projects = dc.useQuery(`@page and "15-Projects" and quarterly_goals = "<% tp.file.title %>"`);
-  const sortedProjects = dc.useArray(projects, array => 
+  const sortedProjects = dc.useArray(projects, array =>
     array.sort(row => row.value("project_progress"))
   );
-  
+
   return <dc.VanillaTable columns={COLUMNS} rows={sortedProjects} />;
 }
 ```
@@ -86,16 +86,16 @@ return function View() {
 ```datacorejsx
 const COLUMNS = [
   { id: "Task", value: row => row.$link },
-  { id: "Status", value: row => row.value("status") },
-  { id: "Priority", value: row => row.value("priority") }
+  { id: "Status", value: row => row.value("task_status") },
+  { id: "Priority", value: row => row.value("task_priority") }
 ];
 
 return function View() {
   const tasks = dc.useQuery(`@page and "16-Tasks" and quarterly_goals = "<% tp.file.title %>"`);
-  const sortedTasks = dc.useArray(tasks, array => 
-    array.sort(row => row.value("priority"))
+  const sortedTasks = dc.useArray(tasks, array =>
+    array.sort(row => row.value("task_priority"))
   );
-  
+
   return <dc.VanillaTable columns={COLUMNS} rows={sortedTasks} />;
 }
 ```

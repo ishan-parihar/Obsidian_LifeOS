@@ -11,13 +11,10 @@
             "id": "8b5df98fe237f84a",
             "type": "leaf",
             "state": {
-              "type": "bases",
-              "state": {
-                "file": "21-Notes/21-Notes.base",
-                "viewName": "Table"
-              },
-              "icon": "lucide-table",
-              "title": "21-Notes"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -205,8 +202,16 @@
   },
   "active": "8b5df98fe237f84a",
   "lastOpenFiles": [
-    "21-Notes/Untitled.md",
+    "00-System/Templates/relational-journal.md",
+    "00-System/Templates/stories.md",
+    "00-System/Templates/quarterly-review.md",
+    "00-System/Templates/quarterly-goal.md",
+    "14-Quarterly-Goals/Untitled.md",
+    "14-Quarterly-Goals/14-Quarterly-Goals.base",
+    "09-Quarters/09-Quarters.base",
     "21-Notes/21-Notes.base",
+    "00-System/Templates/annual-goal.md.tmp.8988.1760476738303",
+    "21-Notes/Untitled.md",
     "00-System/Templates/notes.md",
     "Untitled.md",
     "Untitled",
@@ -230,15 +235,8 @@
     "00-System/Dashboards/Observatory.md",
     "00-System/Templates/monthly-review.md",
     "00-System/Templates/financial-log.md",
-    "00-System/Templates/quarterly-goal.md",
     "00-System/Templates/people-template.md",
     "00-System/Templates/failure-scenario.md",
-    "00-System/Templates/subjective-journal.md",
-    "00-System/Templates/systemic-journal.md",
-    "00-System/Templates/stories.md",
-    "Pending Templates",
-    "Untitled 1.md",
-    "09-Quarters/09-Quarters.base",
-    "10-Years/10-Years.base"
+    "00-System/Templates/subjective-journal.md"
   ]
 }
