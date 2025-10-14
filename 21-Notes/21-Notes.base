@@ -4,5 +4,8 @@ views:
     filters:
       and:
         - file.inFolder("21-Notes")
+        - file.ext != "base"
     order:
       - file.name
+    columnSize:
+      file.name: 168

@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "056e023c6702ac93",
+        "id": "af4b79e74fc79deb",
         "type": "tabs",
         "children": [
           {
-            "id": "74d7df7e2031460c",
+            "id": "34a239fcc872d298",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "06-Days/2025-10-14.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2025-10-14"
+              "title": "New tab"
             }
           }
         ]
@@ -210,14 +206,19 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "74d7df7e2031460c",
+  "active": "34a239fcc872d298",
   "lastOpenFiles": [
-    "06-Days/Untitled.md",
+    "CRUSH.md",
+    "08-Months/08-Months.base",
+    "09-Quarters/09-Quarters.base",
+    "10-Years/10-Years.base",
+    "00-System/Dashboards/Engine-Room.md",
     "15-Projects/15-Projects.base",
+    "06-Days/2025-10-14.md",
+    "06-Days/Untitled.md",
     "16-Tasks/16-Tasks.base",
     "15-Projects/Untitled.md",
     "15-Projects/lifeos-system-optimization.md",
-    "06-Days/2025-10-14.md",
     "03-Systemic-Journal/03-Systemic-Journal.base",
     "02-Relational-Journal/Interactions with Family.md",
     "2025-10-14.md",
@@ -235,9 +236,6 @@
     "01-Subjective-Journal/README.md",
     "02-Relational-Journal/README.md",
     "24-Failure-Scenarios/24-Failure-Scenarios.base",
-    "23-Stories/23-Stories.base",
-    "22-Documents/22-Documents.base",
-    "21-Notes/21-Notes.base",
     "24-Failure-Scenarios/README.md",
     "23-Stories/README.md",
     "22-Documents/README.md",
@@ -245,7 +243,6 @@
     "20-Financial-Log/README.md",
     "19-Financial-Accounts/README.md",
     "18-Community/README.md",
-    "17-People/README.md",
-    "16-Tasks/README.md"
+    "17-People/README.md"
   ]
 }

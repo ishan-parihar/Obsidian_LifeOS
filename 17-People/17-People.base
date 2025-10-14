@@ -4,5 +4,16 @@ views:
     filters:
       and:
         - file.inFolder("17-People")
+        - file.ext != "base"
     order:
       - file.name
+      - first_name
+      - relationship_status
+      - developmental_altitude
+      - last_connected_date
+    columnSize:
+      file.name: 168
+      note.first_name: 127
+      note.relationship_status: 127
+      note.developmental_altitude: 127
+      note.last_connected_date: 127

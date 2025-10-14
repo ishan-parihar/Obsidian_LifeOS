@@ -4,5 +4,8 @@ views:
     filters:
       and:
         - file.inFolder("14-Quarterly-Goals")
+        - file.ext != "base"
     order:
       - file.name
+    columnSize:
+      file.name: 168
