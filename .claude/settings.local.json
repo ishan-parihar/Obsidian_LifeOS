@@ -5,7 +5,8 @@
       "Bash(mkdir:*)",
       "mcp__notion__API-get-self",
       "mcp__notion__API-post-search",
-      "mcp__notion__API-retrieve-a-database"
+      "mcp__notion__API-retrieve-a-database",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []
