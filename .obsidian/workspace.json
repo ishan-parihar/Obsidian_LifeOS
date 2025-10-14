@@ -11,13 +11,10 @@
             "id": "1fd721fb91a37918",
             "type": "leaf",
             "state": {
-              "type": "bases",
-              "state": {
-                "file": "06-Days/06-Days.base",
-                "viewName": "Table"
-              },
-              "icon": "lucide-table",
-              "title": "06-Days"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -130,12 +127,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "06-Days/06-Days.base",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 06-Days"
+              "title": "Outgoing links"
             }
           },
           {
@@ -144,13 +140,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "06-Days/06-Days.base",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 06-Days"
+              "title": "Outline"
             }
           },
           {
@@ -203,9 +198,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "0e17ec9e2eacf489",
+  "active": "1fd721fb91a37918",
   "lastOpenFiles": [
     "06-Days/Untitled.md",
+    "06-Days/06-Days.base",
     "15-Projects/15-Projects.base",
     "15-Projects/Untitled.md",
     "14-Quarterly-Goals/14-Quarterly-Goals.base",
@@ -232,7 +228,6 @@
     "01-Subjective-Journal/01-Subjective-Journal.base",
     "00-System/Dashboards/Forge.md",
     "00-System/Dashboards/Engine-Room.md",
-    "08-Months/08-Months.base",
     "Pending Tasks.md",
     "00-System/Dashboards/Workbench.md",
     "00-System/Templates/documents.md",
