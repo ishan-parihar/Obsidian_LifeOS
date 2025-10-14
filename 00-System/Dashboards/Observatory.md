@@ -9,63 +9,133 @@
 
 ### Daily Syntheses
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Day",
-  day_number as "Day #",
-  choice(length(day_synthesis) > 0, "✅ Synthesized", "⏳ Pending") as "Status"
-FROM "06-Days"
-WHERE date >= date(today) - dur(7 days)
-SORT date DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Day", value: row => row.$link },
+  { id: "Day #", value: row => row.value("day_number") || "" },
+  { id: "Status", value: row => {
+    const synthesis = row.value("day_synthesis");
+    return synthesis && synthesis.length > 0 ? "✅ Synthesized" : "⏳ Pending";
+  }}
+];
+
+return function View() {
+  const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+  
+  const days = dc.useQuery('@page and "06-Days"');
+  const recentDays = dc.useArray(days, array => 
+    array.filter(day => {
+      const dayDate = day.value("date");
+      return dayDate && dayDate >= sevenDaysAgo;
+    }).sort(row => {
+      const date = row.value("date");
+      return date ? -date.getTime() : 0;
+    })
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={recentDays} />;
+}
 ```
 
 ## 🎯 Quarterly Goals Check
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Quarterly Goal",
-  status as "Status",
-  key_result_1 as "KR1",
-  key_result_2 as "KR2",
-  key_result_3 as "KR3"
-FROM "14-Quarterly-Goals"
-WHERE status != "Done"
-SORT priority DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Quarterly Goal", value: row => row.$link },
+  { id: "Status", value: row => row.value("status") },
+  { id: "KR1", value: row => row.value("key_result_1") },
+  { id: "KR2", value: row => row.value("key_result_2") },
+  { id: "KR3", value: row => row.value("key_result_3") }
+];
+
+return function View() {
+  const goals = dc.useQuery('@page and "14-Quarterly-Goals" and status != "Done"');
+  const sortedGoals = dc.useArray(goals, array => 
+    array.sort(row => -(parseInt(row.value("priority")?.match(/⭐/g)?.length || 0)))
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedGoals} />;
+}
 ```
 
 ## 📈 Monthly Patterns
 
-```dataview
-LIST
-FROM "08-Months"
-WHERE year = date(today).year
-SORT month_number DESC
-LIMIT 3
+```datacorejsx
+return function View() {
+  const currentYear = new Date().getFullYear();
+  const months = dc.useQuery(`@page and "08-Months" and year = ${currentYear}`);
+  const sortedMonths = dc.useArray(months, array => 
+    array.sort(row => -(row.value("month_number") || 0))
+  );
+  
+  return (
+    <ul>
+      {sortedMonths.slice(0, 3).map(month => (
+        <li key={month.$path}>{month.$link}</li>
+      ))}
+    </ul>
+  );
+}
 ```
 
 ## 💰 Financial Intelligence
 
 ### This Month's Cashflow
 
-```dataview
-TABLE WITHOUT ID
-  sum(rows.Total_Income) as "Income",
-  sum(rows.Total_Expenses) as "Expenses",
-  sum(rows.Net_Cashflow) as "Net"
-FROM "08-Months"
-WHERE year = date(today).year AND month_number = date(today).month
+```datacorejsx
+const COLUMNS = [
+  { id: "Income", value: row => row.totalIncome.toLocaleString() },
+  { id: "Expenses", value: row => row.totalExpenses.toLocaleString() },
+  { id: "Net", value: row => row.netCashflow.toLocaleString() }
+];
+
+return function View() {
+  const today = new Date();
+  const currentYear = today.getFullYear();
+  const currentMonth = today.getMonth() + 1;
+  
+  const months = dc.useQuery(`@page and "08-Months" and year = ${currentYear} and month_number = ${currentMonth}`);
+  const monthlyData = dc.useArray(months, array => {
+    const totalIncome = array.reduce((sum, month) => sum + (month.value("total_income") || 0), 0);
+    const totalExpenses = array.reduce((sum, month) => sum + (month.value("total_expenses") || 0), 0);
+    const netCashflow = totalIncome - totalExpenses;
+    
+    return [{ totalIncome, totalExpenses, netCashflow }];
+  });
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={monthlyData} />;
+}
 ```
 
 ### Category Breakdown
 
-```dataview
-TABLE WITHOUT ID
-  category as "Category",
-  sum(amount) as "Total"
-FROM "20-Financial-Log"
-WHERE date >= date(today) - dur(30 days)
-GROUP BY category
-SORT sum(amount) DESC
+```datacorejsx
+const COLUMNS = [
+  { id: "Category", value: row => row.category },
+  { id: "Total", value: row => row.total.toLocaleString() }
+];
+
+return function View() {
+  const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+  
+  const transactions = dc.useQuery('@page and "20-Financial-Log"');
+  const categoryTotals = dc.useArray(transactions, array => {
+    const categories = {};
+    array.forEach(transaction => {
+      const transactionDate = transaction.value("date");
+      if (transactionDate && transactionDate >= thirtyDaysAgo) {
+        const category = transaction.value("category") || "Uncategorized";
+        const amount = transaction.value("amount") || 0;
+        categories[category] = (categories[category] || 0) + amount;
+      }
+    });
+    return Object.entries(categories)
+      .map(([category, total]) => ({ category, total }))
+      .sort((a, b) => Math.abs(b.total) - Math.abs(a.total));
+  });
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={categoryTotals} />;
+}
 ```
 
 ## 🧠 Intelligence Synthesis Trends

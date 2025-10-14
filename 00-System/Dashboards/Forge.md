@@ -8,16 +8,31 @@ created: 2025-10-14
 
 ## 🏗️ Active Projects
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Project",
-  status as "Status",
-  priority as "Priority",
-  project_progress as "Progress",
-  deadline as "Deadline"
-FROM "15-Projects"
-WHERE status = "Active"
-SORT priority DESC, deadline ASC
+```datacorejsx
+const COLUMNS = [
+  { id: "Project", value: row => row.$link },
+  { id: "Status", value: row => row.value("status") },
+  { id: "Priority", value: row => row.value("priority") },
+  { id: "Progress", value: row => row.value("project_progress") + "%" },
+  { id: "Deadline", value: row => row.value("deadline")?.toLocaleDateString() }
+];
+
+return function View() {
+  const projects = dc.useQuery('@page and "15-Projects" and status = "Active"');
+  const sortedProjects = dc.useArray(projects, array => 
+    array.sort((a, b) => {
+      const priorityA = parseInt(a.value("priority")?.match(/⭐/g)?.length || 0);
+      const priorityB = parseInt(b.value("priority")?.match(/⭐/g)?.length || 0);
+      if (priorityA !== priorityB) return priorityB - priorityA;
+      
+      const deadlineA = a.value("deadline")?.getTime() || Infinity;
+      const deadlineB = b.value("deadline")?.getTime() || Infinity;
+      return deadlineA - deadlineB;
+    })
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedProjects} />;
+}
 ```
 
 ## 🚀 Current Sprint
@@ -26,18 +41,60 @@ SORT priority DESC, deadline ASC
 
 ### Sprint Tasks
 
-```dataview
-TASK
-WHERE contains(text, "#sprint/current") AND !completed
-GROUP BY file.link
+```datacorejsx
+return function View() {
+  const tasks = dc.useQuery('@task');
+  const sprintTasks = dc.useArray(tasks, array => 
+    array.filter(task => {
+      const text = task.$text || "";
+      return text.includes('#sprint/current') && !task.completed;
+    })
+  );
+  
+  const grouped = sprintTasks.reduce((acc, task) => {
+    const file = task.$file;
+    if (!acc[file]) acc[file] = { file, tasks: [] };
+    acc[file].tasks.push(task);
+    return acc;
+  }, {});
+  
+  return (
+    <div>
+      {Object.values(grouped).map(group => (
+        <div key={group.file}>
+          <strong>{group.file}</strong>
+          <ul>
+            {group.tasks.map((task, i) => (
+              <li key={i}>{task.$text}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+}
 ```
 
 ### Sprint Backlog
 
-```dataview
-TASK
-WHERE contains(text, "#sprint/backlog") AND !completed
-LIMIT 10
+```datacorejsx
+return function View() {
+  const tasks = dc.useQuery('@task');
+  const backlogTasks = dc.useArray(tasks, array => 
+    array.filter(task => {
+      const text = task.$text || "";
+      return text.includes('#sprint/backlog') && !task.completed;
+    }).slice(0, 10)
+  );
+  
+  return (
+    <ul>
+      {backlogTasks.map((task, i) => (
+        <li key={i}>{task.$text}</li>
+      ))}
+    </ul>
+  );
+}
 ```
 
 ## 📋 Task Pipeline
