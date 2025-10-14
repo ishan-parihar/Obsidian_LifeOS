@@ -30,8 +30,8 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 
 ## 📋 Project Overview
 
-**Priority**: 
-**Status**: 
+**Priority**: <% tp.frontmatter.project_priority %>
+**Status**: <% tp.frontmatter.project_status %>
 **Progress**: 0%
 
 ### Project Summary
@@ -70,16 +70,16 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ```datacorejsx
 const COLUMNS = [
   { id: "Task", value: row => row.$link },
-  { id: "Status", value: row => row.value("status") },
-  { id: "Priority", value: row => row.value("priority") }
+  { id: "Status", value: row => row.value("task_status") },
+  { id: "Priority", value: row => row.value("task_priority") }
 ];
 
 return function View() {
-  const tasks = dc.useQuery(`@page and "16-Tasks" and projects = "<% tp.file.title %>" and status != "Done"`);
-  const sortedTasks = dc.useArray(tasks, array => 
-    array.sort(row => row.value("priority"))
+  const tasks = dc.useQuery(`@page and "16-Tasks" and projects = "<% tp.file.title %>" and task_status != "Done"`);
+  const sortedTasks = dc.useArray(tasks, array =>
+    array.sort(row => row.value("task_priority"))
   );
-  
+
   return <dc.VanillaTable columns={COLUMNS} rows={sortedTasks} />;
 }
 ```

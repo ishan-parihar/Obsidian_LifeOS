@@ -1,8 +1,8 @@
 ---
-title: 
+title:
 description: ""
-status: Todo
-priority: ⭐⭐⭐
+task_status: Todo
+task_priority: ⭐⭐⭐
 action_date: <% tp.date.now("YYYY-MM-DD") %>T09:00
 assignee: ""
 projects: []
@@ -55,10 +55,11 @@ years: []
 days: []
 external_dependencies: []
 completion_criteria: []
-task_type: 
-energy_required: 
-cognitive_load: 
-type: task
+task_type:
+task_energy_required:
+task_cognitive_load:
+entity_hierarchy_level: "strategic"
+entity_type: "task"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 
@@ -66,9 +67,9 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 
 ## 📋 Task Overview
 
-**Priority**: ⭐⭐
-**Status**: Todo
-**Estimated Hours**: 
+**Priority**: <% tp.frontmatter.task_priority %>
+**Status**: <% tp.frontmatter.task_status %>
+**Estimated Hours**:
 **Actual Hours**: 
 
 ### Task Summary
@@ -99,7 +100,7 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 
 ## 📈 Progress Tracking
 
-**Current Status**: Todo
+**Current Status**: <% tp.frontmatter.task_status %>
 **Time Invested**: 0 hours
 **Next Action**: 
 
@@ -109,8 +110,8 @@ created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ```datacorejsx
 const COLUMNS = [
   { id: "Task", value: row => row.$link },
-  { id: "Status", value: row => row.value("status") },
-  { id: "Priority", value: row => row.value("priority") }
+  { id: "Status", value: row => row.value("task_status") },
+  { id: "Priority", value: row => row.value("task_priority") }
 ];
 
 return function View() {
@@ -123,18 +124,18 @@ return function View() {
     const thisProjects = [<% tp.frontmatter.projects %>];
     const thisQuarterlyGoals = [<% tp.frontmatter.quarterly_goals %>];
     const thisAnnualGoals = [<% tp.frontmatter.annual_goals %>];
-    
+
     return (
       taskProjects.some(p => thisProjects.includes(p)) ||
       taskQuarterlyGoals.some(qg => thisQuarterlyGoals.includes(qg)) ||
       taskAnnualGoals.some(ag => thisAnnualGoals.includes(ag))
     );
   });
-  
-  const sortedTasks = dc.useArray(relatedTasks, array => 
-    array.sort(row => row.value("priority"))
+
+  const sortedTasks = dc.useArray(relatedTasks, array =>
+    array.sort(row => row.value("task_priority"))
   );
-  
+
   return <dc.VanillaTable columns={COLUMNS} rows={sortedTasks} />;
 }
 ```
