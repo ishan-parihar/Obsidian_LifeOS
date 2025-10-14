@@ -1,0 +1,8 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.inFolder("18-Community")
+    order:
+      - file.name

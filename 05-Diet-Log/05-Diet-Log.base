@@ -1,0 +1,8 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.inFolder("05-Diet-Log")
+    order:
+      - file.name

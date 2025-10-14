@@ -1,0 +1,8 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.inFolder("03-Systemic-Journal")
+    order:
+      - file.name
