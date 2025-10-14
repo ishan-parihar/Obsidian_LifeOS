@@ -1244,7 +1244,6 @@ Since you currently use n8n for automation:
 - Faster performance (local)
 - Infinite extensibility (plugins/scripts)
 - Graph view for emergent insights
-- No vendor lock-in
 
 **Challenges:**
 
@@ -1255,3 +1254,26 @@ Since you currently use n8n for automation:
 ---
 
 This blueprint provides the complete technical specification to rebuild your LifeOS in Obsidian while preserving its sophisticated systemic intelligence. The key is maintaining the dual-hierarchy convergence: logs → synthesis → reviews flowing upward, while strategy → goals → tasks flows downward, meeting at the junction point that reveals "what matters most right now."
+
+---
+# OPERATIONAL CONTEXT
+You are operating in the Obsidian Environment. The data flow in the LifeOS lacks severely.
+
+# LifeOS Systemic Context
+For instance, the entries that I would be adding into any point in any hierarchy like Log Pages (Subjective, Relational Systemic Journal, Activity, Diet Logs), Review Pages (Day, Week, Month, etc) or Strategic Pages (Annual Goals, Projects, Tasks, etc), would not be fully rolling up into their counterpart DBs.
+
+# NOTION LifeOS Context
+The Notion LifeOS is made purely from properties with no page context. This makes those properties machine readable and rollable for creating hierarchies within Databases. 
+
+# Shortcomings
+However, this Obsidian LifeOS does not fully incorporate the hierarchy due to absence of a fully mature yaml properties ecosystem in all the databases and templates.
+
+### Example Implementation:
+If I want to see any day even from the Year Pages, I could do that through dataview. Similarly that for the Strategic Execution Hierarchy, I could see the Tasks at the bottom-most level from the Annual Goals.
+
+# Implementation Process
+To do this, the whole structure of yaml formatted properties would be required, to transform all the templates, so that the Dashboard Database Views can correctly roll up and create formatted views of the data for any database.
+The primary work that you need to do revolves around reformatting the templates with the universal yaml properties and creating dashboard
+views for all the databases (Notes Folder) and ensuring that the Dashboard shows everything correctly.
+
+Based on the investigative research @Research_Docs/LifeOS-Data-Flow-Upgrade-Plan.md upgrade the dataflow in the LifeOS.

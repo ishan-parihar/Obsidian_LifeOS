@@ -1,7 +1,4 @@
----
-dashboard_type: workbench
-created: 2025-10-14
----
+
 # The Workbench
 
 > **Today's Command Center** - Real-time operational intelligence
@@ -69,4 +66,4 @@ WHERE status = "Active"
 
 ---
 
-*Last updated: <% tp.date.now("YYYY-MM-DD HH:mm") %>*
+*Last updated: Real-time*

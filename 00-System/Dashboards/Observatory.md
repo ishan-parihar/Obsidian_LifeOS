@@ -1,15 +1,11 @@
----
-dashboard_type: observatory
-created: 2025-10-14
----
 # The Observatory
 
 > **Strategic Review Hub** - Multi-temporal synthesis and pattern recognition
 
 ## 📅 Current Week Overview
 
-**Week**: <% tp.date.now("YYYY-[W]WW") %>
-**Date Range**: <% tp.date.now("YYYY-MM-DD", 0, -tp.date.now().weekday) %> - <% tp.date.now("YYYY-MM-DD", 6, -tp.date.now().weekday) %>
+**Week**: Current Week
+**Date Range**: This Week
 
 ### Daily Syntheses
 
@@ -99,4 +95,4 @@ GROUP BY split(L.text, "## The ")[1]
 
 ---
 
-*Last updated: <% tp.date.now("YYYY-MM-DD HH:mm") %>*
+*Last updated: Real-time*

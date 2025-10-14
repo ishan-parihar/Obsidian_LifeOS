@@ -158,4 +158,4 @@ SORT count(rows) DESC
 
 ---
 
-*Last updated: <% tp.date.now("YYYY-MM-DD HH:mm") %>*
+*Last updated: 2025-10-14*

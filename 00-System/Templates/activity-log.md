@@ -10,7 +10,7 @@ activity_notes:
 habit:
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
-
+. 
 # Activity Log - <% tp.date.now("YYYY-MM-DD HH:mm") %>
 
 ## 🏃 Activity Details
