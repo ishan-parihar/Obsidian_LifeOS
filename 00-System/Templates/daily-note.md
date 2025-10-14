@@ -132,7 +132,7 @@ const COLUMNS = [
 return function View() {
   const entries = dc.useQuery(`@page and "01-Subjective-Journal" and days = "<% tp.file.title %>"`);
   const sortedEntries = dc.useArray(entries, array => 
-    array.sort(row => row.$mtime).reverse()
+    array.sort(row => -row.$mtime)
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedEntries} />;
@@ -150,7 +150,7 @@ const COLUMNS = [
 return function View() {
   const entries = dc.useQuery(`@page and "02-Relational-Journal" and days = "<% tp.file.title %>"`);
   const sortedEntries = dc.useArray(entries, array => 
-    array.sort(row => row.$mtime).reverse()
+    array.sort(row => -row.$mtime)
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedEntries} />;
@@ -168,7 +168,7 @@ const COLUMNS = [
 return function View() {
   const issues = dc.useQuery(`@page and "03-Systemic-Journal" and date = "<% tp.frontmatter.date %>"`);
   const sortedIssues = dc.useArray(issues, array => 
-    array.sort(row => row.value("impact")).reverse()
+    array.sort(row => -row.value("impact"))
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedIssues} />;
@@ -186,7 +186,7 @@ const COLUMNS = [
 return function View() {
   const activities = dc.useQuery(`@page and "04-Activity-Log" and days = "<% tp.file.title %>"`);
   const sortedActivities = dc.useArray(activities, array => 
-    array.sort(row => row.$mtime).reverse()
+    array.sort(row => -row.$mtime)
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedActivities} />;
@@ -203,7 +203,7 @@ const COLUMNS = [
 return function View() {
   const meals = dc.useQuery(`@page and "05-Diet-Log" and days = "<% tp.file.title %>"`);
   const sortedMeals = dc.useArray(meals, array => 
-    array.sort(row => row.$mtime).reverse()
+    array.sort(row => -row.$mtime)
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedMeals} />;

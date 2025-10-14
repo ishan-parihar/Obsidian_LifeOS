@@ -103,7 +103,7 @@ const COLUMNS = [
 return function View() {
   const quarters = dc.useQuery(`@page and "09-Quarters" and years = "<% tp.file.title %>"`);
   const sortedQuarters = dc.useArray(quarters, array => 
-    array.sort(row => row.$name).reverse()
+    array.sort(row => row.$name)
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedQuarters} />;
@@ -121,7 +121,7 @@ const COLUMNS = [
 return function View() {
   const goals = dc.useQuery(`@page and "13-Annual-Goals" and years = "<% tp.file.title %>"`);
   const sortedGoals = dc.useArray(goals, array => 
-    array.sort(row => row.value("goal_progress")).reverse()
+    array.sort(row => row.value("goal_progress"))
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedGoals} />;
@@ -199,7 +199,7 @@ const COLUMNS = [
 return function View() {
   const issues = dc.useQuery(`@page and "03-Systemic-Journal" and date >= "<% tp.frontmatter.time_period_start %>" and date <= "<% tp.frontmatter.time_period_end %>"`);
   const sortedIssues = dc.useArray(issues, array => 
-    array.sort(row => row.value("impact")).reverse()
+    array.sort(row => row.value("impact"))
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedIssues} />;

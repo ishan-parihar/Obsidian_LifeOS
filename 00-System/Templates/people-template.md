@@ -118,7 +118,7 @@ const COLUMNS = [
 return function View() {
   const interactions = dc.useQuery(`@page and "Logs/Relational" and people = "<% tp.file.title %>"`);
   const sortedInteractions = dc.useArray(interactions, array => 
-    array.sort(row => row.value("date")).reverse()
+    array.sort(row => row.value("date"))
   ).slice(0, 5);
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedInteractions} />;

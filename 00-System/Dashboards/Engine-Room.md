@@ -11,15 +11,21 @@ created: 2025-10-14
 
 ### Recent Notes
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Note",
-  status as "Status",
-  file.mtime as "Modified"
-FROM "21-Notes"
-WHERE status = "Live" OR status = "Priority-Highlight"
-SORT file.mtime DESC
-LIMIT 10
+```datacorejsx
+const COLUMNS = [
+  { id: "Note", value: row => row.$link },
+  { id: "Status", value: row => row.value("status") },
+  { id: "Modified", value: row => row.$mtime.toLocaleDateString() }
+];
+
+return function View() {
+  const notes = dc.useQuery('@page and "21-Notes" and (status = "Live" or status = "Priority-Highlight")');
+  const sortedNotes = dc.useArray(notes, array => 
+    array.sort(row => -row.$mtime)
+  );
+  
+  return <dc.VanillaTable columns={COLUMNS} rows={sortedNotes.slice(0, 10)} />;
+}
 ```
 
 ## 📄 Document Repository

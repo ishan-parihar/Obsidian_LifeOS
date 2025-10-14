@@ -74,7 +74,7 @@ const COLUMNS = [
 return function View() {
   const projects = dc.useQuery(`@page and "15-Projects" and quarterly_goals = "<% tp.file.title %>"`);
   const sortedProjects = dc.useArray(projects, array => 
-    array.sort(row => row.value("project_progress")).reverse()
+    array.sort(row => row.value("project_progress"))
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedProjects} />;
@@ -93,7 +93,7 @@ const COLUMNS = [
 return function View() {
   const tasks = dc.useQuery(`@page and "16-Tasks" and quarterly_goals = "<% tp.file.title %>"`);
   const sortedTasks = dc.useArray(tasks, array => 
-    array.sort(row => row.value("priority")).reverse()
+    array.sort(row => row.value("priority"))
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedTasks} />;
@@ -113,7 +113,7 @@ const COLUMNS = [
 return function View() {
   const risks = dc.useQuery(`@page and "24-Failure-Scenarios" and quarterly_goals = "<% tp.file.title %>"`);
   const sortedRisks = dc.useArray(risks, array => 
-    array.sort(row => row.value("impact")).reverse()
+    array.sort(row => row.value("impact"))
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedRisks} />;

@@ -68,7 +68,7 @@ const COLUMNS = [
 return function View() {
   const goals = dc.useQuery(`@page and "13-Annual-Goals" and vision = "<% tp.file.title %>"`);
   const sortedGoals = dc.useArray(goals, array => 
-    array.sort(row => row.value("goal_progress")).reverse()
+    array.sort(row => row.value("goal_progress"))
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedGoals} />;

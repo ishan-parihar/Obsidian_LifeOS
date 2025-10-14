@@ -104,7 +104,7 @@ const COLUMNS = [
 return function View() {
   const weeks = dc.useQuery(`@page and "07-Weeks" and months = "<% tp.file.title %>"`);
   const sortedWeeks = dc.useArray(weeks, array => 
-    array.sort(row => row.$name).reverse()
+    array.sort(row => row.$name)
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedWeeks} />;
@@ -182,7 +182,7 @@ const COLUMNS = [
 return function View() {
   const issues = dc.useQuery(`@page and "03-Systemic-Journal" and date >= "<% tp.frontmatter.time_period_start %>" and date <= "<% tp.frontmatter.time_period_end %>"`);
   const sortedIssues = dc.useArray(issues, array => 
-    array.sort(row => row.value("impact")).reverse()
+    array.sort(row => row.value("impact"))
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedIssues} />;

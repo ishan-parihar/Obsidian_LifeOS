@@ -93,7 +93,7 @@ const COLUMNS = [
 return function View() {
   const tasks = dc.useQuery(`@page and "16-Tasks" and projects = "Untitled" and status != "Done"`);
   const sortedTasks = dc.useArray(tasks, array => 
-    array.sort(row => row.value("priority")).reverse()
+    array.sort(row => row.value("priority"))
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedTasks} />;
@@ -123,7 +123,7 @@ const COLUMNS = [
 return function View() {
   const issues = dc.useQuery(`@page and "03-Systemic-Journal" and projects = "Untitled"`);
   const sortedIssues = dc.useArray(issues, array => 
-    array.sort(row => row.value("impact")).reverse()
+    array.sort(row => row.value("impact"))
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedIssues} />;

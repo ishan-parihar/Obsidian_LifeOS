@@ -132,7 +132,7 @@ return function View() {
   });
   
   const sortedTasks = dc.useArray(relatedTasks, array => 
-    array.sort(row => row.value("priority")).reverse()
+    array.sort(row => row.value("priority"))
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedTasks} />;
@@ -150,7 +150,7 @@ const COLUMNS = [
 return function View() {
   const issues = dc.useQuery(`@page and "03-Systemic-Journal" and projects = "<% tp.file.title %>"`);
   const sortedIssues = dc.useArray(issues, array => 
-    array.sort(row => row.value("impact")).reverse()
+    array.sort(row => row.value("impact"))
   );
   
   return <dc.VanillaTable columns={COLUMNS} rows={sortedIssues} />;
