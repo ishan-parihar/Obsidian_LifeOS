@@ -8,20 +8,38 @@
 ```datacorejsx
 const COLUMNS = [
   { id: "Task", value: row => row.$link },
-  { id: "Priority", value: row => row.value("priority") },
-  { id: "Status", value: row => row.value("status") }
+  { id: "Priority", value: row => row.value("priority") ?? "" },
+  { id: "Status", value: row => row.value("status") ?? "" }
 ];
 
 return function View() {
-  const projects = dc.useQuery('@page and "15-Projects" and status = "Active"');
-  const currentSprintProjects = dc.useArray(projects, array => 
-    array.filter(project => {
-      const tags = project.$tags || [];
-      return tags.includes('#sprint/current');
-    }).sort(row => -(parseInt(row.value("priority")?.match(/⭐/g)?.length || 0)))
-  );
-  
-  return <dc.VanillaTable columns={COLUMNS} rows={currentSprintProjects.slice(0, 10)} />;
+  try {
+    const projects = dc.useQuery('@page and "15-Projects" and status = "Active"');
+    const currentSprintProjects = dc.useArray(projects, array => 
+      array.filter(project => {
+        try {
+          const tags = project.$tags || [];
+          return tags.includes('#sprint/current');
+        } catch {
+          return false;
+        }
+      }).sort((a, b) => {
+        try {
+          const priorityStrA = a.value("priority") || "";
+          const priorityStrB = b.value("priority") || "";
+          const starsA = (priorityStrA.match(/⭐/g) || []).length;
+          const starsB = (priorityStrB.match(/⭐/g) || []).length;
+          return starsB - starsA;
+        } catch {
+          return 0;
+        }
+      })
+    );
+    
+    return <dc.VanillaTable columns={COLUMNS} rows={currentSprintProjects.slice(0, 10)} />;
+  } catch (error) {
+    return <div>⚠️ Today's Focus Widget Error</div>;
+  }
 }
 ```
 
@@ -30,17 +48,33 @@ return function View() {
 ```datacorejsx
 const COLUMNS = [
   { id: "Issue", value: row => row.$link },
-  { id: "Impact", value: row => row.value("impact") },
-  { id: "Status", value: row => row.value("status") }
+  { id: "Impact", value: row => row.value("impact") ?? "" },
+  { id: "Status", value: row => row.value("status") ?? "" }
 ];
 
 return function View() {
-  const issues = dc.useQuery('@page and "03-Systemic-Journal" and (status = "Triage" or status = "Escalated")');
-  const sortedIssues = dc.useArray(issues, array => 
-    array.sort(row => -(parseInt(row.value("impact")?.match(/P(\d)/)?.[1] || 0)))
-  );
-  
-  return <dc.VanillaTable columns={COLUMNS} rows={sortedIssues.slice(0, 5)} />;
+  try {
+    const issues = dc.useQuery('@page and "03-Systemic-Journal" and (status = "Triage" or status = "Escalated")');
+    const sortedIssues = dc.useArray(issues, array => 
+      array.sort((a, b) => {
+        try {
+          const impactStrA = a.value("impact") || "";
+          const impactStrB = b.value("impact") || "";
+          const matchA = impactStrA.match(/P(\d)/);
+          const matchB = impactStrB.match(/P(\d)/);
+          const priorityA = matchA ? parseInt(matchA[1]) : 0;
+          const priorityB = matchB ? parseInt(matchB[1]) : 0;
+          return priorityB - priorityA;
+        } catch {
+          return 0;
+        }
+      })
+    );
+    
+    return <dc.VanillaTable columns={COLUMNS} rows={sortedIssues.slice(0, 5)} />;
+  } catch (error) {
+    return <div>⚠️ Systemic Issues Widget Error</div>;
+  }
 }
 ```
 

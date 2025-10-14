@@ -187,7 +187,7 @@ return function View() {
     return <div>⚠️ Up Next Tasks Widget Error</div>;
   }
 }
-
+```
 ### In Progress
 ```datacorejsx
 const COLUMNS = [
@@ -226,6 +226,7 @@ return function View() {
     return <div>⚠️ In Progress Tasks Widget Error</div>;
   }
 }
+```
 
 ### Recently Completed
 ```datacorejsx
@@ -271,7 +272,7 @@ return function View() {
     return <div>⚠️ Recently Completed Widget Error</div>;
   }
 }
-
+``````
 ## 📊 Project Health Matrix
 
 ```datacorejsx
@@ -318,7 +319,7 @@ return function View() {
     return <div>⚠️ Project Health Matrix Widget Error</div>;
   }
 }
-
+```
 ## 🎯 Strategic Execution
 
 ### Quarterly Goal Alignment
@@ -360,7 +361,7 @@ return function View() {
     return <div>⚠️ Quarterly Goal Alignment Widget Error</div>;
   }
 }
-
+```
 ### Annual Goal Progress
 
 ```datacorejsx
@@ -422,7 +423,7 @@ return function View() {
     return <div>⚠️ Annual Goal Progress Widget Error</div>;
   }
 }
-
+```
 ## ⚡ Quick Actions
 
 - [ ] Move task to Current Sprint
@@ -494,7 +495,6 @@ return function View() {
     return <div>⚠️ Project Tasks Widget Error</div>;
   }
 }
+```
 
 ---
-
-*Last updated: 2025-10-14*

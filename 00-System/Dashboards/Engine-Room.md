@@ -119,18 +119,44 @@ return function View() {
 ```datacorejsx
 const COLUMNS = [
   { id: "Account", value: row => row.$link },
-  { id: "Type", value: row => row.value("type")?.join(", ") ?? "" },
-  { id: "Balance", value: row => row.value("current_balance") },
-  { id: "Status", value: row => row.value("status") }
+  { id: "Type", value: row => {
+    try {
+      const type = row.value("type");
+      return Array.isArray(type) ? type.join(", ") : type || "";
+    } catch {
+      return "";
+    }
+  }},
+  { id: "Balance", value: row => {
+    try {
+      const balance = row.value("current_balance");
+      return balance ? `₹${balance.toLocaleString()}` : "₹0";
+    } catch {
+      return "₹0";
+    }
+  }},
+  { id: "Status", value: row => row.value("status") ?? "" }
 ];
 
 return function View() {
-  const accounts = dc.useQuery('@page and "19-Financial-Accounts" and status = "Active"');
-  const sortedAccounts = dc.useArray(accounts, array => 
-    array.sort(row => -(row.value("current_balance") || 0))
-  );
-  
-  return <dc.VanillaTable columns={COLUMNS} rows={sortedAccounts} />;
+  try {
+    const accounts = dc.useQuery('@page and "19-Financial-Accounts" and status = "Active"');
+    const sortedAccounts = dc.useArray(accounts, array => 
+      array.sort((a, b) => {
+        try {
+          const balanceA = a.value("current_balance") || 0;
+          const balanceB = b.value("current_balance") || 0;
+          return balanceB - balanceA;
+        } catch {
+          return 0;
+        }
+      })
+    );
+    
+    return <dc.VanillaTable columns={COLUMNS} rows={sortedAccounts} />;
+  } catch (error) {
+    return <div>⚠️ Account Overview Widget Error</div>;
+  }
 }
 ```
 
@@ -139,18 +165,46 @@ return function View() {
 ```datacorejsx
 const COLUMNS = [
   { id: "Transaction", value: row => row.$link },
-  { id: "Amount", value: row => row.value("amount") },
-  { id: "Category", value: row => row.value("category") },
-  { id: "Date", value: row => row.value("date")?.toLocaleDateString() }
+  { id: "Amount", value: row => {
+    try {
+      const amount = row.value("amount");
+      return amount ? `₹${amount.toLocaleString()}` : "₹0";
+    } catch {
+      return "₹0";
+    }
+  }},
+  { id: "Category", value: row => row.value("category") ?? "" },
+  { id: "Date", value: row => {
+    try {
+      const date = row.value("date");
+      return date?.toLocaleDateString() ?? "";
+    } catch {
+      return "";
+    }
+  }}
 ];
 
 return function View() {
-  const transactions = dc.useQuery('@page and "20-Financial-Log"');
-  const sortedTransactions = dc.useArray(transactions, array => 
-    array.sort(row => -(row.value("date")?.getTime() || 0))
-  );
-  
-  return <dc.VanillaTable columns={COLUMNS} rows={sortedTransactions.slice(0, 10)} />;
+  try {
+    const transactions = dc.useQuery('@page and "20-Financial-Log"');
+    const sortedTransactions = dc.useArray(transactions, array => 
+      array.sort((a, b) => {
+        try {
+          const dateA = a.value("date");
+          const dateB = b.value("date");
+          const timeA = dateA?.getTime() || 0;
+          const timeB = dateB?.getTime() || 0;
+          return timeB - timeA;
+        } catch {
+          return 0;
+        }
+      })
+    );
+    
+    return <dc.VanillaTable columns={COLUMNS} rows={sortedTransactions.slice(0, 10)} />;
+  } catch (error) {
+    return <div>⚠️ Recent Financial Activity Widget Error</div>;
+  }
 }
 ```
 
