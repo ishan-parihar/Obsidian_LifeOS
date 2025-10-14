@@ -4,3 +4,13 @@ views:
     filters:
       and:
         - file.inFolder("02-Relational-Journal")
+        - file.ext != "base"
+    order:
+      - file.name
+      - people
+      - emotional_tone
+      - power_balance
+      - days
+    columnSize:
+      file.name: 168
+      note.people: 127

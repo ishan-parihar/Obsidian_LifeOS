@@ -4,5 +4,14 @@ views:
     filters:
       and:
         - file.inFolder("04-Activity-Log")
+        - file.ext != "base"
     order:
       - file.name
+      - activity_type
+      - habit
+      - habit_quality
+    columnSize:
+      file.name: 168
+      note.activity_type: 127
+      note.habit: 127
+      note.habit_quality: 100

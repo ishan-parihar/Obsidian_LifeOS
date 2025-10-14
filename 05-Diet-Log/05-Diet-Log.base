@@ -4,5 +4,11 @@ views:
     filters:
       and:
         - file.inFolder("05-Diet-Log")
+        - file.ext != "base"
     order:
       - file.name
+      - meal_type
+      - days
+    columnSize:
+      file.name: 168
+      note.meal_type: 127

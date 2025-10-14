@@ -4,5 +4,14 @@ views:
     filters:
       and:
         - file.inFolder("06-Days")
+        - file.ext != "base"
     order:
       - file.name
+      - date
+      - day_name
+      - status
+    columnSize:
+      file.name: 168
+      note.date: 127
+      note.day_name: 127
+      note.status: 100

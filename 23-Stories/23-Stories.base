@@ -3,6 +3,6 @@ views:
     name: Table
     filters:
       and:
-        - file.inFolder("16-Tasks")
+        - file.inFolder("23-Stories")
     order:
       - file.name

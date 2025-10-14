@@ -4,5 +4,14 @@ views:
     filters:
       and:
         - file.inFolder("03-Systemic-Journal")
+        - file.ext != "base"
     order:
       - file.name
+      - status
+      - impact
+      - system_domain
+    columnSize:
+      file.name: 168
+      note.status: 100
+      note.impact: 100
+      note.system_domain: 127

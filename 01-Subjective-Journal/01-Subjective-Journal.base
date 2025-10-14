@@ -4,5 +4,13 @@ views:
     filters:
       and:
         - file.inFolder("01-Subjective-Journal")
+        - file.ext != "base"
     order:
       - file.name
+      - primary_emotion
+      - secondary_emotion
+      - days
+    columnSize:
+      file.name: 168
+      note.primary_emotion: 127
+      note.secondary_emotion: 127

@@ -4,20 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "bf2e0bfffb6ca054",
+        "id": "056e023c6702ac93",
         "type": "tabs",
         "children": [
           {
-            "id": "21d577404a9edcf9",
+            "id": "74d7df7e2031460c",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "02-Relational-Journal/02-Relational-Journal.base",
-                "viewName": "Table"
+                "file": "06-Days/2025-10-14.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "02-Relational-Journal"
+              "icon": "lucide-file",
+              "title": "2025-10-14"
             }
           }
         ]
@@ -209,43 +210,42 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "fe70c38ec800b6c7",
+  "active": "74d7df7e2031460c",
   "lastOpenFiles": [
-    "20-Financial-Log/20-Financial-Log.base",
+    "06-Days/Untitled.md",
+    "15-Projects/15-Projects.base",
+    "16-Tasks/16-Tasks.base",
+    "15-Projects/Untitled.md",
+    "15-Projects/lifeos-system-optimization.md",
+    "06-Days/2025-10-14.md",
     "03-Systemic-Journal/03-Systemic-Journal.base",
-    "19-Financial-Accounts/19-Financial-Accounts.base",
+    "02-Relational-Journal/Interactions with Family.md",
+    "2025-10-14.md",
+    "06-Days/06-Days.base",
+    "00-System/Templates/daily-note.md",
+    "00-System/Templates/annual-goal.md",
+    "00-System/Templates/activity-log.md",
+    "03-Systemic-Journal/Untitled.md",
+    "02-Relational-Journal/02-Relational-Journal.base",
+    "01-Subjective-Journal/01-Subjective-Journal.base",
+    "14-Quarterly-Goals/README.md",
+    "11-Values/README.md",
+    "12-Vision/README.md",
+    "13-Annual-Goals/README.md",
+    "01-Subjective-Journal/README.md",
+    "02-Relational-Journal/README.md",
+    "24-Failure-Scenarios/24-Failure-Scenarios.base",
+    "23-Stories/23-Stories.base",
+    "22-Documents/22-Documents.base",
+    "21-Notes/21-Notes.base",
     "24-Failure-Scenarios/README.md",
-    "18-Community/18-Community.base",
     "23-Stories/README.md",
     "22-Documents/README.md",
     "21-Notes/README.md",
     "20-Financial-Log/README.md",
     "19-Financial-Accounts/README.md",
-    "17-People/17-People.base",
     "18-Community/README.md",
     "17-People/README.md",
-    "16-Tasks/README.md",
-    "16-Tasks/16-Tasks.base",
-    "15-Projects/README.md",
-    "13-Annual-Goals/13-Annual-Goals.base",
-    "15-Projects/15-Projects.base",
-    "14-Quarterly-Goals/14-Quarterly-Goals.base",
-    "11-Values/11-Values.base",
-    "12-Vision/12-Vision.base",
-    "10-Years/README.md",
-    "09-Quarters/README.md",
-    "08-Months/README.md",
-    "07-Weeks/README.md",
-    "06-Days/README.md",
-    "05-Diet-Log/README.md",
-    "00-System/Dashboards/Engine-Room.md",
-    "01-Subjective-Journal/Untitled.md",
-    "02-Relational-Journal/Untitled.md",
-    "03-Systemic-Journal/README.md",
-    "04-Activity-Log/README.md",
-    "Untitled.md",
-    "01-Subjective-Journal/README.md",
-    "00-System/Templates/failure-scenario.md",
-    "00-System/Templates/financial-account.md"
+    "16-Tasks/README.md"
   ]
 }
