@@ -4,7 +4,7 @@ the_antigoal: ""
 type: ""
 impact: ""
 likelihood: ""
-status: Identified
+status: "Identified"
 early_warning_signs: ""
 proactive_protocol: ""
 reactive_protocol: ""
@@ -15,7 +15,7 @@ systemic_journal: []
 threat_level: ""
 current_quarter: ""
 suggestions: ""
-type: failure-scenario
+entity_type: "failure-scenario"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 

@@ -1,19 +1,18 @@
 ---
-title: "<% tp.date.now("YY-MM-DD") %>-D<% tp.date.now("DDD") %>"
+title: "<% tp.date.now('YY-MM-DD') %>-D<% tp.date.now('DDD') %>"
 daily_date: <% tp.date.now("YYYY-MM-DD") %>
-daily_day_name: <% tp.date.now("dddd") %>
+daily_day_name: "<% tp.date.now('dddd') %>"
 daily_day_number: <% tp.date.now("DDD") %>
 daily_year: <% tp.date.now("YYYY") %>
 daily_time_period_start: <% tp.date.now("YYYY-MM-DD") %>
 daily_time_period_end: <% tp.date.now("YYYY-MM-DD") %>
-daily_containing_period: [[<% tp.date.now("YYYY-[W]WW") %>]]
+daily_containing_period: "[[<% tp.date.now('YYYY-[W]WW') %>]]"
 entity_hierarchy_level: "review"
 entity_type: "daily-review"
-daily_weeks: [[<% tp.date.now("YYYY-[W]WW") %>]]
-daily_months: [[<% tp.date.now("YYYY-MM") %>]]
-daily_quarters: [[<% tp.date.now("YYYY-[Q]Q") %>]]
-daily_years: [[<% tp.date.now("YYYY") %>]]
-# Intelligence Synthesis Fields
+daily_weeks: ["[[<% tp.date.now('YYYY-[W]WW') %>]]"]
+daily_months: ["[[<% tp.date.now('YYYY-MM') %>]]"]
+daily_quarters: ["[[<% tp.date.now('YYYY-[Q]Q') %>]]"]
+daily_years: ["[[<% tp.date.now('YYYY') %>]]"]
 daily_day_synthesis: ""
 daily_the_witness: ""
 daily_the_logos_inquisitor: ""
@@ -30,7 +29,6 @@ daily_the_stillness_warden: ""
 daily_the_aesthetic_calibrator: ""
 daily_the_legacy_tender: ""
 daily_the_systemic_navigator: ""
-# Meta-Synthesis Fields
 daily_day_oracle_synthesis: ""
 daily_day_phoenix_synthesis: ""
 daily_day_sovereign_synthesis: ""
@@ -39,6 +37,7 @@ daily_status: ""
 daily_day_report: ""
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
+
 
 # <% tp.date.now("dddd, MMMM D, YYYY") %>
 

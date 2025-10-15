@@ -2,33 +2,24 @@
 vision_statement: ""
 guiding_question: ""
 strategic_pillars: []
-priority: ⭐⭐⭐
-status: Planning
+priority: "⭐⭐⭐"
+status: "Planning"
 review_date: ""
 last_review_date: ""
 hierarchy_level: "strategic"
-parent_entities: "[] # None (top level)"
-child_entities: "[] # Annual Goals"
-sibling_entities: "[] # Other Vision statements"
+parent_entities: []
+child_entities: []
+sibling_entities: []
 related_time_periods: []
 strategic_alignment: []
-strategic_hierarchy: "{"
-  vision: "[],"
-  annual_goals: "[],"
-  quarterly_goals: "[],"
-  projects: "[],"
-  tasks: []
-}
-execution_status: "{"
-  progress: 0,
-  health: "",
-  next_milestone: "",
-  blockers: []
-}
 life_aspects: []
 values: []
 annual_goals: []
 quarterly_goals: []
+progress: 0
+health: ""
+next_milestone: ""
+blockers: []
 entity_type: "vision"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---

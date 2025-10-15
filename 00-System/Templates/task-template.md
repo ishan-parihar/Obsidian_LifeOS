@@ -1,9 +1,9 @@
 ---
 title: ""
 description: ""
-task_status: Waiting
-task_priority: ⭐⭐⭐
-action_date: <% tp.date.now("YYYY-MM-DD") %>T09:00
+task_status: "Waiting"
+task_priority: "⭐⭐⭐"
+action_date: "<% tp.date.now('YYYY-MM-DD') %>T09:00"
 assignee: ""
 projects: []
 weeks: []
@@ -13,8 +13,6 @@ project_status: ""
 sprint_status: ""
 monitor: ""
 tasks_report: ""
-
-# Button Properties (for workflow)
 done_button: false
 current_sprint_button: false
 backlog_button: false
@@ -22,32 +20,12 @@ next_sprint_1_button: false
 next_sprint_2_button: false
 next_sprint_3_button: false
 next_sprint_4_button: false
-
 hierarchy_level: "strategic"
-parent_entities: "[] # Projects"
-child_entities: "[] # Subtasks"
-sibling_entities: "[] # Other Tasks in Project"
+parent_entities: []
+child_entities: []
+sibling_entities: []
 related_time_periods: []
 strategic_alignment: []
-strategic_hierarchy: "{"
-  vision: "[],"
-  annual_goals: "[],"
-  quarterly_goals: "[],"
-  projects: "[],"
-  tasks: "[] # Dependencies"
-}
-execution_status: "{"
-  progress: 0,
-  health: "",
-  next_milestone: "",
-  blockers: []
-}
-context: "{"
-  energy_required: "",
-  time_of_day: "",
-  location: "",
-  tools_needed: []
-}
 quarterly_goals: []
 annual_goals: []
 quarters: []
@@ -58,6 +36,14 @@ completion_criteria: []
 task_type: ""
 task_energy_required: ""
 task_cognitive_load: ""
+progress: 0
+health: ""
+next_milestone: ""
+blockers: []
+energy_required: ""
+time_of_day: ""
+task_location: ""
+tools_needed: []
 entity_hierarchy_level: "strategic"
 entity_type: "task"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>

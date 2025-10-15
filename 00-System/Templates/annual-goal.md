@@ -7,24 +7,13 @@ the_epic: ""
 target_value: ""
 success_condition: ""
 key_risks: ""
-status: Draft
-hierarchy_level: strategic
+status: "Draft"
+hierarchy_level: "strategic"
 parent_entities: []
 child_entities: []
 sibling_entities: []
 related_time_periods: []
 strategic_alignment: []
-strategic_hierarchy: ""
-  vision: []
-  annual_goals: []
-  quarterly_goals: []
-  projects: []
-  tasks: []
-execution_status: ""
-  progress: 0
-  health: ""
-  next_milestone: ""
-  blockers: []
 vision: []
 quarters: []
 quarterly_goals: []
@@ -35,6 +24,10 @@ current_annual_goal: ""
 goal_progress: 0
 planned_range: ""
 entity_type: "annual-goal"
+progress: 0
+health: ""
+next_milestone: ""
+blockers: []
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 

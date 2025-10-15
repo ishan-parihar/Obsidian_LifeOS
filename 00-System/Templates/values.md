@@ -4,30 +4,21 @@ the_commitment: ""
 the_boundary: ""
 shadow_expression: ""
 litmus_test: ""
-status: Active
+status: "Active"
 hierarchy_level: "strategic"
-parent_entities: "[] # Vision"
-child_entities: "[] # Annual Goals"
-sibling_entities: "[] # Other Values"
+parent_entities: []
+child_entities: []
+sibling_entities: []
 related_time_periods: []
 strategic_alignment: []
-strategic_hierarchy: "{"
-  vision: "[],"
-  annual_goals: "[],"
-  quarterly_goals: "[],"
-  projects: "[],"
-  tasks: []
-}
-execution_status: "{"
-  progress: 0,
-  health: "",
-  next_milestone: "",
-  blockers: []
-}
 life_aspects: []
 vision: []
 annual_goals: []
-type: values
+progress: 0
+health: ""
+next_milestone: ""
+blockers: []
+entity_type: "values"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 

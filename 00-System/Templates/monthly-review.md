@@ -1,24 +1,24 @@
 ---
-title: <% tp.date.now("YYYY-MM") %>
+title: "<% tp.date.now('YYYY-MM') %>"
 month_number: <% tp.date.now("MM") %>
 year: <% tp.date.now("YYYY") %>
-time_period_start: <% tp.date.now("YYYY-MM-DD", 1) %>
-time_period_end: <% tp.date.now("YYYY-MM-DD", 0, 1) %>
-containing_period: [[<% tp.date.now("YYYY-[Q]Q") %>]]
-contained_periods: [] # Auto-populated with weeks
-parallel_periods: [] # Other months in same year
+time_period_start: "<% tp.date.now('YYYY-MM-01') %>"
+time_period_end: "<% tp.date.now('YYYY-MM-DD', 0, tp.date.now('YYYY-MM-01'), 1, 'month') %>"
+containing_period: "[[<% tp.date.now('YYYY-[Q]Q') %>]]"
+contained_periods: []
+parallel_periods: []
 hierarchy_level: "review"
-parent_entities: [] # Quarters
-child_entities: [] # Weeks
-sibling_entities: [] # Other months in year
+parent_entities: []
+child_entities: []
+sibling_entities: []
 related_time_periods: []
 strategic_alignment: []
-quarters: [[<% tp.date.now("YYYY-[Q]Q") %>]]
-years: [[<% tp.date.now("YYYY") %>]]
+quarters: ["[[<% tp.date.now('YYYY-[Q]Q') %>]]"]
+years: ["[[<% tp.date.now('YYYY') %>]]"]
 weeks: []
 days: []
-type: monthly-review
-status: Active
+entity_type: "monthly-review"
+status: "Active"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 

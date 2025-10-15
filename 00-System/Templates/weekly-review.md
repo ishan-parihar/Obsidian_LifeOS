@@ -1,17 +1,17 @@
 ---
-title: <% tp.date.now("YYYY-[W]WW") %>
+title: "<% tp.date.now('YYYY-[W]WW') %>"
 weekly_week_number: <% tp.date.now("WW") %>
 weekly_year: <% tp.date.now("YYYY") %>
-weekly_time_period_start: <% tp.date.now("YYYY-MM-DD", 0, -tp.date.now().weekday) %>
-weekly_time_period_end: <% tp.date.now("YYYY-MM-DD", 6, -tp.date.now().weekday) %>
-weekly_containing_period: [[<% tp.date.now("YYYY-[Q]Q") %>]]
+weekly_time_period_start: "<% tp.date.now('YYYY-MM-DD', -tp.date.now().weekday()) %>"
+weekly_time_period_end: "<% tp.date.now('YYYY-MM-DD', 6 - tp.date.now().weekday()) %>"
+weekly_containing_period: "[[<% tp.date.now('YYYY-[Q]Q') %>]]"
 entity_hierarchy_level: "review"
 entity_type: "weekly-review"
-weekly_months: [[<% tp.date.now("YYYY-MM") %>]]
-weekly_quarters: [[<% tp.date.now("YYYY-[Q]Q") %>]]
-weekly_years: [[<% tp.date.now("YYYY") %>]]
+weekly_months: ["[[<% tp.date.now('YYYY-MM') %>]]"]
+weekly_quarters: ["[[<% tp.date.now('YYYY-[Q]Q') %>]]"]
+weekly_years: ["[[<% tp.date.now('YYYY') %>]]"]
 weekly_days: []
-weekly_status: Active
+weekly_status: "Active"
 weekly_week_synthesis: ""
 weekly_the_witness: ""
 weekly_the_logos_inquisitor: ""

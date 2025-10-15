@@ -1,207 +1,149 @@
 ---
-# Stories Template
-
-# Metadata
-story_id:: 
-story_title:: 
-story_type:: 
-created_date:: 2025-10-14
-last_updated:: 2025-10-14
-status:: pending
-priority:: medium
-
-category:: Stories
-
-tags:: #stories #template #pending
-
-# Story Information
-story_genre:: 
-story_theme:: 
-story_tone:: 
-story_purpose:: 
-
-story_audience:: 
-story_length:: 
-story_complexity:: 
-story_maturity:: 
-
-# Story Structure
-story_arc:: 
-narrative_structure:: 
-plot_type:: 
-story_timeline:: 
-
-story_setting:: 
-time_period:: 
-location:: 
-cultural_context:: 
-
-# Story Characters
-main_characters:: 
-supporting_characters:: 
-antagonists:: 
-character_relationships:: 
-
-character_development:: 
-character_arcs:: 
-character_motivations:: 
-character_backstories:: 
-
-# Story Plot
-plot_summary:: 
-main_conflict:: 
-subplots:: 
-plot_twists:: 
-
-climax:: 
-resolution:: 
-open_questions:: 
-thematic_elements:: 
-
-# Story Writing
-writing_style:: 
-narrative_voice:: 
-perspective:: 
-language_level:: 
-
-dialogue_style:: 
-description_style:: 
-pacing:: 
-tension_building:: 
-
-# Story Development
-draft_status:: 
-revision_history:: 
-writing_progress:: 
-completion_milestones:: 
-
-research_needed:: 
-inspiration_sources:: 
-creative_constraints:: 
-development_challenges:: 
-
-# Story Quality
-narrative_coherence:: 
-character_consistency:: 
-plot_plausibility:: 
-emotional_impact:: 
-
-originality:: 
-readability:: 
-engagement_level:: 
-overall_rating:: 
-
-# Story Relationships
-prequel_stories:: 
-sequel_stories:: 
-related_stories:: 
-shared_universe:: 
-
-character_crossovers:: 
-thematic_connections:: 
-setting_connections:: 
-story_series:: 
-
-# Story Analytics
-reader_engagement:: 
-feedback_scores:: 
-sharing_frequency:: 
-recommendation_rate:: 
-
-time_to_read:: 
-completion_rate:: 
-re_read_value:: 
-emotional_response:: 
-
-# Story Management
-publication_status:: 
-distribution_channels:: 
-access_permissions:: 
-sharing_restrictions:: 
-
-archival_status:: 
-version_control:: 
-backup_status:: 
-sync_status:: 
-
-# Story Collaboration
-collaborators:: 
-editors:: 
-beta_readers:: 
-feedback_providers:: 
-
-co_authors:: 
-illustrators:: 
-cover_artists:: 
-publishing_partners:: 
-
-# Story Publication
-publishing_status:: 
-publishing_platform:: 
-distribution_method:: 
-publication_date:: 
-
-isbn_identifier:: 
-copyright_info:: 
-licensing_terms:: 
-royalty_structure:: 
-
-# Story Marketing
-marketing_strategy:: 
-target_demographics:: 
-promotion_channels:: 
-branding_elements:: 
-
-tagline:: 
-cover_description:: 
-author_bio:: 
-press_kit:: 
-
-# Story Reviews
-critical_reception:: 
-user_reviews:: 
-award_nominations:: 
-sales_performance:: 
-
-review_analysis:: 
-feedback_trends:: 
-improvement_areas:: 
-success_factors:: 
-
-# Story Documentation
-writing_process:: 
-creation_timeline:: 
-inspiration_journal:: 
-technical_notes:: 
-
-research_notes:: 
-character_bibles:: 
-setting_descriptions:: 
-plot_outlines:: 
-
-# Story Future
-sequel_plans:: 
-expansion_ideas:: 
-adaptation_potential:: 
-merchandising_opportunities:: 
-
-franchise_development:: 
-cross_media_potential:: 
-community_building:: 
-long_term_vision:: 
-
-# Notes
-writer_notes:: 
-inspiration_notes:: 
-revision_notes:: 
-future_ideas:: 
-
-# Related Items
-related_projects:: 
-inspiration_sources:: 
-writing_resources:: 
-publishing_contacts:: 
-
+story_id: ""
+story_title: ""
+story_type: ""
+created_date: "2025-10-14"
+last_updated: "2025-10-14"
+status: "pending"
+priority: "medium"
+category: "Stories"
+tags: [stories, template, pending]
+story_genre: ""
+story_theme: ""
+story_tone: ""
+story_purpose: ""
+story_audience: ""
+story_length: ""
+story_complexity: ""
+story_maturity: ""
+story_arc: ""
+narrative_structure: ""
+plot_type: ""
+story_timeline: ""
+story_setting: ""
+time_period: ""
+location: ""
+cultural_context: ""
+main_characters: []
+supporting_characters: []
+antagonists: []
+character_relationships: []
+character_development: ""
+character_arcs: []
+character_motivations: []
+character_backstories: []
+plot_summary: ""
+main_conflict: ""
+subplots: []
+plot_twists: []
+climax: ""
+resolution: ""
+open_questions: []
+thematic_elements: []
+writing_style: ""
+narrative_voice: ""
+perspective: ""
+language_level: ""
+dialogue_style: ""
+description_style: ""
+pacing: ""
+tension_building: ""
+draft_status: ""
+revision_history: []
+writing_progress: 0
+completion_milestones: []
+research_needed: []
+inspiration_sources: []
+creative_constraints: []
+development_challenges: []
+narrative_coherence: ""
+character_consistency: ""
+plot_plausibility: ""
+emotional_impact: ""
+originality: ""
+readability: ""
+engagement_level: ""
+overall_rating: ""
+prequel_stories: []
+sequel_stories: []
+related_stories: []
+shared_universe: ""
+character_crossovers: []
+thematic_connections: []
+setting_connections: []
+story_series: ""
+reader_engagement: ""
+feedback_scores: []
+sharing_frequency: 0
+recommendation_rate: 0
+time_to_read: ""
+completion_rate: 0
+re_read_value: ""
+emotional_response: []
+publication_status: ""
+distribution_channels: []
+access_permissions: ""
+sharing_restrictions: ""
+archival_status: ""
+version_control: ""
+backup_status: ""
+sync_status: ""
+collaborators: []
+editors: []
+beta_readers: []
+feedback_providers: []
+co_authors: []
+illustrators: []
+cover_artists: []
+publishing_partners: []
+publishing_platform: ""
+distribution_method: ""
+publication_date: ""
+isbn_identifier: ""
+copyright_info: ""
+licensing_terms: ""
+royalty_structure: ""
+marketing_strategy: ""
+target_demographics: []
+promotion_channels: []
+branding_elements: []
+tagline: ""
+cover_description: ""
+author_bio: ""
+press_kit: ""
+critical_reception: ""
+user_reviews: []
+award_nominations: []
+sales_performance: ""
+review_analysis: ""
+feedback_trends: []
+improvement_areas: []
+success_factors: []
+writing_process: ""
+creation_timeline: ""
+inspiration_journal: ""
+technical_notes: ""
+research_notes: ""
+character_bibles: []
+setting_descriptions: []
+plot_outlines: []
+sequel_plans: []
+expansion_ideas: []
+adaptation_potential: ""
+merchandising_opportunities: []
+franchise_development: ""
+cross_media_potential: ""
+community_building: ""
+long_term_vision: ""
+writer_notes: ""
+inspiration_notes: ""
+revision_notes: ""
+future_ideas: []
+related_projects: []
+writing_resources: []
+publishing_contacts: []
+entity_type: "story"
+created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 
 # Story Overview
