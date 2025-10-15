@@ -1,110 +1,75 @@
 ---
-# Notes Template
-
-# Metadata
 title:
 note_status: "New Note"
-note_id::
-note_title::
-note_type::
-created_date:: 2025-10-14
-last_updated:: 2025-10-14
-category:: Notes
+note_id: ""
+note_title: ""
+note_type: ""
+created_date: 2025-10-14
+last_updated: 2025-10-14
+category: Notes
 entity_type: "note"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
-
-tags:: #notes #template #pending
-
-# Note Information
-note_category:: 
-note_subcategory:: 
-note_source:: 
-note_author:: 
-
-note_format:: 
-note_length:: 
-note_complexity:: 
-note_importance:: 
-
-# Note Content
-summary:: 
-key_points:: 
-detailed_notes:: 
-
-examples:: 
-references:: 
-resources:: 
-
-# Note Organization
-folder_location:: 
-related_notes:: 
-linked_topics:: 
-tag_hierarchy:: 
-
-# Note Processing
-processing_status:: 
-review_required:: 
-action_items:: 
-follow_up_needed:: 
-
-# Note Quality
-completeness:: 
-accuracy:: 
-clarity:: 
-relevance:: 
-
-# Note Relationships
-parent_notes:: 
-child_notes:: 
-sibling_notes:: 
-cross_references:: 
-
-# Note Analytics
-access_frequency:: 
-usage_count:: 
-last_accessed:: 
-search_relevance:: 
-
-# Note Management
-archival_status:: 
-deletion_date:: 
-backup_status:: 
-version_history:: 
-
-# Note Collaboration
-shared_with:: 
-permissions:: 
-contributions:: 
-feedback:: 
-
-# Note Development
-development_status:: 
-expansion_areas:: 
-improvement_needed:: 
-future_plans:: 
-
-# Note Review
-review_date:: 
-reviewer:: 
-review_comments:: 
-review_score:: 
-
-# Note Documentation
-documentation_links:: 
-related_documents:: 
-external_resources:: 
-internal_references:: 
-
-# Notes
-personal_notes:: 
-action_items:: 
-next_steps:: 
-
-# Related Items
-related_projects:: 
-related_tasks:: 
-related_concepts:: 
-
+tags: ["notes", "template", "pending"]
+note_category: ""
+note_subcategory: ""
+note_source: ""
+note_author: ""
+note_format: ""
+note_length: ""
+note_complexity: ""
+note_importance: ""
+summary: ""
+key_points: ""
+detailed_notes: ""
+examples: ""
+references: ""
+resources: ""
+folder_location: ""
+related_notes: ""
+linked_topics: ""
+tag_hierarchy: ""
+processing_status: ""
+review_required: ""
+action_items: ""
+follow_up_needed: ""
+completeness: ""
+accuracy: ""
+clarity: ""
+relevance: ""
+parent_notes: ""
+child_notes: ""
+sibling_notes: ""
+cross_references: ""
+access_frequency: ""
+usage_count: ""
+last_accessed: ""
+search_relevance: ""
+archival_status: ""
+deletion_date: ""
+backup_status: ""
+version_history: ""
+shared_with: ""
+permissions: ""
+contributions: ""
+feedback: ""
+development_status: ""
+expansion_areas: ""
+improvement_needed: ""
+future_plans: ""
+review_date: ""
+reviewer: ""
+review_comments: ""
+review_score: ""
+documentation_links: ""
+related_documents: ""
+external_resources: ""
+internal_references: ""
+personal_notes: ""
+action_items: ""
+next_steps: ""
+related_projects: ""
+related_tasks: ""
+related_concepts: ""
 ---
 
 # Note Overview

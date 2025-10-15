@@ -1,7 +1,7 @@
 ---
 title:
 description: ""
-task_status: Todo
+task_status: Waiting
 task_priority: ⭐⭐⭐
 action_date: <% tp.date.now("YYYY-MM-DD") %>T09:00
 assignee: ""

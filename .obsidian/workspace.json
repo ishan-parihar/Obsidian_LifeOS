@@ -11,14 +11,10 @@
             "id": "1fd721fb91a37918",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00-System/Templates/yearly-review.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "yearly-review"
+              "title": "New tab"
             }
           }
         ]
@@ -131,12 +127,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00-System/Templates/yearly-review.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from yearly-review"
+              "title": "Outgoing links"
             }
           },
           {
@@ -145,13 +140,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00-System/Templates/yearly-review.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of yearly-review"
+              "title": "Outline"
             }
           },
           {
@@ -206,14 +200,12 @@
   },
   "active": "1fd721fb91a37918",
   "lastOpenFiles": [
-    "00-System/Templates/weekly-review.md",
-    "00-System/Templates/values.md",
     "00-System/Templates/task-template.md",
-    "00-System/Templates/subjective-journal.md",
+    "00-System/Templates/yearly-review.md",
+    "00-System/Templates/weekly-review.md",
     "00-System/Templates/systemic-journal.md",
     "00-System/Templates/stories.md",
     "00-System/Templates/relational-journal.md",
-    "00-System/Templates/quarterly-review.md",
     "00-System/Templates/quarterly-goal.md",
     "00-System/Templates/project-template.md",
     "00-System/Templates/people-template.md",
@@ -229,6 +221,9 @@
     "00-System/Templates/annual-goal.md",
     "00-System/Templates/activity-log.md",
     "06-Days/Untitled.md",
+    "00-System/Templates/values.md",
+    "00-System/Templates/subjective-journal.md",
+    "00-System/Templates/quarterly-review.md",
     "06-Days/06-Days.base",
     "15-Projects/15-Projects.base",
     "15-Projects/Untitled.md",
@@ -238,7 +233,6 @@
     "09-Quarters/09-Quarters.base",
     "21-Notes/21-Notes.base",
     "00-System/Templates/annual-goal.md.tmp.8988.1760476738303",
-    "21-Notes/Untitled.md",
     "Untitled",
     "02-Relational-Journal/02-Relational-Journal.base",
     "01-Subjective-Journal/01-Subjective-Journal.base"
