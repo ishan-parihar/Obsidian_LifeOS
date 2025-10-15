@@ -1,5 +1,5 @@
 ---
-title:
+title: ""
 description: ""
 task_status: Waiting
 task_priority: ⭐⭐⭐

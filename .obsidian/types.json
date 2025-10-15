@@ -25,7 +25,6 @@
     "TQ_show_tree": "checkbox",
     "TQ_show_urgency": "checkbox",
     "status": "multitext",
-    "=== SUBJECTIVE JOURNAL PROPERTIES ===": "",
     "sj_primary_emotion": {
       "type": "select",
       "options": [
@@ -66,7 +65,6 @@
         "Uncertain"
       ]
     },
-    "=== RELATIONAL JOURNAL PROPERTIES ===": "",
     "rj_emotional_tone": {
       "type": "select",
       "options": [
@@ -87,7 +85,6 @@
         "Unequal - They have more"
       ]
     },
-    "=== SYSTEMIC JOURNAL PROPERTIES ===": "",
     "sysj_status": {
       "type": "select",
       "options": [
@@ -118,7 +115,6 @@
         "Financial"
       ]
     },
-    "=== ACTIVITY LOG PROPERTIES ===": "",
     "al_habit_quality": {
       "type": "select",
       "options": [
@@ -134,7 +130,6 @@
         "1.0"
       ]
     },
-    "=== DIET LOG PROPERTIES ===": "",
     "dl_meal_type": {
       "type": "select",
       "options": [
@@ -145,7 +140,6 @@
         "Brunch"
       ]
     },
-    "=== TASK PROPERTIES ===": "",
     "task_status": {
       "type": "select",
       "options": [
@@ -201,7 +195,6 @@
         "Intense"
       ]
     },
-    "=== PROJECT PROPERTIES ===": "",
     "project_status": {
       "type": "select",
       "options": [
@@ -223,7 +216,6 @@
         "⭐"
       ]
     },
-    "=== FINANCIAL LOG PROPERTIES ===": "",
     "fl_category": {
       "type": "select",
       "options": [
@@ -254,7 +246,6 @@
         "Personal"
       ]
     },
-    "=== FINANCIAL ACCOUNT PROPERTIES ===": "",
     "fa_type": {
       "type": "multiselect",
       "options": [
@@ -283,7 +274,6 @@
         "Closed"
       ]
     },
-    "=== PEOPLE PROPERTIES ===": "",
     "people_relationship_status": {
       "type": "select",
       "options": [
@@ -437,7 +427,6 @@
         "I am in Debt"
       ]
     },
-    "=== DOCUMENT PROPERTIES ===": "",
     "doc_category": {
       "type": "select",
       "options": [
@@ -454,7 +443,6 @@
         "Done"
       ]
     },
-    "=== NOTES PROPERTIES ===": "",
     "note_status": {
       "type": "select",
       "options": [
@@ -464,7 +452,6 @@
         "Archived Note"
       ]
     },
-    "=== HIERARCHICAL PROPERTIES ===": "",
     "entity_hierarchy_level": {
       "type": "select",
       "options": [
