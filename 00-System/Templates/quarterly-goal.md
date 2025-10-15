@@ -72,7 +72,7 @@ const COLUMNS = [
 ];
 
 return function View() {
-  const projects = dc.useQuery(`@page and "15-Projects" and quarterly_goals = "<% tp.file.title %>"`);
+  const projects = dc.useQuery(`@page and "15-Projects" and quarterly_goals = "{{TITLE}}"`); // Placeholder for tp.file.title
   const sortedProjects = dc.useArray(projects, array =>
     array.sort(row => row.value("project_progress"))
   );
@@ -91,7 +91,7 @@ const COLUMNS = [
 ];
 
 return function View() {
-  const tasks = dc.useQuery(`@page and "16-Tasks" and quarterly_goals = "<% tp.file.title %>"`);
+  const tasks = dc.useQuery(`@page and "16-Tasks" and quarterly_goals = "{{TITLE}}"`); // Placeholder for tp.file.title
   const sortedTasks = dc.useArray(tasks, array =>
     array.sort(row => row.value("task_priority"))
   );
@@ -111,7 +111,7 @@ const COLUMNS = [
 ];
 
 return function View() {
-  const risks = dc.useQuery(`@page and "24-Failure-Scenarios" and quarterly_goals = "<% tp.file.title %>"`);
+  const risks = dc.useQuery(`@page and "24-Failure-Scenarios" and quarterly_goals = "{{TITLE}}"`); // Placeholder for tp.file.title
   const sortedRisks = dc.useArray(risks, array => 
     array.sort(row => row.value("impact"))
   );

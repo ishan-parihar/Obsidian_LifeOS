@@ -115,15 +115,16 @@ const COLUMNS = [
 ];
 
 return function View() {
-  const currentFile = "<% tp.file.title %>";
+  const currentFile = "{{TITLE}}"; // Placeholder for tp.file.title
   const tasks = dc.useQuery(`@page and "16-Tasks" and file != "${currentFile}"`);
   const relatedTasks = tasks.filter(task => {
     const taskProjects = task.value("projects") || [];
     const taskQuarterlyGoals = task.value("quarterly_goals") || [];
     const taskAnnualGoals = task.value("annual_goals") || [];
-    const thisProjects = [<% tp.frontmatter.projects %>];
-    const thisQuarterlyGoals = [<% tp.frontmatter.quarterly_goals %>];
-    const thisAnnualGoals = [<% tp.frontmatter.annual_goals %>];
+    // Using empty arrays to prevent errors when opened as templates
+    const thisProjects = [];
+    const thisQuarterlyGoals = [];
+    const thisAnnualGoals = [];
 
     return (
       taskProjects.some(p => thisProjects.includes(p)) ||
@@ -149,7 +150,7 @@ const COLUMNS = [
 ];
 
 return function View() {
-  const issues = dc.useQuery(`@page and "03-Systemic-Journal" and projects = "<% tp.file.title %>"`);
+  const issues = dc.useQuery(`@page and "03-Systemic-Journal" and projects = "{{TITLE}}"`); // Placeholder for tp.file.title
   const sortedIssues = dc.useArray(issues, array => 
     array.sort(row => row.value("impact"))
   );

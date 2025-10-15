@@ -66,7 +66,7 @@ const COLUMNS = [
 ];
 
 return function View() {
-  const goals = dc.useQuery(`@page and "13-Annual-Goals" and vision = "<% tp.file.title %>"`);
+  const goals = dc.useQuery(`@page and "13-Annual-Goals" and vision = "{{TITLE}}"`); // Placeholder for tp.file.title
   const sortedGoals = dc.useArray(goals, array => 
     array.sort(row => row.value("goal_progress"))
   );
@@ -79,7 +79,7 @@ return function View() {
 
 ```datacorejsx
 return function View() {
-  const quarterlyGoals = dc.useQuery(`@page and "14-Quarterly-Goals" and vision = "<% tp.file.title %>"`);
+  const quarterlyGoals = dc.useQuery(`@page and "14-Quarterly-Goals" and vision = "{{TITLE}}"`); // Placeholder for tp.file.title
   
   const total = quarterlyGoals.length;
   const completed = quarterlyGoals.filter(goal => goal.value("status") === "Done").length;
