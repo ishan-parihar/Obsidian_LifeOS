@@ -156,7 +156,11 @@
   "frontmatterListDisplay": "asArray",
   "fileClassExcludedFolders": [],
   "showIndexingStatusInStatusBar": true,
-  "fileIndexingExcludedFolders": [],
+  "fileIndexingExcludedFolders": [
+    ".git",
+    ".obsidian",
+    ".trash"
+  ],
   "fileIndexingExcludedExtensions": [
     ".excalidraw.md"
   ],

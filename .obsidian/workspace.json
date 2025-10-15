@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Research_Docs/Metadata_Menu_Documentation.md",
+                "file": "00-System/Templates/weekly-review.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Metadata_Menu_Documentation"
+              "title": "weekly-review"
             }
           }
         ]
@@ -131,12 +131,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Research_Docs/Metadata_Menu_Documentation.md",
+                "file": "00-System/Templates/weekly-review.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Metadata_Menu_Documentation"
+              "title": "Outgoing links from weekly-review"
             }
           },
           {
@@ -145,13 +145,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Research_Docs/Metadata_Menu_Documentation.md",
+                "file": "00-System/Templates/weekly-review.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Metadata_Menu_Documentation"
+              "title": "Outline of weekly-review"
             }
           },
           {
@@ -204,17 +204,15 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "1fd721fb91a37918",
+  "active": "fe70c38ec800b6c7",
   "lastOpenFiles": [
-    "Research_Docs/Metadata_Menu_Documentation.md",
-    "00-System/Templates/annual-goal.md",
-    "00-System/Templates/activity-log.md",
+    "00-System/Templates/vision.md",
+    "00-System/Templates/values.md",
     "00-System/Templates/task-template.md",
-    "00-System/Templates/yearly-review.md",
-    "00-System/Templates/weekly-review.md",
-    "00-System/Templates/systemic-journal.md",
+    "00-System/Templates/subjective-journal.md",
     "00-System/Templates/stories.md",
     "00-System/Templates/relational-journal.md",
+    "00-System/Templates/quarterly-review.md",
     "00-System/Templates/quarterly-goal.md",
     "00-System/Templates/project-template.md",
     "00-System/Templates/people-template.md",
@@ -227,13 +225,15 @@
     "00-System/Templates/diet-log.md",
     "00-System/Templates/daily-note.md",
     "00-System/Templates/community.md",
+    "00-System/Templates/annual-goal.md",
+    "00-System/Templates/activity-log.md",
+    "Research_Docs/Metadata_Menu_Documentation.md",
+    "00-System/Templates/yearly-review.md",
+    "00-System/Templates/weekly-review.md",
+    "00-System/Templates/systemic-journal.md",
     "06-Days/Untitled.md",
-    "00-System/Templates/values.md",
-    "00-System/Templates/subjective-journal.md",
-    "00-System/Templates/quarterly-review.md",
     "06-Days/06-Days.base",
     "15-Projects/15-Projects.base",
-    "15-Projects/Untitled.md",
     "14-Quarterly-Goals/14-Quarterly-Goals.base",
     "13-Annual-Goals/13-Annual-Goals.base",
     "09-Quarters/09-Quarters.base",
