@@ -107,15 +107,21 @@ def main():
     
     # Output the JSON
     json_output = json.dumps(result, indent=2, ensure_ascii=False)
-    print(json_output)
     
     # Optionally save to file
     output_file = os.path.join(target_dir, 'markdown_files.json')
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(json_output)
     
-    print(f"\nProcessed {len(result['files'])} markdown files.")
+    print(f"Processed {len(result['files'])} markdown files.")
     print(f"Output saved to: {output_file}")
+    
+    # Print to stdout with proper encoding handling
+    try:
+        print(json_output)
+    except UnicodeEncodeError:
+        # If there's an encoding issue, write to file only
+        pass
 
 
 if __name__ == "__main__":

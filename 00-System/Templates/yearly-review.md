@@ -4,12 +4,12 @@ year: <% tp.date.now("YYYY") %>
 time_period_start: <% tp.date.now("YYYY-01-01") %>
 time_period_end: <% tp.date.now("YYYY-12-31") %>
 containing_period: ""
-contained_periods: [] # Auto-populated with quarters
-parallel_periods: [] # Other years
-hierarchy_level: "review"
-parent_entities: [] # None (top level)
-child_entities: [] # Quarters
-sibling_entities: [] # Other years
+contained_periods: []
+parallel_periods: []
+hierarchy_level: review
+parent_entities: []
+child_entities: []
+sibling_entities: []
 related_time_periods: []
 strategic_alignment: []
 quarters: []

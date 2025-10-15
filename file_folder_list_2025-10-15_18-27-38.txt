@@ -1,0 +1,88 @@
+00-System/
+  ├── Dashboards/
+  │   ├── Engine-Room.md
+  │   ├── Forge.md
+  │   ├── Observatory.md
+  │   └── Workbench.md
+  └── Templates/
+      ├── activity-log.md
+      ├── annual-goal.md
+      ├── community.md
+      ├── daily-note.md
+      ├── diet-log.md
+      ├── documents.md
+      ├── failure-scenario.md
+      ├── financial-account.md
+      ├── financial-log.md
+      ├── markdown_files.json
+      ├── monthly-review.md
+      ├── notes.md
+      ├── people-template.md
+      ├── project-template.md
+      ├── quarterly-goal.md
+      ├── quarterly-review.md
+      ├── relational-journal.md
+      ├── stories.md
+      ├── subjective-journal.md
+      ├── systemic-journal.md
+      ├── task-template.md
+      ├── values.md
+      ├── vision.md
+      ├── weekly-review.md
+      └── yearly-review.md
+01-Subjective-Journal/
+  └── 01-Subjective-Journal.base
+02-Relational-Journal/
+  └── 02-Relational-Journal.base
+03-Systemic-Journal/
+  └── 03-Systemic-Journal.base
+04-Activity-Log/
+  └── 04-Activity-Log.base
+05-Diet-Log/
+  └── 05-Diet-Log.base
+06-Days/
+  ├── 06-Days.base
+  └── Untitled.md
+07-Weeks/
+  └── 07-Weeks.base
+08-Months/
+  └── 08-Months.base
+09-Quarters/
+  └── 09-Quarters.base
+10-Years/
+  └── 10-Years.base
+11-Values/
+  └── 11-Values.base
+12-Vision/
+  └── 12-Vision.base
+13-Annual-Goals/
+  └── 13-Annual-Goals.base
+14-Quarterly-Goals/
+  └── 14-Quarterly-Goals.base
+15-Projects/
+  └── 15-Projects.base
+16-Tasks/
+  └── 16-Tasks.base
+17-People/
+  └── 17-People.base
+18-Community/
+  └── 18-Community.base
+19-Financial-Accounts/
+  └── 19-Financial-Accounts.base
+20-Financial-Log/
+  └── 20-Financial-Log.base
+21-Notes/
+  └── 21-Notes.base
+22-Documents/
+  └── 22-Documents.base
+23-Stories/
+  └── 23-Stories.base
+24-Failure-Scenarios/
+  └── 24-Failure-Scenarios.base
+Research_Docs/
+  ├── Datacore_Documentation.md
+  ├── Initial_Instructions_Deprecated.md
+  ├── Metadata_Menu_Documentation.md
+  └── Research-Results.md
+CRUSH.md
+Pending Tasks.md
