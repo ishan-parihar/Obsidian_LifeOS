@@ -14,13 +14,13 @@ child_entities: []
 sibling_entities: []
 related_time_periods: []
 strategic_alignment: []
-strategic_hierarchy:
+strategic_hierarchy: ""
   vision: []
   annual_goals: []
   quarterly_goals: []
   projects: []
   tasks: []
-execution_status:
+execution_status: ""
   progress: 0
   health: ""
   next_milestone: ""

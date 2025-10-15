@@ -6,19 +6,19 @@ key_result_3: ""
 key_learning: ""
 status: Planning
 hierarchy_level: "strategic"
-parent_entities: [] # Annual Goals
-child_entities: [] # Projects
-sibling_entities: [] # Other Quarterly Goals
+parent_entities: "[] # Annual Goals"
+child_entities: "[] # Projects"
+sibling_entities: "[] # Other Quarterly Goals"
 related_time_periods: []
 strategic_alignment: []
-strategic_hierarchy: {
-  vision: [],
-  annual_goals: [],
-  quarterly_goals: [], 
-  projects: [],
+strategic_hierarchy: "{"
+  vision: "[],"
+  annual_goals: "[],"
+  quarterly_goals: "[],"
+  projects: "[],"
   tasks: []
 }
-execution_status: {
+execution_status: "{"
   progress: 0,
   health: "",
   next_milestone: "",

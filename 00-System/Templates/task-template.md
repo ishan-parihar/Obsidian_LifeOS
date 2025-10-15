@@ -24,25 +24,25 @@ next_sprint_3_button: false
 next_sprint_4_button: false
 
 hierarchy_level: "strategic"
-parent_entities: [] # Projects
-child_entities: [] # Subtasks
-sibling_entities: [] # Other Tasks in Project
+parent_entities: "[] # Projects"
+child_entities: "[] # Subtasks"
+sibling_entities: "[] # Other Tasks in Project"
 related_time_periods: []
 strategic_alignment: []
-strategic_hierarchy: {
-  vision: [],
-  annual_goals: [],
-  quarterly_goals: [],
-  projects: [],
-  tasks: [] # Dependencies
+strategic_hierarchy: "{"
+  vision: "[],"
+  annual_goals: "[],"
+  quarterly_goals: "[],"
+  projects: "[],"
+  tasks: "[] # Dependencies"
 }
-execution_status: {
+execution_status: "{"
   progress: 0,
   health: "",
   next_milestone: "",
   blockers: []
 }
-context: {
+context: "{"
   energy_required: "",
   time_of_day: "",
   location: "",

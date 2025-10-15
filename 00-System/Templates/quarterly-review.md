@@ -4,16 +4,16 @@ quarter_number: <% tp.date.now("[Q]Q") %>
 year: <% tp.date.now("YYYY") %>
 time_period_start: <% tp.date.now("YYYY-MM-DD", 0, -tp.date.now().quarter + 1) %>
 time_period_end: <% tp.date.now("YYYY-MM-DD", 0, -tp.date.now().quarter + 1 + 90) %>
-containing_period: [[<% tp.date.now("YYYY") %>]]
-contained_periods: [] # Auto-populated with months
-parallel_periods: [] # Other quarters in same year
+containing_period: "[[<% tp.date.now(\"YYYY\") %>]]"
+contained_periods: "[] # Auto-populated with months"
+parallel_periods: "[] # Other quarters in same year"
 hierarchy_level: "review"
-parent_entities: [] # Years
-child_entities: [] # Months
-sibling_entities: [] # Other quarters in year
+parent_entities: "[] # Years"
+child_entities: "[] # Months"
+sibling_entities: "[] # Other quarters in year"
 related_time_periods: []
 strategic_alignment: []
-years: [[<% tp.date.now("YYYY") %>]]
+years: "[[<% tp.date.now(\"YYYY\") %>]]"
 months: []
 weeks: []
 days: []

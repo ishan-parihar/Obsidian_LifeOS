@@ -3,7 +3,7 @@ title: Subjective Journal
 sj_date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
 sj_primary_emotion: ""
 sj_secondary_emotion: ""
-sj_days: [[<% tp.date.now("YYYY-MM-DD") %>]]
+sj_days: "[[<% tp.date.now(\"YYYY-MM-DD\") %>]]"
 sj_total_context: ""
 sj_id: ""
 entity_hierarchy_level: "atomic"

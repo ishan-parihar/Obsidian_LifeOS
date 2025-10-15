@@ -12,7 +12,6 @@ weekly_quarters: [[<% tp.date.now("YYYY-[Q]Q") %>]]
 weekly_years: [[<% tp.date.now("YYYY") %>]]
 weekly_days: []
 weekly_status: Active
-# Intelligence Synthesis Fields
 weekly_week_synthesis: ""
 weekly_the_witness: ""
 weekly_the_logos_inquisitor: ""
@@ -29,7 +28,6 @@ weekly_the_stillness_warden: ""
 weekly_the_aesthetic_calibrator: ""
 weekly_the_legacy_tender: ""
 weekly_the_systemic_navigator: ""
-# Meta-Synthesis Fields
 weekly_week_oracle_synthesis: ""
 weekly_week_phoenix_synthesis: ""
 weekly_week_sovereign_synthesis: ""

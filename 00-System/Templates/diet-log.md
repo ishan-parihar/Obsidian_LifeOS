@@ -2,7 +2,7 @@
 title: Diet Log
 dl_date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
 dl_meal_type: ""
-dl_days: [[<% tp.date.now("YYYY-MM-DD") %>]]
+dl_days: "[[<% tp.date.now(\"YYYY-MM-DD\") %>]]"
 dl_total_context: ""
 dl_id: ""
 entity_hierarchy_level: "atomic"

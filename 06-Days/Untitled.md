@@ -1,6 +1,6 @@
 ---
-date:
-day_name:
+date: ""
+day_name: ""
 status: ""
 title: 25-10-14-D287
 daily_date: 2025-10-14
@@ -9,17 +9,17 @@ daily_day_number: 287
 daily_year: 2025
 daily_time_period_start: 2025-10-14
 daily_time_period_end: 2025-10-14
-daily_containing_period:
+daily_containing_period: ""
   - - 2025-W42
 entity_hierarchy_level: review
 entity_type: daily-review
-daily_weeks:
+daily_weeks: ""
   - - 2025-W42
-daily_months:
+daily_months: ""
   - - 2025-10
-daily_quarters:
+daily_quarters: ""
   - - 2025-Q4
-daily_years:
+daily_years: ""
   - - 2025
 daily_day_synthesis: ""
 daily_the_witness: ""
