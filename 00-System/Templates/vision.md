@@ -1,11 +1,11 @@
 ---
-vision_statement: 
-guiding_question: 
+vision_statement: ""
+guiding_question: ""
 strategic_pillars: []
 priority: ⭐⭐⭐
 status: Planning
-review_date: 
-last_review_date: 
+review_date: ""
+last_review_date: ""
 hierarchy_level: "strategic"
 parent_entities: [] # None (top level)
 child_entities: [] # Annual Goals

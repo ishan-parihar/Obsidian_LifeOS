@@ -1,9 +1,9 @@
 ---
-core_tenet: 
-the_commitment: 
-the_boundary: 
-shadow_expression: 
-litmus_test: 
+core_tenet: ""
+the_commitment: ""
+the_boundary: ""
+shadow_expression: ""
+litmus_test: ""
 status: Active
 hierarchy_level: "strategic"
 parent_entities: [] # Vision

@@ -1,20 +1,20 @@
 ---
-title: 
-the_antigoal: 
-type: 
-impact: 
-likelihood: 
+title: ""
+the_antigoal: ""
+type: ""
+impact: ""
+likelihood: ""
 status: Identified
-early_warning_signs: 
-proactive_protocol: 
-reactive_protocol: 
-post_mortem_debrief: 
-last_assessed: 
+early_warning_signs: ""
+proactive_protocol: ""
+reactive_protocol: ""
+post_mortem_debrief: ""
+last_assessed: ""
 quarterly_goals: []
 systemic_journal: []
-threat_level: 
-current_quarter: 
-suggestions: 
+threat_level: ""
+current_quarter: ""
+suggestions: ""
 type: failure-scenario
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---

@@ -1,5 +1,5 @@
 ---
-title: 
+title: ""
 fl_date: <% tp.date.now("YYYY-MM-DD") %>T<% tp.date.now("HH:mm") %>
 fl_category: 
 fl_capital_engine: 

@@ -1,5 +1,5 @@
 ---
-title:
+title: ""
 note_status: "New Note"
 note_id: ""
 note_title: ""

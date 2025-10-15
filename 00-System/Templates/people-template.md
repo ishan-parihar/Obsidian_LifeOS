@@ -1,5 +1,5 @@
 ---
-title: 
+title: ""
 people_first_name: ""
 people_custom_name: ""
 people_city: ""

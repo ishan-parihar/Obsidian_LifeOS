@@ -1,7 +1,7 @@
 ---
 date:
 day_name:
-status:
+status: ""
 title: 25-10-14-D287
 daily_date: 2025-10-14
 daily_day_name: Tuesday

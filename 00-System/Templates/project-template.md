@@ -1,11 +1,11 @@
 ---
-title: 
-project_summary: 
+title: ""
+project_summary: ""
 project_priority: ⭐⭐⭐
 project_status: On-Hold
-project_start: 
-project_deadline: 
-project_review_date: 
+project_start: ""
+project_deadline: ""
+project_review_date: ""
 entity_hierarchy_level: "strategic"
 entity_type: "project"
 project_quarterly_goals: []
@@ -18,11 +18,11 @@ project_notes: []
 project_documents: []
 project_competencies: []
 project_systemic_journal: []
-project_hard_constraints_antigoals: 
-project_kpis: 
+project_hard_constraints_antigoals: ""
+project_kpis: ""
 project_kpi_bar: 0
 project_progress: 0
-project_health: 
+project_health: ""
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 

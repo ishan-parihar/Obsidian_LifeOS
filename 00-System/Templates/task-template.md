@@ -55,9 +55,9 @@ years: []
 days: []
 external_dependencies: []
 completion_criteria: []
-task_type:
-task_energy_required:
-task_cognitive_load:
+task_type: ""
+task_energy_required: ""
+task_cognitive_load: ""
 entity_hierarchy_level: "strategic"
 entity_type: "task"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>

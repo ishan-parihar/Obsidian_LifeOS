@@ -1,12 +1,12 @@
 ---
-title:
-goal_archetype:
-strategic_intent:
-strategic_approach:
-the_epic:
-target_value:
-success_condition:
-key_risks:
+title: ""
+goal_archetype: ""
+strategic_intent: ""
+strategic_approach: ""
+the_epic: ""
+target_value: ""
+success_condition: ""
+key_risks: ""
 status: Draft
 hierarchy_level: strategic
 parent_entities: []
@@ -31,9 +31,9 @@ quarterly_goals: []
 projects: []
 tasks: []
 primary_metric: []
-current_annual_goal:
+current_annual_goal: ""
 goal_progress: 0
-planned_range:
+planned_range: ""
 entity_type: "annual-goal"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---

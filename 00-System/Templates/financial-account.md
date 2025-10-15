@@ -1,16 +1,16 @@
 ---
-title:
+title: ""
 fa_type: ["Asset"]
-fa_subtype:
+fa_subtype: ""
 fa_status: "Active"
-fa_capital_engine:
+fa_capital_engine: ""
 fa_current_balance: 0
 fa_financial_logs: []
-fa_last_updated:
-fa_related_statements:
-fa_related_transactions:
-fa_current_status:
-fa_active_range:
+fa_last_updated: ""
+fa_related_statements: ""
+fa_related_transactions: ""
+fa_current_status: ""
+fa_active_range: ""
 entity_type: "financial-account"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---

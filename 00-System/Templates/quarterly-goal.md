@@ -1,9 +1,9 @@
 ---
-title: 
-key_result_1: 
-key_result_2: 
-key_result_3: 
-key_learning: 
+title: ""
+key_result_1: ""
+key_result_2: ""
+key_result_3: ""
+key_learning: ""
 status: Planning
 hierarchy_level: "strategic"
 parent_entities: [] # Annual Goals
@@ -30,9 +30,9 @@ years: []
 projects: []
 tasks: []
 failure_scenarios: []
-current_quarter_goal: 
+current_quarter_goal: ""
 goal_progress: 0
-health: 
+health: ""
 entity_type: "quarterly-goal"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---

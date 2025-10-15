@@ -1,6 +1,6 @@
 ---
-title:
-doc_category:
+title: ""
+doc_category: ""
 doc_status: "Not started"
 document_id: ""
 document_title: ""
