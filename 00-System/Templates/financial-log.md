@@ -16,7 +16,6 @@ entity_type: "financial-log"
 created: <% tp.date.now("YYYY-MM-DDTHH:mm:ss") %>
 ---
 
-
 # Financial Log - <% tp.date.now("YYYY-MM-DD HH:mm") %>
 
 ## 💰 Transaction Details

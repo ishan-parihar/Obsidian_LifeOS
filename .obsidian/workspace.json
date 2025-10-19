@@ -222,18 +222,18 @@
   },
   "active": "395460f147b66a05",
   "lastOpenFiles": [
+    "00-System/Templates/markdown_to_json.py",
+    "Untitled",
     "FileClass/FileClass-Base.md",
     "FileClass/FileClass-ReviewCycles.md",
     "FileClass/FileClass-AtomicLogs.md",
     "06-Days/06-Days.base",
     "FileClass",
-    "Untitled",
     "00-System/Templates/weekly-review.md",
     "file_folder_list_2025-10-15_18-27-38.txt",
     "list_paths.py",
     "Scripts/markdown_to_json.py",
     "00-System/Templates/markdown_files.json",
-    "00-System/Templates/markdown_to_json.py",
     "00-System/Templates/yearly-review.md",
     "markdown_files.json",
     "00-System/Templates/vision.md",
@@ -256,7 +256,6 @@
     "00-System/Templates/diet-log.md",
     "00-System/Templates/daily-note.md",
     "00-System/Templates/community.md",
-    "00-System/Templates/annual-goal.md",
     "02-Relational-Journal/02-Relational-Journal.base"
   ]
 }
