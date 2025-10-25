@@ -20,5 +20,8 @@
   "file-explorer-plus",
   "excalibrain",
   "obsidian-local-rest-api",
-  "metaedit"
+  "metaedit",
+  "obsidian-book-search-plugin",
+  "auto-note-mover",
+  "metadata-menu"
 ]
