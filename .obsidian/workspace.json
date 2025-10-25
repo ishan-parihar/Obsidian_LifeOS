@@ -4,39 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "efd831bbbff5315e",
+        "id": "9e4d5ba61e2ef953",
         "type": "tabs",
         "children": [
           {
-            "id": "8087cce9e14bd5c6",
+            "id": "8fb174639b2975c2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "FileClass/FileClass-Base.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "FileClass-Base"
-            }
-          },
-          {
-            "id": "395460f147b66a05",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "FileClass/FileClass-ReviewCycles.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "FileClass-ReviewCycles"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -220,12 +201,12 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "395460f147b66a05",
+  "active": "8fb174639b2975c2",
   "lastOpenFiles": [
-    "00-System/Templates/markdown_to_json.py",
-    "Untitled",
     "FileClass/FileClass-Base.md",
     "FileClass/FileClass-ReviewCycles.md",
+    "00-System/Templates/markdown_to_json.py",
+    "Untitled",
     "FileClass/FileClass-AtomicLogs.md",
     "06-Days/06-Days.base",
     "FileClass",
